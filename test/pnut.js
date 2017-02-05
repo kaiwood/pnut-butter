@@ -11,12 +11,13 @@ const pnut = require('../lib/pnut');
 describe('The pnut API wrapper', function () {
 
   before(function() {
-    let root = 'https://api.pnut.io'
-    nock(root)
+    let base = 'https://api.pnut.io';
+
+    nock(base)
       .get('/v0')
       .reply(200, {})
 
-    nock(root)
+    nock(base)
       .get('/v0/posts/streams/global')
       .reply(200, {posts: 1})
   });
