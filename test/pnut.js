@@ -14,7 +14,7 @@ describe('The pnut API wrapper', function () {
     let root = 'https://api.pnut.io'
     nock(root)
       .get('/v0')
-      .reply(200, {interceptor: 'nock'})
+      .reply(200, {})
 
     nock(root)
       .get('/v0/posts/streams/global')
@@ -25,12 +25,7 @@ describe('The pnut API wrapper', function () {
     nock.cleanAll();
   });
 
-  it('should be able to talk to the api root', function () {
-    let result = {interceptor: 'nock'}
-    return pnut.root().should.become(result);
-  });
-
   it('should get the global timeline', function() {;
     return pnut.global().should.become({'posts': 1})
-  })
+  });
 });
