@@ -1,1 +1,1 @@
-const pnut = require('lib/pnut');
+const pnut = require('./lib/pnut');
