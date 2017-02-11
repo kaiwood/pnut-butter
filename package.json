@@ -2,7 +2,7 @@
   "name": "pnut-butter",
   "version": "0.0.1",
   "description": "pnut-butter.js – wrapper library for the pnut.io API",
-  "main": "index.js",
+  "main": "lib/pnut.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
