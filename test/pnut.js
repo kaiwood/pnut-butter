@@ -30,6 +30,10 @@ describe('The pnut API wrapper', function () {
       .reply(200, {})
 
     nock(base)
+      .get('/users/1/cover')
+      .reply(200, {})
+
+    nock(base)
       .get('/posts/1')
       .reply(200, {})
 
@@ -61,6 +65,10 @@ describe('The pnut API wrapper', function () {
       // TODO: Test should be more specific about the return values
       expect(pnut.avatar(1)).to.be.fulfilled;
     });
+
+    it('should be able to fetch a users cover', () => {
+      expect(pnut.cover('1')).to.be.fulfilled
+    })
   });
 
 
