@@ -58,8 +58,9 @@ describe('The pnut API wrapper', function () {
     });
 
     it('should be able to fetch a users avatar', () => {
-      return pnut.avatar('1').should.become({});
-    })
+      // TODO: Test should be more specific about the return values
+      expect(pnut.avatar(1)).to.be.fulfilled;
+    });
   });
 
 
