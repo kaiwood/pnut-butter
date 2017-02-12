@@ -39,25 +39,29 @@ describe('The pnut API wrapper', function () {
     nock.cleanAll();
   });
 
-  it('should get the global timeline', function() {;
+  it('should be able to fetch the the global timeline', function() {;
     return pnut.global().should.become({})
   });
 
-  it('should be able to fetch a user by id', () => {
-    return pnut.user(1).should.become({});
-  });
 
-  it('should be able to fetch an array of users by their ids', () => {
-    return pnut.users([4, 12, 1000]).should.become({});
-  });
+  describe('User context', () => {
+    it('should be able to fetch a user by id', () => {
+      return pnut.user(1).should.become({});
+    });
 
-  it('should be able to fetch a post by id', () => {
-    return pnut.post(1).should.become({});
-  });
-
-  it('should be able to fetch an array of posts by their ids', () => {
-    return pnut.posts([4, 12, 1000]).should.become({});
+    it('should be able to fetch an array of users by their ids', () => {
+      return pnut.users([4, 12, 1000]).should.become({});
+    });
   });
 
 
+  describe('Post context', () => {
+    it('should be able to fetch a post by id', () => {
+      return pnut.post(1).should.become({});
+    });
+
+    it('should be able to fetch an array of posts by their ids', () => {
+      return pnut.posts([4, 12, 1000]).should.become({});
+    });
+  });
 });
