@@ -26,6 +26,10 @@ describe('The pnut API wrapper', function () {
       .reply(200, {})
 
     nock(base)
+      .get('/users/1/avatar')
+      .reply(200, {})
+
+    nock(base)
       .get('/posts/1')
       .reply(200, {})
 
@@ -52,6 +56,10 @@ describe('The pnut API wrapper', function () {
     it('should be able to fetch an array of users by their ids', () => {
       return pnut.users([4, 12, 1000]).should.become({});
     });
+
+    it('should be able to fetch a users avatar', () => {
+      return pnut.avatar('1').should.become({});
+    })
   });
 
 
