@@ -48,6 +48,15 @@ describe('The pnut API wrapper', function () {
     nock(base)
       .get('/users/1/mentions')
       .reply(200, {})
+
+    nock(base)
+      .get('/users/1/posts')
+      .reply(200, {})
+
+    nock(base)
+      .get('/posts/tag/pnut-butter')
+      .reply(200, {})
+
   });
 
   after(function() {
@@ -94,6 +103,14 @@ describe('The pnut API wrapper', function () {
 
     it('should be able to fetch mentions for a specific user', () => {
       return pnut.mentions(1).should.become({});
-    })
+    });
+
+    it('should be able to fetch posts of a specific user', () => {
+      return pnut.postsFrom(1).should.become({});
+    });
+
+    it('shuld be able to fetch posts by tags', () => {
+      return pnut.postsTaggedWith('pnut-butter').should.become({});
+    });
   });
 });
