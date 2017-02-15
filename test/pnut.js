@@ -41,6 +41,9 @@ describe('The pnut API wrapper', function () {
       .get('/posts?ids=4,12,1000')
       .reply(200, {})
 
+    nock(base)
+      .get('/posts/1/revisions')
+      .reply(200, {})
   });
 
   after(function() {
@@ -80,5 +83,9 @@ describe('The pnut API wrapper', function () {
     it('should be able to fetch an array of posts by their ids', () => {
       return pnut.posts([4, 12, 1000]).should.become({});
     });
+
+    it('should be able to fetch revisions of posts', () => {
+      return pnut.revisions(1).should.become({});
+    })
   });
 });
