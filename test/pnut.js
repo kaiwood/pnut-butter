@@ -44,6 +44,10 @@ describe('The pnut API wrapper', function () {
     nock(base)
       .get('/posts/1/revisions')
       .reply(200, {})
+
+    nock(base)
+      .get('/users/1/mentions')
+      .reply(200, {})
   });
 
   after(function() {
@@ -86,6 +90,10 @@ describe('The pnut API wrapper', function () {
 
     it('should be able to fetch revisions of posts', () => {
       return pnut.revisions(1).should.become({});
+    });
+
+    it('should be able to fetch mentions for a specific user', () => {
+      return pnut.mentions(1).should.become({});
     })
   });
 });
