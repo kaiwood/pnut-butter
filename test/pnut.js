@@ -57,6 +57,10 @@ describe('The pnut API wrapper', function () {
       .get('/posts/tag/pnut-butter')
       .reply(200, {})
 
+    nock(base)
+      .get('/posts/1/thread')
+      .reply(200, {})
+
   });
 
   after(function() {
@@ -112,5 +116,9 @@ describe('The pnut API wrapper', function () {
     it('should be able to fetch posts by tags', () => {
       return pnut.postsTaggedWith('pnut-butter').should.become({});
     });
+
+    it('should be able to fetch posts within a thread', () => {
+      return pnut.thread('1').should.become({});
+    })
   });
 });
