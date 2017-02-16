@@ -61,6 +61,10 @@ describe('The pnut API wrapper', function () {
       .get('/posts/1/thread')
       .reply(200, {})
 
+    nock(base)
+      .get('/posts/1/actions')
+      .reply(200, {})
+
   });
 
   after(function() {
@@ -119,6 +123,10 @@ describe('The pnut API wrapper', function () {
 
     it('should be able to fetch posts within a thread', () => {
       return pnut.thread('1').should.become({});
-    })
+    });
+
+    it('should be able to fetch actions executed against a post', () => {
+      return pnut.actions('1').should.become({});
+    });
   });
 });
