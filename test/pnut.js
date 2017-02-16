@@ -75,8 +75,10 @@ describe('The pnut API wrapper', function () {
     return pnut.global().should.become({})
   });
 
-
-  describe('User context', () => {
+  /**
+   * User context
+   */
+  describe('In the context of users, it', () => {
     it('should be able to fetch a user by id', () => {
       return pnut.user(1).should.become({});
     });
@@ -95,8 +97,10 @@ describe('The pnut API wrapper', function () {
     })
   });
 
-
-  describe('Post context', () => {
+  /**
+   * Post context
+   */
+  describe('In the context of posts, it', () => {
     it('should be able to fetch a post by id', () => {
       return pnut.post(1).should.become({});
     });
