@@ -109,7 +109,7 @@ describe('The pnut API wrapper', function () {
       return pnut.postsFrom(1).should.become({});
     });
 
-    it('shuld be able to fetch posts by tags', () => {
+    it('should be able to fetch posts by tags', () => {
       return pnut.postsTaggedWith('pnut-butter').should.become({});
     });
   });
