@@ -14,6 +14,10 @@ describe('The pnut API wrapper', function () {
     let base = 'https://api.pnut.io/v0';
 
     nock(base)
+      .get('/custom/endpoint')
+      .reply(200, {})
+
+    nock(base)
       .get('/posts/streams/global')
       .reply(200, {})
 
@@ -70,6 +74,10 @@ describe('The pnut API wrapper', function () {
   after(function() {
     nock.cleanAll();
   });
+
+  it('should be able to send a custom request', function() {
+    return pnut.custom('/custom/endpoint').should.become({})
+  })
 
   it('should be able to fetch the the global timeline', function() {;
     return pnut.global().should.become({})
