@@ -1,6 +1,6 @@
 {
   "name": "pnut-butter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pnut-butter.js – wrapper library for the pnut.io API",
   "main": "lib/pnut.js",
   "scripts": {
