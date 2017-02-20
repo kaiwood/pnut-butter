@@ -38,6 +38,7 @@ pnut.global().then(data => {
 ## Todo
 
 - [ ] Implement endpoints where authentication is required
+- [ ] Implement additional parameters for each endpoint / method
 - [ ] Decide if the scope of this library should be expanded to be browser compatible
 - [ ] Leave alpha status
 - [ ] Better documentation
