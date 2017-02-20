@@ -1,6 +1,8 @@
 # pnut-butter
 
-A simple, promise based wrapper library for the API of [pnut.io](https://pnut.io)
+A simple, promise based wrapper library for the API of [pnut.io](https://pnut.io).
+
+Currently requires Node 6+ because of its ES6 completeness.
 
 ## Installation
 
