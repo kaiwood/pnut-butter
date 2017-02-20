@@ -1,5 +1,7 @@
 # pnut-butter
 
+A simple, promise based wrapper library for the API of [pnut.io](https://pnut.io)
+
 ## Installation
 
 ```bash
@@ -33,4 +35,7 @@ pnut.global().then(data => {
 
 ## Todo
 
-- Leave alpha status
+- [ ] Implement endpoints where authentication is required
+- [ ] Decide if the scope of this library should be expanded to be browser compatible
+- [ ] Leave alpha status
+- [ ] Better documentation
