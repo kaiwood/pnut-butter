@@ -69,6 +69,18 @@ describe('The pnut API wrapper', function () {
       .get('/posts/1/actions')
       .reply(200, {})
 
+    nock(base)
+      .post('/somewhere')
+      .reply(200, {})
+
+    nock(base)
+      .put('/somewhere')
+      .reply(200, {})
+
+    nock(base)
+      .patch('/somewhere')
+      .reply(200, {})
+
   });
 
   after(function() {
@@ -82,6 +94,18 @@ describe('The pnut API wrapper', function () {
   it('should be able to fetch the the global timeline', function() {;
     return pnut.global().should.become({})
   });
+
+  it('should be able to send a custom POST request', function() {
+    return pnut.custom('/somewhere', 'POST', {text: 'sometext'})
+  });
+
+  it('should be able to send a custom PUT request', function() {
+    return pnut.custom('/somewhere', 'PUT', {text: 'sometext'})
+  });
+
+  it('should be able to send a custom PATCH request', function() {
+    return pnut.custom('/somewhere', 'PATCH', {text: 'sometext'});
+  })
 
   /**
    * User context
