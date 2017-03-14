@@ -108,6 +108,25 @@ describe('The pnut API wrapper', function () {
   })
 
   /**
+   * Authentication
+   */
+  describe('When requesting an authentication url, it', () => {
+    it('should fail when no client id is given', () => {
+      expect(() => pnut.authenticateClientURL('', 'http://github.com')).to.throw(Error)
+    });
+
+    it('should fail if no redirect uri is given', () => {
+      expect(() => pnut.authenticateClientURL('sometoken', '')).to.throw(Error)
+    });
+
+    it('should give back a correct url where the client can authenticate', () => {
+      let expectedURL = 'https://api.pnut.io/v0/authenticate?clientId=mytoken&redirect_uri=http://github.com&scope=basic,stream,write_post,follow,update_profile,presence,messages,public_messages&response_type=token';
+
+      expect(pnut.authenticateClientURL('mytoken', 'http://github.com')).to.equal(expectedURL);
+    })
+  })
+
+  /**
    * User context
    */
   describe('In the context of users, it', () => {
