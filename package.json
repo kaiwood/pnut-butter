@@ -23,6 +23,8 @@
     "nock": "^9.0.2"
   },
   "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
     "node-fetch": "^1.6.3"
   }
 }
