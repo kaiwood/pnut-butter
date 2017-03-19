@@ -120,7 +120,7 @@ describe('The pnut API wrapper', function () {
     });
 
     it('should give back a correct url where the client can authenticate', () => {
-      let expectedURL = 'https://api.pnut.io/v0/authenticate?clientId=mytoken&redirect_uri=http://github.com&scope=basic,stream,write_post,follow,update_profile,presence,messages,public_messages&response_type=token';
+      let expectedURL = 'https://pnut.io/oauth/authenticate?client_id=mytoken&redirect_uri=http://github.com&scope=basic,stream,write_post,follow,update_profile,presence,messages,public_messages&response_type=token';
 
       expect(pnut.authenticateClientURL('mytoken', 'http://github.com')).to.equal(expectedURL);
     })
