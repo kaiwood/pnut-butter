@@ -6,7 +6,7 @@ chai.should();
 
 const pnut = require('../lib/pnut');
 
-before(function() {
+before(function () {
   let base = 'https://api.pnut.io/v0';
 
   nock(base)
@@ -70,85 +70,83 @@ before(function() {
     .reply(200, {});
 
   nock(base)
-    .put('/users/me/presence', {presence: 'A presence message'})
+    .put('/users/me/presence', { presence: 'A presence message' })
     .reply(200, {})
 });
 
-after(function() {
+after(function () {
   nock.cleanAll();
 })
 
-describe('Private endpoints', () => {
-  describe('for the users object', () => {
+describe('User endpoints', () => {
 
-    it('should be able to update the profile with a single object', () => {
-      return pnut.replaceProfile({
-        locale: 'de_DE',
-        timezone: 'Europe/Berlin'
-      }).should.become({});
-    });
-
-    it('should be able to update only given parts of the profile', () => {
-      return pnut.updateProfile({
-        name: 'pnut-butter user'
-      }).should.become({});
-    });
-
-    it('should be able to retrieve a list of people a user follows', () => {
-      return pnut.following(1).should.become({});
-    });
-
-    it('should be able to retrieve a list of people a user is following', () => {
-      return pnut.followers(1).should.become({});
-    });
-
-    it('should be able to follow another user', () => {
-      return pnut.follow(2).should.become({});
-    });
-
-    it('should be able to unfollow a user', () => {
-      return pnut.unfollow(2).should.become({});
-    });
-
-    it('should be able to get a list of muted users', () => {
-      return pnut.muted().should.become({});
-    });
-
-    it('should be able to mute a user', () => {
-      return pnut.mute(2).should.become({});
-    });
-
-    it('should be able to unmute a user', () => {
-      return pnut.unmute(2).should.become({});
-    });
-
-    it('should be able to get a list of blocked users', () => {
-      return pnut.blocked(2).should.become({});
-    });
-
-    it('should be able to block a user', () => {
-      return pnut.block(2).should.become({});
-    });
-
-    it('should be able to unblock a user', () => {
-      return pnut.unblock(2).should.become({});
-    });
-
-    it('should be able to get presence information for all users', () => {
-      return pnut.presence().should.become({});
-    });
-
-    it('should be able to get presence information of another user', () => {
-      return pnut.presenceOf(2).should.become({});
-    });
-
-    it('should be able to update presence', () => {
-      return pnut.updatePresence().should.become({});
-    });
-
-    it('should be able to update presence with an optional message', () => {
-      return pnut.updatePresence("A presence message").should.become({});
-    });
-
+  it('should be able to update the profile with a single object', () => {
+    return pnut.replaceProfile({
+      locale: 'de_DE',
+      timezone: 'Europe/Berlin'
+    }).should.become({});
   });
+
+  it('should be able to update only given parts of the profile', () => {
+    return pnut.updateProfile({
+      name: 'pnut-butter user'
+    }).should.become({});
+  });
+
+  it('should be able to retrieve a list of people a user follows', () => {
+    return pnut.following(1).should.become({});
+  });
+
+  it('should be able to retrieve a list of people a user is following', () => {
+    return pnut.followers(1).should.become({});
+  });
+
+  it('should be able to follow another user', () => {
+    return pnut.follow(2).should.become({});
+  });
+
+  it('should be able to unfollow a user', () => {
+    return pnut.unfollow(2).should.become({});
+  });
+
+  it('should be able to get a list of muted users', () => {
+    return pnut.muted().should.become({});
+  });
+
+  it('should be able to mute a user', () => {
+    return pnut.mute(2).should.become({});
+  });
+
+  it('should be able to unmute a user', () => {
+    return pnut.unmute(2).should.become({});
+  });
+
+  it('should be able to get a list of blocked users', () => {
+    return pnut.blocked(2).should.become({});
+  });
+
+  it('should be able to block a user', () => {
+    return pnut.block(2).should.become({});
+  });
+
+  it('should be able to unblock a user', () => {
+    return pnut.unblock(2).should.become({});
+  });
+
+  it('should be able to get presence information for all users', () => {
+    return pnut.presence().should.become({});
+  });
+
+  it('should be able to get presence information of another user', () => {
+    return pnut.presenceOf(2).should.become({});
+  });
+
+  it('should be able to update presence', () => {
+    return pnut.updatePresence().should.become({});
+  });
+
+  it('should be able to update presence with an optional message', () => {
+    return pnut.updatePresence("A presence message").should.become({});
+  });
+
 });
