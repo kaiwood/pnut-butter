@@ -114,7 +114,6 @@ describe('User endpoints', () => {
   });
 
   it('should be able to fetch a users avatar', () => {
-    // TODO: Test should be more specific about the return values
     expect(pnut.avatar(1)).to.be.fulfilled;
   });
 
