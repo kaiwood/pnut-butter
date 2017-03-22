@@ -3,11 +3,36 @@ const chaiAsPromised = require('chai-as-promised');
 const nock = require('nock');
 chai.use(chaiAsPromised);
 chai.should();
+const expect = chai.expect;
 
 const pnut = require('../lib/pnut');
 
 before(function () {
   let base = 'https://api.pnut.io/v0';
+
+  nock(base)
+    .get('/users/1')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users?ids=4,12,1000')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/1/mentions')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/1/posts')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/1/avatar')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/1/cover')
+    .reply(200, {});
 
   nock(base)
     .put('/users/me', { locale: 'de_DE', timezone: 'Europe/Berlin' })
@@ -19,11 +44,11 @@ before(function () {
 
   nock(base)
     .get('/users/1/following')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .get('/users/1/followers')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .put('/users/2/follow')
@@ -71,7 +96,7 @@ before(function () {
 
   nock(base)
     .put('/users/me/presence', { presence: 'A presence message' })
-    .reply(200, {})
+    .reply(200, {});
 });
 
 after(function () {
@@ -79,6 +104,23 @@ after(function () {
 })
 
 describe('User endpoints', () => {
+
+  it('should be able to fetch a user by id', () => {
+    return pnut.user(1).should.become({});
+  });
+
+  it('should be able to fetch an array of users by their ids', () => {
+    return pnut.users([4, 12, 1000]).should.become({});
+  });
+
+  it('should be able to fetch a users avatar', () => {
+    // TODO: Test should be more specific about the return values
+    expect(pnut.avatar(1)).to.be.fulfilled;
+  });
+
+  it('should be able to fetch a users cover', () => {
+    expect(pnut.cover('1')).to.be.fulfilled;
+  })
 
   it('should be able to update the profile with a single object', () => {
     return pnut.replaceProfile({
