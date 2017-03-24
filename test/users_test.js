@@ -109,8 +109,8 @@ describe('User endpoints', () => {
     return pnut.user(1).should.become({});
   });
 
-  it('should be able to fetch an array of users by their ids', () => {
-    return pnut.users([4, 12, 1000]).should.become({});
+  it('should be able to fetch users by their ids', () => {
+    return pnut.users(4, 12, 1000).should.become({});
   });
 
   it('should be able to fetch a users avatar', () => {
