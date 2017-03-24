@@ -72,7 +72,7 @@ before(function () {
 
 after(function () {
   nock.cleanAll();
-})
+});
 
 describe('Post endpoints', () => {
   it('should be able to fetch a post by id', () => {

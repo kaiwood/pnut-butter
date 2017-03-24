@@ -16,7 +16,7 @@ before(function () {
   nock(base)
     .get('/posts/streams/me')
     .reply(200, {});
-  
+
   nock(base)
     .get('/posts/streams/unified')
     .reply(200, {});
@@ -24,12 +24,12 @@ before(function () {
 
 after(function () {
   nock.cleanAll();
-})
+});
 
 describe('Stream endpoints', () => {
 
   it('should be able to fetch the the global timeline', function () {;
-    return pnut.global().should.become({})
+    return pnut.global().should.become({});
   });
 
   it('should be able to fetch the personal stream', () => {

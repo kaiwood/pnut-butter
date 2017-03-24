@@ -15,7 +15,7 @@ before(function () {
 
   nock(base)
     .get('/channels?ids=1,2,3')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .get('/users/me/channels')

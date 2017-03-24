@@ -12,19 +12,19 @@ before(function () {
 
   nock(base)
     .get('/somewhere')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .post('/somewhere')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .put('/somewhere')
-    .reply(200, {})
+    .reply(200, {});
 
   nock(base)
     .patch('/somewhere')
-    .reply(200, {})
+    .reply(200, {});
 });
 
 after(function () {
@@ -33,7 +33,7 @@ after(function () {
 
 describe('The pnut-butter library', () => {
   it('should be able to send a custom GET request', () => {
-    return pnut.custom('/somewhere').should.become({})
+    return pnut.custom('/somewhere').should.become({});
   });
 
   it('should be able to send a custom POST request', () => {
@@ -45,7 +45,7 @@ describe('The pnut-butter library', () => {
   it('should be able to send a custom PUT request', () => {
     return pnut.custom('/somewhere', 'PUT', {
       text: 'sometext'
-    })
+    });
   });
 
   it('should be able to send a custom PATCH request', () => {
@@ -57,11 +57,11 @@ describe('The pnut-butter library', () => {
 
 describe('Authentication', () => {
   it('should fail when no client id is given', () => {
-    expect(() => pnut.authenticateClientURL('', 'http://github.com')).to.throw(Error)
+    expect(() => pnut.authenticateClientURL('', 'http://github.com')).to.throw(Error);
   });
 
   it('should fail if no redirect uri is given', () => {
-    expect(() => pnut.authenticateClientURL('sometoken', '')).to.throw(Error)
+    expect(() => pnut.authenticateClientURL('sometoken', '')).to.throw(Error);
   });
 
   it('should give back a correct url where the client can authenticate', () => {
