@@ -80,7 +80,7 @@ describe('Post endpoints', () => {
   });
 
   it('should be able to fetch an array of posts by their ids', () => {
-    return pnut.posts([4, 12, 1000]).should.become({});
+    return pnut.posts(4, 12, 1000).should.become({});
   });
 
   it('should be able to fetch revisions of posts', () => {
