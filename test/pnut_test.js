@@ -25,6 +25,14 @@ before(function () {
   nock(base)
     .patch('/somewhere')
     .reply(200, {});
+
+  nock(base)
+    .get('/sys/config')
+    .reply(200, {});
+
+  nock(base)
+    .get('/sys/stats')
+    .reply(200, {});
 });
 
 after(function () {
@@ -69,5 +77,14 @@ describe('Authentication', () => {
 
     expect(pnut.authenticateClientURL('mytoken', 'http://github.com')).to.equal(expectedURL);
   });
+});
 
+describe('System', () => {
+  it('should be able to fetch sys/config', () => {
+    return pnut.config().should.become({});
+  });
+
+  it('should be able to fetch sys/stats', () => {
+    return pnut.stats().should.become({});
+  });
 });
