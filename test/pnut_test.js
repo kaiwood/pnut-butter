@@ -25,14 +25,6 @@ before(function () {
   nock(base)
     .patch('/somewhere')
     .reply(200, {});
-
-  nock(base)
-    .get('/sys/config')
-    .reply(200, {});
-
-  nock(base)
-    .get('/sys/stats')
-    .reply(200, {});
 });
 
 after(function () {
@@ -76,15 +68,5 @@ describe('Authentication', () => {
     let expectedURL = 'https://pnut.io/oauth/authenticate?client_id=mytoken&redirect_uri=http://github.com&scope=basic,stream,write_post,follow,update_profile,presence,messages,public_messages&response_type=token';
 
     expect(pnut.authenticateClientURL('mytoken', 'http://github.com')).to.equal(expectedURL);
-  });
-});
-
-describe('System', () => {
-  it('should be able to fetch sys/config', () => {
-    return pnut.config().should.become({});
-  });
-
-  it('should be able to fetch sys/stats', () => {
-    return pnut.stats().should.become({});
   });
 });
