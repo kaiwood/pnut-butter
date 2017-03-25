@@ -62,4 +62,16 @@ describe('Channels', () => {
   it('should be able to mark all private messages as read', () => {
     return pnut.markAsRead().should.become({});
   });
+
+  it('should be able to create a channel (pnut.createChannel)');
+  it('should be able to update a channel (pnut.updateChannel');
+  it('should be able to delete a channel (pnut.updateChannel)');
+
+  it('should be able to retrieve a list of subscribed channels (pnut.subscribed)');
+  it('should be able to retrieve a list of subscribers of a channel (pnut.subscribers)');
+  it('should be able to subscribe to a channel (pnut.subscribe');
+  it('should be able to unsubscribe from a channel (pnut.unsubscribe)');
+
+  it('should be able to mute a channel (pnut.muteChannel)');
+  it('should be able to unmute a channel (pnut.unmuteChannel)');
 });
