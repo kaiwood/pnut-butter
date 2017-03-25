@@ -38,11 +38,15 @@ before(function () {
     .reply(200, {});
 
   nock(base)
-    .post('/posts', {text: 'An awesome post'})
+    .post('/posts', {
+      text: 'An awesome post'
+    })
     .reply(200, {});
 
   nock(base)
-    .put('/posts/1000', {text: 'A revised, but still awesome post'})
+    .put('/posts/1000', {
+      text: 'A revised, but still awesome post'
+    })
     .reply(200, {});
 
   nock(base)
@@ -68,13 +72,37 @@ before(function () {
   nock(base)
     .delete('/posts/1000/bookmark')
     .reply(200, {});
+
+  nock(base)
+    .get('/posts/streams/global')
+    .reply(200, {});
+
+  nock(base)
+    .get('/posts/streams/me')
+    .reply(200, {});
+
+  nock(base)
+    .get('/posts/streams/unified')
+    .reply(200, {});
 });
 
 after(function () {
   nock.cleanAll();
 });
 
-describe('Post endpoints', () => {
+describe('Posts', () => {
+  it('should be able to fetch the the global timeline', function () {;
+    return pnut.global().should.become({});
+  });
+
+  it('should be able to fetch the personal stream', () => {
+    return pnut.personal().should.become({});
+  });
+
+  it('should be able to fetch a unified streams', () => {
+    return pnut.unified().should.become({});
+  });
+
   it('should be able to fetch a post by id', () => {
     return pnut.post(1).should.become({});
   });
@@ -142,5 +170,4 @@ describe('Post endpoints', () => {
   it('should be able to delete a bookmark', () => {
     return pnut.deleteBookmark(1000).should.become({});
   });
-
 });
