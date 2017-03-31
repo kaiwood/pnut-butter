@@ -60,7 +60,7 @@ describe('Channels', () => {
   });
 
   it('should be able to mark all private messages as read', () => {
-    return pnut.markAsRead().should.become({});
+    return pnut.markAllAsRead().should.become({});
   });
 
   it('should be able to create a channel (pnut.createChannel)');
