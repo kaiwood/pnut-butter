@@ -15,7 +15,7 @@ npm install pnut-butter --save
 Fetch the global timeline:
 
 ```javascript
-const pnut = require('pnut');
+const pnut = require('pnut-butter');
 
 pnut.global().then(data => {
   console.log(data);
