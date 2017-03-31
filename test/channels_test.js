@@ -32,6 +32,38 @@ before(function () {
   nock(base)
     .delete('/users/me/channels/num_unread/pm')
     .reply(200, {});
+
+  nock(base)
+    .delete('/channels/1')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/me/channels/subscribed')
+    .reply(200, {});
+
+  nock(base)
+    .get('/channels/1/subscribers')
+    .reply(200, {});
+
+  nock(base)
+    .put('/channels/1/subscribe')
+    .reply(200, {});
+
+  nock(base)
+    .delete('/channels/1/subscribe')
+    .reply(200, {});
+
+  nock(base)
+    .get('/users/me/channels/muted')
+    .reply(200, {});
+
+  nock(base)
+    .put('/channels/1/mute')
+    .reply(200, {});
+
+  nock(base)
+    .delete('/channels/1/mute')
+    .reply(200, {});
 });
 
 after(function () {
@@ -65,13 +97,36 @@ describe('Channels', () => {
 
   it('should be able to create a channel (pnut.createChannel)');
   it('should be able to update a channel (pnut.updateChannel');
-  it('should be able to delete a channel (pnut.updateChannel)');
 
-  it('should be able to retrieve a list of subscribed channels (pnut.subscribed)');
-  it('should be able to retrieve a list of subscribers of a channel (pnut.subscribers)');
-  it('should be able to subscribe to a channel (pnut.subscribe');
-  it('should be able to unsubscribe from a channel (pnut.unsubscribe)');
+  it('should be able to deactivate a channel', () => {
+    return pnut.deactivateChannel(1).should.become({});
+  });
 
-  it('should be able to mute a channel (pnut.muteChannel)');
-  it('should be able to unmute a channel (pnut.unmuteChannel)');
+  it('should be able to retrieve a list of subscribed channels', () => {
+    return pnut.subscribed().should.become({});
+  });
+
+  it('should be able to retrieve a list of subscribers of a channel', () => {
+    return pnut.subscribers(1).should.become({});
+  });
+
+  it('should be able to subscribe to a channel', () => {
+    return pnut.subscribe(1).should.become({});
+  });
+
+  it('should be able to unsubscribe from a channel', () => {
+    return pnut.unsubscribe(1).should.become({});
+  });
+
+  it('should be able to receive a list of muted channels', () => {
+    return pnut.mutedChannels().should.become({});
+  });
+
+  it('should be able to mute a channel (pnut.muteChannel)', () => {
+    return pnut.muteChannel(1).should.become({});
+  });
+
+  it('should be able to unmute a channel (pnut.unmuteChannel)', () => {
+    return pnut.unmuteChannel(1).should.become({});
+  });
 });
