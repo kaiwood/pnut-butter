@@ -36,7 +36,9 @@ pnut.post(1234).then(res => {
 });
 ```
 
-You can find the full documentation with all methods [here](https://kaiwood.github.io/pnut-butter/).
+# Documentation
+
+You can find the full documentation with all methods [here](https://kaiwood.github.io/pnut-butter/)
 
 ## Custom requests
 
