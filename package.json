@@ -4,7 +4,8 @@
   "description": "pnut-butter.js – wrapper library for the pnut.io API",
   "main": "lib/pnut.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha"
+    "test": "node_modules/mocha/bin/mocha",
+    "generate_docs": "jsdoc -R README.md lib/*"
   },
   "repository": {
     "type": "git",
