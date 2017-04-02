@@ -5,7 +5,7 @@
   "main": "lib/pnut.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
-    "generate_docs": "jsdoc -R README.md lib/*"
+    "generate_docs": "jsdoc -d ./docs -R README.md lib/*"
   },
   "repository": {
     "type": "git",
