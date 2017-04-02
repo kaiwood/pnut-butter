@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: posts.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: posts.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+/**
+ * Posts
+ * @module posts
+ */
+module.exports = (api) => {
+  return {
+    /**
+     * A stream of all users' public posts.
+     * @returns {Promise}
+     */
+    global() {
+      return api.request(`/posts/streams/global`);
+    },
+
+    /**
+     * The authenticated user's stream of posts from their followers and themself.
+     * @returns {Promise}
+     */
+    personal() {
+      return api.request('/posts/streams/me');
+    },
+
+
+    /**
+     * A combined Personal Stream including the authenticated user's mentions.
+     * @returns {Promise}
+     */
+    unified() {
+      return api.request('/posts/streams/unified');
+    },
+
+    /**
+     * Retrieve a post object.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    post(postId) {
+      return api.request(`/posts/${postId}`);
+    },
+
+    /**
+     * Retrieve a list of specified post objects. Only retrieves the first 200 found.
+     * @param {...string|Number} ids - Post ids, max 200
+     * @returns {Promise}
+     */
+    posts(...ids) {
+      return api.request(`/posts?ids=${ids.join(',')}`);
+    },
+
+    /**
+     * Retrieve a list of previous versions of a post, not including the most recent.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    revisions(postId) {
+      return api.request(`/posts/${postId}/revisions`);
+    },
+
+    /**
+     * Retrieve a stream of all posts that include the specified tag.
+     * @param {string} tag – A tag name
+     * @returns {Promise}
+     */
+    postsTaggedWith(tag) {
+      return api.request(`/posts/tag/${encodeURI(tag)}`);
+    },
+
+    /**
+     * Retrieve posts within a thread.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    thread(postId) {
+      return api.request(`/posts/${postId}/thread`);
+    },
+
+    /**
+     * Retrieve actions executed against a post.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    actions(postId) {
+      return api.request(`/posts/${postId}/actions`);
+    },
+
+    /**
+     * Retrieve actions executed against the authenticated user and their posts.
+     * @returns {Promise}
+     */
+    usersActions() {
+      return api.request('/users/me/actions');
+    },
+
+    /**
+     * Create a post.
+     * @param {string} text - text for a new post
+     * @returns {Promise}
+     */
+    createPost(text) {
+      return api.request('/posts', {
+        httpMethod: 'POST',
+        data: {
+          text: text
+        }
+      });
+    },
+
+    /**
+     * Edit / revise a post.
+     * @param {string|Number} postId - A post id
+     * @param {string} newText - new text for a post
+     * @returns {Promise}
+     */
+    updatePost(postId, newText) {
+      return api.request(`/posts/${postId}`, {
+        httpMethod: 'PUT',
+        data: {
+          text: newText
+        }
+      });
+    },
+
+    /**
+     * Delete a post.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    deletePost(postId) {
+      return api.request(`/posts/${postId}`, {
+        httpMethod: 'DELETE'
+      });
+    },
+
+    /**
+     * Repost another post.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    repost(postId) {
+      return api.request(`/posts/${postId}/repost`, {
+        httpMethod: 'PUT'
+      });
+    },
+
+    /**
+     * Delete a repost.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    deleteRepost(postId) {
+      return api.request(`/posts/${postId}/repost`, {
+        httpMethod: 'DELETE'
+      });
+    },
+
+    /**
+     * Retrieve a list of bookmarks made by the specified user.
+     * @param {string|Number} userId - A post id
+     * @returns {Promise}
+     */
+    bookmarks(userId) {
+      return api.request(`/users/${userId}/bookmarks`);
+    },
+
+    /**
+     * Bookmark a post.
+     * @param {string} postId - A post id
+     * @returns {Promise}
+     */
+    bookmark(postId) {
+      return api.request(`/posts/${postId}/bookmark`, {
+        httpMethod: 'PUT'
+      });
+    },
+
+    /**
+     * Remove a bookmark for a post.
+     * @param {string|Number} postId - A post id
+     * @returns {Promise}
+     */
+    deleteBookmark(postId) {
+      return api.request(`/posts/${postId}/bookmark`, {
+        httpMethod: 'DELETE'
+      });
+    },
+  };
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sun Apr 02 2017 21:20:57 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
