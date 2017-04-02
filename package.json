@@ -1,7 +1,7 @@
 {
   "name": "pnut-butter",
   "version": "0.0.8",
-  "description": "pnut-butter.js – wrapper library for the pnut.io API",
+  "description": "pnut-butter.js – A modern, promise based wrapper library for the pnut.io API.",
   "main": "lib/pnut.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
