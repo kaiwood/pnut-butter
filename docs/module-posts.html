@@ -1,38 +1,84 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>JSDoc: Module: posts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Documentation Module: posts</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.simplex.css">
+
 </head>
 
 <body>
 
-<div id="main">
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Documentation</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
 
-    <h1 class="page-title">Module: posts</h1>
-
-    
-
+</div>
+</div>
 
 
+<div class="container" id="toc-content">
+<div class="row">
 
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: posts</h1>
 <section>
 
 <header>
     
-        
-            
-        
-    
 </header>
+
 
 <article>
     <div class="container-overview">
@@ -42,23 +88,14 @@
         
 
         
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -68,49 +105,26 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line3">line 3</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         
@@ -123,7 +137,7 @@
 
     
 
-     
+    
 
     
 
@@ -132,33 +146,32 @@
     
         <h3 class="subsection-title">Methods</h3>
 
-        
+        <dl>
             
+<hr>
+<dt>
+    <h4 class="name" id="~actions"><span class="type-signature">&lt;inner> </span>actions(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve actions executed against a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~actions"><span class="type-signature">(inner) </span>actions<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve actions executed against a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -192,6 +205,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -206,12 +220,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -221,51 +240,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line84">line 84</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -277,40 +287,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~bookmark"><span class="type-signature">&lt;inner> </span>bookmark(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Bookmark a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~bookmark"><span class="type-signature">(inner) </span>bookmark<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Bookmark a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -341,6 +353,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -355,12 +368,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -370,51 +388,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line172">line 172</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -426,40 +435,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~bookmarks"><span class="type-signature">&lt;inner> </span>bookmarks(userId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve a list of bookmarks made by the specified user.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~bookmarks"><span class="type-signature">(inner) </span>bookmarks<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve a list of bookmarks made by the specified user.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -493,6 +504,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -507,12 +519,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -522,51 +539,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line163">line 163</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -578,40 +586,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~createPost"><span class="type-signature">&lt;inner> </span>createPost(text)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Create a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~createPost"><span class="type-signature">(inner) </span>createPost<span class="signature">(text)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Create a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -642,6 +652,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -656,12 +667,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -671,51 +687,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line101">line 101</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -727,40 +734,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~deleteBookmark"><span class="type-signature">&lt;inner> </span>deleteBookmark(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Remove a bookmark for a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~deleteBookmark"><span class="type-signature">(inner) </span>deleteBookmark<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Remove a bookmark for a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -794,6 +803,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -808,12 +818,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -823,51 +838,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line183">line 183</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -879,40 +885,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~deletePost"><span class="type-signature">&lt;inner> </span>deletePost(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Delete a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~deletePost"><span class="type-signature">(inner) </span>deletePost<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Delete a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -946,6 +954,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -960,12 +969,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -975,51 +989,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line130">line 130</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1031,40 +1036,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~deleteRepost"><span class="type-signature">&lt;inner> </span>deleteRepost(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Delete a repost.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~deleteRepost"><span class="type-signature">(inner) </span>deleteRepost<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Delete a repost.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1098,6 +1105,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1112,12 +1120,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1127,51 +1140,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line152">line 152</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1183,41 +1187,48 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~global"><span class="type-signature">&lt;inner> </span>global()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        A stream of all users' public posts.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~global"><span class="type-signature">(inner) </span>global<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
+    
+    
 
-
-<div class="description">
-    A stream of all users' public posts.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1227,51 +1238,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line13">line 13</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1283,41 +1285,48 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~personal"><span class="type-signature">&lt;inner> </span>personal()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        The authenticated user's stream of posts from their followers and themself.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~personal"><span class="type-signature">(inner) </span>personal<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
+    
+    
 
-
-<div class="description">
-    The authenticated user's stream of posts from their followers and themself.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1327,51 +1336,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line21">line 21</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1383,40 +1383,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~post"><span class="type-signature">&lt;inner> </span>post(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve a post object.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~post"><span class="type-signature">(inner) </span>post<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve a post object.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1450,6 +1452,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1464,12 +1467,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1479,51 +1487,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line39">line 39</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1535,40 +1534,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~posts"><span class="type-signature">&lt;inner> </span>posts(ids)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve a list of specified post objects. Only retrieves the first 200 found.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~posts"><span class="type-signature">(inner) </span>posts<span class="signature">(ids)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve a list of specified post objects. Only retrieves the first 200 found.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1602,6 +1603,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1616,12 +1618,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1631,51 +1638,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line48">line 48</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1687,40 +1685,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~postsTaggedWith"><span class="type-signature">&lt;inner> </span>postsTaggedWith(tag)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve a stream of all posts that include the specified tag.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~postsTaggedWith"><span class="type-signature">(inner) </span>postsTaggedWith<span class="signature">(tag)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve a stream of all posts that include the specified tag.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1751,6 +1751,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -1765,12 +1766,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1780,51 +1786,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line66">line 66</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1836,40 +1833,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~repost"><span class="type-signature">&lt;inner> </span>repost(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Repost another post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~repost"><span class="type-signature">(inner) </span>repost<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Repost another post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -1901,6 +1900,7 @@
 |
 
 <span class="param-type">Number</span>
+
 
 
             
@@ -1917,12 +1917,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -1932,51 +1937,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line141">line 141</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -1988,40 +1984,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~revisions"><span class="type-signature">&lt;inner> </span>revisions(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve a list of previous versions of a post, not including the most recent.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~revisions"><span class="type-signature">(inner) </span>revisions<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve a list of previous versions of a post, not including the most recent.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2053,6 +2051,7 @@
 |
 
 <span class="param-type">Number</span>
+
 
 
             
@@ -2069,12 +2068,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2084,51 +2088,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line57">line 57</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -2140,40 +2135,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~thread"><span class="type-signature">&lt;inner> </span>thread(postId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve posts within a thread.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~thread"><span class="type-signature">(inner) </span>thread<span class="signature">(postId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Retrieve posts within a thread.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2205,6 +2202,7 @@
 |
 
 <span class="param-type">Number</span>
+
 
 
             
@@ -2221,12 +2219,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2236,51 +2239,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line75">line 75</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -2292,41 +2286,48 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~unified"><span class="type-signature">&lt;inner> </span>unified()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        A combined Personal Stream including the authenticated user's mentions.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~unified"><span class="type-signature">(inner) </span>unified<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
+    
+    
 
-
-<div class="description">
-    A combined Personal Stream including the authenticated user's mentions.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2336,51 +2337,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line30">line 30</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -2392,40 +2384,42 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~updatePost"><span class="type-signature">&lt;inner> </span>updatePost(postId, newText)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Edit / revise a post.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~updatePost"><span class="type-signature">(inner) </span>updatePost<span class="signature">(postId, newText)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
-
-
-<div class="description">
-    Edit / revise a post.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
     
+    
+        <h5>Parameters:</h5>
+        
 
-<table class="params">
+<table class="params table table-striped">
     <thead>
     <tr>
         
@@ -2457,6 +2451,7 @@
 |
 
 <span class="param-type">Number</span>
+
 
 
             
@@ -2482,6 +2477,7 @@
 <span class="param-type">string</span>
 
 
+
             
             </td>
 
@@ -2496,12 +2492,17 @@
     </tbody>
 </table>
 
+    
 
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2511,51 +2512,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line116">line 116</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -2567,41 +2559,48 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
+
+        
+
     
-
-
+</dd>
 
         
             
+<hr>
+<dt>
+    <h4 class="name" id="~usersActions"><span class="type-signature">&lt;inner> </span>usersActions()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Retrieve actions executed against the authenticated user and their posts.
+    </div>
+    
 
     
 
-    <h4 class="name" id="~usersActions"><span class="type-signature">(inner) </span>usersActions<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
     
 
+    
+    
 
-
-<div class="description">
-    Retrieve actions executed against the authenticated user and their posts.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 <dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
@@ -2611,51 +2610,42 @@
 
     
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
+	
 
-    
 
-    
 
-    
+	
 
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="posts.js.html">posts.js</a>, <a href="posts.js.html#line92">line 92</a>
-    </li></ul></dd>
-    
+	
 
-    
+	
 
-    
-
-    
+	
 </dl>
 
 
+    
 
+    
 
+    
 
+    
 
+    
 
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
+    
+    <h5>Returns:</h5>
+    
+            
 
 
 <dl>
@@ -2667,14 +2657,17 @@
 <span class="param-type">Promise</span>
 
 
+
     </dd>
 </dl>
 
-    
-
-
 
         
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -2687,19 +2680,132 @@
 
 
 
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
-</nav>
 
-<br class="clear">
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sun Apr 02 2017 21:42:23 GMT+0200 (CEST)
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on 2017-04-02T21:51:40+02:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
 </body>
 </html>
