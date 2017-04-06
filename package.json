@@ -25,7 +25,9 @@
     "nock": "^9.0.2"
   },
   "dependencies": {
+    "append-query": "^2.0.1",
     "es6-promise": "^4.0.5",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "snake-case": "^2.1.0"
   }
 }
