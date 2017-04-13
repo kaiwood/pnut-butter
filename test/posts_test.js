@@ -75,7 +75,17 @@ before(function () {
 
   nock(base)
     .get('/posts/streams/global')
-    .reply(200, {});
+    .reply(200, {data: [
+      { id: 2000 },
+      { id: 2001 }
+    ]});
+
+  nock(base)
+    .get('/posts/streams/global?before_id=2000')
+    .reply(200, {data: [
+      { id: 1998 },
+      { id: 1999 }
+    ]});
 
   nock(base)
     .get('/posts/streams/me')
@@ -91,8 +101,22 @@ after(function () {
 });
 
 describe('Posts', () => {
-  it('should be able to fetch the the global timeline', function () {;
-    return pnut.global().should.become({});
+  it('should be able to fetch the the global timeline', () => {;
+    return pnut.global().should.become({
+      data: [
+        { id: 2000 },
+        { id: 2001 }
+      ]
+    });
+  });
+
+  it('should be able to fetch the global timeline with additional parameters', () => {
+    return pnut.global({ beforeId: 2000 }).should.become({
+      data: [
+        { id: 1998 },
+        { id: 1999 }
+      ]
+    });
   });
 
   it('should be able to fetch the personal stream', () => {
