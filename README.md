@@ -36,9 +36,28 @@ pnut.post(1234).then(res => {
 });
 ```
 
+Most methods allow any arbiritary, additional URL parameters that can be found in the [official documentation](https://pnut.io/docs/api). For example, you can use something like this:
+
+```javascript
+pnut.mentions({beforeId: 1235})
+```
+…to get posts in the mentions category before the specified id. We generate them dynamically and convert the parameters to snake_case automatically for you, so it doesn't matter if you write:
+
+```javascript
+pnut.global({sinceId: 4567})
+```
+
+or
+
+```javascript
+pnut.global({since_id: 4567})
+```
+
+Both versions work, it's just syntactic sugar and a matter of personal preference.
+
 ## Documentation
 
-You can find the full documentation with all methods [here](https://kaiwood.github.io/pnut-butter/)
+You can find the full documentation of all methods [here](https://kaiwood.github.io/pnut-butter/).
 
 ## Custom requests
 
