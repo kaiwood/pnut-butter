@@ -27,6 +27,7 @@
   "dependencies": {
     "append-query": "^2.0.1",
     "es6-promise": "^4.0.5",
+    "form-data": "^2.1.4",
     "isomorphic-fetch": "^2.2.1",
     "snake-case": "^2.1.0"
   }
