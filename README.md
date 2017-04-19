@@ -87,7 +87,7 @@ pnut.custom('/posts/streams/me?before_id=1234').then(res => {
 
 ## Authentication
 
-For everything that requires an authenticated user, you will need an access token. You can create one in the setting of your account on pnut.io under "Develop" menu.
+For everything that requires an authenticated user, you will need an access token. You can create one in the setting of your account on pnut.io under the "Develop" menu.
 
 You can set it like this:
 
@@ -102,6 +102,52 @@ pnut.mentions('me').then(data => {
 ```
 
 Please consult the [pnut docs](https://pnut.io/docs) for further information about how authentication is handled in the network, how to aquire a "real" token able to authenticate multiple users and so on.
+
+## App Streams
+
+pnut-butter has support for creating, managing and reading app streams (you need a properly "signed" pair of Client ID and Client Secret to use this).
+
+First, you need to request an app stream access token:
+
+```js
+const pnut = require('pnut-butter');
+pnut.requestAppAccessToken(YOUR_CLIENT_ID, YOUR_CLIENT_SECRET).then(res => console.log(res));
+```
+
+If successful, you will get back a proper token in the response. Set it via:
+
+```js
+pnut.token = YOUR_ACCESS_TOKEN
+```
+
+Next step is to setup your app stream with up to 5 (!) options (post, bookmark, follow, mute, block, message, channel, channel_subscription, token, user) and a key name:
+
+```js
+pnut.createStream({
+  objectTypes: ["post", "bookmark", "follow"],
+  key: "myfancykeyname"
+}).then(res => console.log(res));
+```
+
+You should now be set and can create a working websocket, where you need to listen to the typical websocket events:
+
+```js
+const ws = pnut.createAppStreamSocket("myfancykeyname");
+
+ws.on("open", event => {
+  console.log("Opening app stream");
+});
+
+ws.on("message", event => {
+  console.log(event.data);
+});
+
+ws.on("close", event => {
+  console.log("Closing app stream", event.code, event.reason);
+});
+```
+
+You can now work on the streaming data from the "message" event. Keep in mind that you might want to reconnect to the socket in case it closes on the server side.
 
 ## Collaboration / Project status
 
