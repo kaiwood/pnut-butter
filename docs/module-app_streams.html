@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Module: system</title>
+	<title>Documentation Module: app_streams</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: system</h1>
+	<h1 class="page-title">Module: app_streams</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description">System</div>
+            <div class="description">App Streams</div>
         
 
         
@@ -150,7 +150,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="~config"><span class="type-signature">&lt;inner> </span>config( [params])</h4>
+    <h4 class="name" id="~createAppStreamSocket"><span class="type-signature">&lt;inner> </span>createAppStreamSocket(streamKey)</h4>
     
     
 </dt>
@@ -158,7 +158,755 @@
 
     
     <div class="description">
-        Retrieve a list of parameters for interacting with the API.
+        Create and return a websocket with an app stream.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>streamKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">streamKey</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A valid stream key</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A connected websocket
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~createStream"><span class="type-signature">&lt;inner> </span>createStream(options)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Create an app stream for the authenticated app.
+
+The options object must at least include "objectType",
+which is an array of up to 5(!) valid apps streams to subscribe to.
+
+Allowed values are: post, bookmark, follow, mute, block, message,
+channel, channel_subscription, token and user
+
+You can optionally add "key: 'myfancykeyname'" to name your stream.
+If you do not supply your own key, you get back a generated one from
+the API which you need to keep track of.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Option object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~deleteStream"><span class="type-signature">&lt;inner> </span>deleteStream(streamKey)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Delete a specific app stream by its key.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>streamKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A stream key</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~deleteStreams"><span class="type-signature">&lt;inner> </span>deleteStreams()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Delete all app streams for the authorized app.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~stream"><span class="type-signature">&lt;inner> </span>stream(streamKey [, params])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a specific app stream by its key.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>streamKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A stream key</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Additional URI parameters</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~streams"><span class="type-signature">&lt;inner> </span>streams( [params])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a specific app stream by its key.
     </div>
     
 
@@ -310,7 +1058,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="~stats"><span class="type-signature">&lt;inner> </span>stats( [params])</h4>
+    <h4 class="name" id="~updateStream"><span class="type-signature">&lt;inner> </span>updateStream(options)</h4>
     
     
 </dt>
@@ -318,7 +1066,11 @@
 
     
     <div class="description">
-        Retrieve basic statistics for the network.
+        Update an app stream for the authorized app.
+
+Same rules as in createStream apply, but "key"
+is no longer optional and must be supplied to identify
+the stream you want to update.
     </div>
     
 
@@ -341,8 +1093,6 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -355,7 +1105,7 @@
 
         <tr>
             
-                <td class="name"><code>params</code></td>
+                <td class="name"><code>options</code></td>
             
 
             <td class="type">
@@ -369,20 +1119,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">Additional URI parameters</td>
+            <td class="description last">Options object</td>
         </tr>
 
     

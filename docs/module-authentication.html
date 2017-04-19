@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Global</title>
+	<title>Documentation Module: authentication</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,15 +72,10 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Global</h1>
+	<h1 class="page-title">Module: authentication</h1>
 <section>
 
 <header>
-    
-        <h2>
-        
-        </h2>
-        
     
 </header>
 
@@ -89,6 +84,8 @@
     <div class="container-overview">
     
         
+            <div class="description">Authentication</div>
+        
 
         
 <dl class="details">
@@ -144,70 +141,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="token">
-    <h4 id="token"><span class="type-signature"></span>token<span class="type-signature"></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        Set auth token.
-    </div>
-    
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -217,7 +150,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="custom"><span class="type-signature"></span>custom(endpoint, method)</h4>
+    <h4 class="name" id="~authenticateClientURL"><span class="type-signature">&lt;inner> </span>authenticateClientURL(redirectURI [, scope])</h4>
     
     
 </dt>
@@ -225,7 +158,235 @@
 
     
     <div class="description">
-        Send request with custom endpoint / parameters.
+        Generate a URL for client side authentication.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code></code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Client ID token</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>redirectURI</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">URI you want to be redirected at</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The scope you want to request</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A ready-to-use authentication url
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~requestAppAccessToken"><span class="type-signature">&lt;inner> </span>requestAppAccessToken(clientId, clientSecret)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Request an app access token
     </div>
     
 
@@ -260,7 +421,7 @@
 
         <tr>
             
-                <td class="name"><code>endpoint</code></td>
+                <td class="name"><code>clientId</code></td>
             
 
             <td class="type">
@@ -277,14 +438,14 @@
 
             
 
-            <td class="description last">The custom call</td>
+            <td class="description last">The client id</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>method</code></td>
+                <td class="name"><code>clientSecret</code></td>
             
 
             <td class="type">
@@ -301,7 +462,7 @@
 
             
 
-            <td class="description last">HTTP verb, defaults to GET</td>
+            <td class="description last">The client secret</td>
         </tr>
 
     
@@ -373,106 +534,6 @@
     <dd>
         
 <span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="pnut"><span class="type-signature"></span>pnut()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        pnut-butter.js
-
-Wrapper library for the pnut.io API.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
 
 
 
