@@ -111,7 +111,8 @@ First, you need to request an app stream access token:
 
 ```js
 const pnut = require('pnut-butter');
-pnut.requestAppAccessToken(YOUR_CLIENT_ID, YOUR_CLIENT_SECRET).then(res => console.log(res));
+pnut.requestAppAccessToken(YOUR_CLIENT_ID, YOUR_CLIENT_SECRET)
+  .then(res => console.log(res));
 ```
 
 If successful, you will get back a proper token in the response. Set it via:
