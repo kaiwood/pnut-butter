@@ -130,10 +130,14 @@ pnut.createStream({
 }).then(res => console.log(res));
 ```
 
-You should now be set and can create a working websocket, where you need to listen to the typical websocket events:
+For reading the stream, we provide a separate module you have to require, that preconfigures a web socket connection for you, where you can simply listen on the "message" event to read the stream:
 
 ```js
-const ws = pnut.createAppStreamSocket("myfancykeyname");
+const pnut = require("pnut-butter");
+const AppStreamSocket = require("pnut-butter/lib/app_stream_socket");
+
+pnut.token = "MY_VALID_ACCESS_TOKEN";
+const ws = AppStreamSocket("myfancykeyname");
 
 ws.on("open", event => {
   console.log("Opening app stream");
