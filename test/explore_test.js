@@ -16,14 +16,14 @@ before(function() {
 
 describe("Explore", () => {
   it("should be able to fetch the 'explore conversations' stream", () => {
-    pnut.conversations().should.become({});
+    return pnut.conversations().should.become({});
   });
 
   it("should be able to fetch the 'explore photos' stream", () => {
-    pnut.photos().should.become({});
+    return pnut.photos().should.become({});
   });
 
   it("should be able to fetch the 'explore trending' stream", () => {
-    pnut.trending().should.become({});
+    return pnut.trending().should.become({});
   });
 });
