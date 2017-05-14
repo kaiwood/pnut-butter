@@ -39,3 +39,4 @@ jspm_packages
 index.js
 .vscode
 out
+dist

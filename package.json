@@ -2,9 +2,10 @@
   "name": "pnut-butter",
   "version": "0.7.2",
   "description": "pnut-butter.js – A modern, promise based wrapper library for the pnut.io API.",
-  "main": "lib/pnut.js",
+  "main": "dist/pnut.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha",
+    "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
     "generate_docs": "jsdoc -d ./docs -t ./node_modules/ink-docstrap/template -R README.md lib/*"
   },
   "repository": {
@@ -26,6 +27,8 @@
   },
   "dependencies": {
     "append-query": "^2.0.1",
+    "babel-cli": "6",
+    "babel-preset-es2015": "6",
     "death": "^1.1.0",
     "es6-promise": "^4.0.5",
     "faye-websocket": "^0.11.1",
