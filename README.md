@@ -103,6 +103,33 @@ pnut.mentions('me').then(data => {
 
 Please consult the [pnut docs](https://pnut.io/docs) for further information about how authentication is handled in the network, how to aquire a "real" token able to authenticate multiple users and so on.
 
+## Changing profile / cover images
+
+Uploading images is currently only supported on the client side. You can give the DOM node for an upload form containing file fields for "avatar" or "cover" as argument to the corresponding methods `uploadAvatar` / `uploadCover`.
+
+A basic HTML form would look something like this:
+
+```html
+<form id="avatar-form">
+  <input type="file" name="avatar">
+</form>
+```
+
+Depending on how your application is set up, an upload function looks somewhat like this:
+
+```javascript
+function upload(event) {
+  event.preventDefault();
+
+  const form = document.querySelector("#avatar-form");
+  pnut.uploadAvatar(form).then(res => {
+    console.log(res);
+  });
+}
+```
+
+Both, `uploadAvatar` and `uploadCover` will handle server side uploads in a future release.
+
 ## App Streams
 
 pnut-butter has support for creating, managing and reading app streams (you need a properly "signed" pair of Client ID and Client Secret to use this).

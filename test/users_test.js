@@ -76,9 +76,13 @@ describe("User endpoints", () => {
     expect(pnut.avatar(1)).to.be.fulfilled;
   });
 
+  it("should be able to upload a new avatar image");
+
   it("should be able to fetch a users cover", () => {
     expect(pnut.cover("1")).to.be.fulfilled;
   });
+
+  it("should be able to upload a new cover image");
 
   it("should be able to update the profile with a single object", () => {
     return pnut
