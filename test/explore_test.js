@@ -12,6 +12,7 @@ before(function() {
   nock(base).get("/posts/streams/explore/conversations").reply(200, {});
   nock(base).get("/posts/streams/explore/photos").reply(200, {});
   nock(base).get("/posts/streams/explore/trending").reply(200, {});
+  nock(base).get("/posts/streams/explore/missed_conversations").reply(200, {});
 });
 
 describe("Explore", () => {
@@ -25,5 +26,9 @@ describe("Explore", () => {
 
   it("should be able to fetch the 'explore trending' stream", () => {
     return pnut.trending().should.become({});
+  });
+
+  it("should be able to fetch the 'missed conversations' stream", () => {
+    return pnut.missedConversations().should.become({});
   });
 });
