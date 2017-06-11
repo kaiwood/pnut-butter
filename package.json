@@ -12,12 +12,23 @@
     "type": "git",
     "url": "git+https://github.com/kaiwood/pnut-butter.git"
   },
-  "author": "Kai Wood <kwood@kwd.io> (http://kwd.io)",
+  "author": {
+    "name": "Kai Wood",
+    "email": "kwood@kwd.io",
+    "url": "https://kwd.io"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaiwood/pnut-butter/issues"
+    "url": "https://github.com/kaiwood/pnut-butter/issues",
+    "email": "kwood@kwd.io"
   },
   "homepage": "https://github.com/kaiwood/pnut-butter#readme",
+  "keywords": [
+    "pnut",
+    "pnut.io",
+    "library",
+    "api"
+  ],
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
