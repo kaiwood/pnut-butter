@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0
+
+- Stream marker support
+
 ## 0.9.0
 
 - Add "Missed Conversations" stream
