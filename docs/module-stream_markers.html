@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Module: app_streams</title>
+	<title>Documentation Module: stream_markers</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: app_streams</h1>
+	<h1 class="page-title">Module: stream_markers</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description">App Streams</div>
+            <div class="description">Stream markers</div>
         
 
         
@@ -150,7 +150,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="~createStream"><span class="type-signature">&lt;inner> </span>createStream(options)</h4>
+    <h4 class="name" id="~marker"><span class="type-signature">&lt;inner> </span>marker(name, id)</h4>
     
     
 </dt>
@@ -158,17 +158,13 @@
 
     
     <div class="description">
-        Create an app stream for the authenticated app.
+        Set a single stream marker.
 
-The options object must at least include "objectType",
-which is an array of up to 5(!) valid apps streams to subscribe to.
-
-Allowed values are: post, bookmark, follow, mute, block, message,
-channel, channel_subscription, token and user
-
-You can optionally add "key: 'myfancykeyname'" to name your stream.
-If you do not supply your own key, you get back a generated one from
-the API which you need to keep track of.
+Valid values for the "name" argument are:
+- global
+- personal
+- mentions
+- channel:id
     </div>
     
 
@@ -203,155 +199,7 @@ the API which you need to keep track of.
 
         <tr>
             
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Option object.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~deleteStream"><span class="type-signature">&lt;inner> </span>deleteStream(streamKey)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Delete a specific app stream by its key.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>streamKey</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
@@ -368,244 +216,23 @@ the API which you need to keep track of.
 
             
 
-            <td class="description last">A stream key</td>
+            <td class="description last">Name of the markable stream</td>
         </tr>
 
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~deleteStreams"><span class="type-signature">&lt;inner> </span>deleteStreams()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Delete all app streams for the authorized app.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~stream"><span class="type-signature">&lt;inner> </span>stream(streamKey [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Get a specific app stream by its key.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>streamKey</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
 <span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
 
 
 
@@ -613,52 +240,10 @@ the API which you need to keep track of.
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">A stream key</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Additional URI parameters</td>
+            <td class="description last">ID of the post / message</td>
         </tr>
 
     
@@ -740,164 +325,12 @@ the API which you need to keep track of.
         
 
     
-</dd>
-
+        <h5>Example</h5>
         
-            
-<hr>
-<dt>
-    <h4 class="name" id="~streams"><span class="type-signature">&lt;inner> </span>streams( [params])</h4>
-    
-    
-</dt>
-<dd>
+    <pre class="sunlight-highlight-javascript">pnut.marker(&quot;channel:18&quot;, 15100).then(res =&gt; {
+ console.log(res);
+});</pre>
 
-    
-    <div class="description">
-        Get a specific app stream by its key.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Additional URI parameters</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -906,7 +339,7 @@ the API which you need to keep track of.
             
 <hr>
 <dt>
-    <h4 class="name" id="~updateStream"><span class="type-signature">&lt;inner> </span>updateStream(options)</h4>
+    <h4 class="name" id="~markers"><span class="type-signature">&lt;inner> </span>markers(markerObjects)</h4>
     
     
 </dt>
@@ -914,11 +347,7 @@ the API which you need to keep track of.
 
     
     <div class="description">
-        Update an app stream for the authorized app.
-
-Same rules as in createStream apply, but "key"
-is no longer optional and must be supplied to identify
-the stream you want to update.
+        Set up to 10 markers at once, like described in the pnut docs.
     </div>
     
 
@@ -953,13 +382,13 @@ the stream you want to update.
 
         <tr>
             
-                <td class="name"><code>options</code></td>
+                <td class="name"><code>markerObjects</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">array</span>
 
 
 
@@ -970,7 +399,7 @@ the stream you want to update.
 
             
 
-            <td class="description last">Options object</td>
+            <td class="description last">An array of marker objects</td>
         </tr>
 
     
@@ -1050,6 +479,15 @@ the stream you want to update.
 
 
         
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">pnut.markers([
+    { name: &quot;channel:18&quot;, id: 15100 },
+    { name: &quot;channel:19&quot;, id: 15101 }
+]).then(res =&gt; console.log(res));</pre>
+
 
     
 </dd>
@@ -1104,7 +542,7 @@ the stream you want to update.
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2017-07-01T11:09:52+02:00
+		on 2017-07-01T11:09:53+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
