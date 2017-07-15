@@ -161,7 +161,7 @@ For reading the stream, we provide a separate module you have to require, that p
 
 ```js
 const pnut = require("pnut-butter");
-const AppStreamSocket = require("pnut-butter/lib/app_stream_socket");
+const AppStreamSocket = require("pnut-butter/dist/app_stream_socket");
 
 pnut.token = "MY_VALID_ACCESS_TOKEN";
 const ws = AppStreamSocket("myfancykeyname");
