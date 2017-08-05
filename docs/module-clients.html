@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Module: explore</title>
+	<title>Documentation Module: clients</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Module: explore</h1>
+	<h1 class="page-title">Module: clients</h1>
 <section>
 
 <header>
@@ -84,7 +84,7 @@
     <div class="container-overview">
     
         
-            <div class="description">Explore</div>
+            <div class="description">Clients</div>
         
 
         
@@ -150,7 +150,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="~conversations"><span class="type-signature">&lt;inner> </span>conversations( [params])</h4>
+    <h4 class="name" id="~client"><span class="type-signature">&lt;inner> </span>client(clientId)</h4>
     
     
 </dt>
@@ -158,7 +158,7 @@
 
     
     <div class="description">
-        New conversations just starting on pnut.io
+        Retrieve details on a public client.
     </div>
     
 
@@ -181,8 +181,6 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -195,13 +193,13 @@
 
         <tr>
             
-                <td class="name"><code>params</code></td>
+                <td class="name"><code>clientId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">string</span>
 
 
 
@@ -209,20 +207,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">Additional URI parameters</td>
+            <td class="description last">A client id</td>
         </tr>
 
     
@@ -282,6 +270,34 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">pnut.client(&quot;3PFPMSet53RutGINA8e5HWqYg_UCDHad&quot;).then(res =&gt; {
+ console.log(res);
+});</pre>
+
 
     
 </dd>
@@ -290,7 +306,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="~missedConversations"><span class="type-signature">&lt;inner> </span>missedConversations( [params])</h4>
+    <h4 class="name" id="~clientsByUser"><span class="type-signature">&lt;inner> </span>clientsByUser(userId)</h4>
     
     
 </dt>
@@ -298,7 +314,7 @@
 
     
     <div class="description">
-        Posts with missed conversations
+        Retrieve a list of active clients created by a user.
     </div>
     
 
@@ -321,8 +337,6 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
-        
 
         
 
@@ -335,13 +349,16 @@
 
         <tr>
             
-                <td class="name"><code>params</code></td>
+                <td class="name"><code>userId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">string</span>
+|
+
+<span class="param-type">number</span>
 
 
 
@@ -349,20 +366,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">Additional URI parameters</td>
+            <td class="description last">A user id</td>
         </tr>
 
     
@@ -422,286 +429,34 @@
     
 
     
-
+    <h5>Returns:</h5>
     
-</dd>
+            
 
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            
-<hr>
-<dt>
-    <h4 class="name" id="~photos"><span class="type-signature">&lt;inner> </span>photos( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Posts with photos on pnut.io
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
+<span class="param-type">Promise</span>
 
 
 
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Additional URI parameters</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
+    </dd>
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="~trending"><span class="type-signature">&lt;inner> </span>trending( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Posts trending on pnut.io
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
         
 
-<table class="params table table-striped">
-    <thead>
-    <tr>
+    
+        <h5>Example</h5>
         
-        <th>Name</th>
-        
+    <pre class="sunlight-highlight-javascript">pnut.clientsByUser(&quot;@33MHz&quot;).then(res =&gt; {
+ console.log(res);
+});</pre>
 
-        <th>Type</th>
-
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>params</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Additional URI parameters</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
