@@ -5,36 +5,42 @@ ignore:
   'npm:brace-expansion:20170302':
     - fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.108Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - fstream-ignore > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - fstream-ignore > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar-pack > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar-pack > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar-pack > fstream-ignore > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar-pack > fstream-ignore > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
     - node-pre-gyp > tar-pack > tar > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
-        expires: '2017-08-13T09:40:47.109Z'
+        expires: '2017-10-30T13:59:08.481Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:ms:20170412':
     - node-pre-gyp > tar-pack > debug > ms:
-        patched: '2017-07-14T09:38:55.375Z'
+        patched: '2017-09-30T13:56:39.389Z'
+  'npm:debug:20170905':
+    - node-pre-gyp > tar-pack > debug:
+        patched: '2017-09-30T13:56:39.389Z'
+  'npm:tough-cookie:20170905':
+    - node-pre-gyp > request > tough-cookie:
+        patched: '2017-09-30T13:56:39.389Z'

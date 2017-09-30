@@ -47,8 +47,8 @@
     "faye-websocket": "^0.11.1",
     "form-data": "^2.2.0",
     "isomorphic-fetch": "^2.2.1",
-    "snake-case": "^2.1.0",
-    "snyk": "^1.38.1"
+    "snake-case": "2.1.0",
+    "snyk": "1.38.1"
   },
   "snyk": true
 }
