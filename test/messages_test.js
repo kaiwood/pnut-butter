@@ -9,17 +9,29 @@ const pnut = require("../lib/pnut");
 before(function() {
   let base = "https://api.pnut.io/v0";
 
-  nock(base).get("/somewhere").reply(200, {});
+  nock(base)
+    .get("/somewhere")
+    .reply(200, {});
 
-  nock(base).get("/channels/1/messages/1").reply(200, {});
+  nock(base)
+    .get("/channels/1/messages/1")
+    .reply(200, {});
 
-  nock(base).get("/channels/1/messages/1/thread").reply(200, {});
+  nock(base)
+    .get("/channels/1/messages/1/thread")
+    .reply(200, {});
 
-  nock(base).get("/channels/messages?ids=1,2,3").reply(200, {});
+  nock(base)
+    .get("/channels/messages?ids=1,2,3")
+    .reply(200, {});
 
-  nock(base).get("/channels/1/messages").reply(200, {});
+  nock(base)
+    .get("/channels/1/messages")
+    .reply(200, {});
 
-  nock(base).get("/users/me/messages").reply(200, {});
+  nock(base)
+    .get("/users/me/messages")
+    .reply(200, {});
 
   nock(base)
     .post("/channels/1/messages", {
@@ -27,13 +39,21 @@ before(function() {
     })
     .reply(200, {});
 
-  nock(base).delete("/channels/1/messages/1").reply(200, {});
+  nock(base)
+    .delete("/channels/1/messages/1")
+    .reply(200, {});
 
-  nock(base).get("/channels/1/sticky_messages").reply(200, {});
+  nock(base)
+    .get("/channels/1/sticky_messages")
+    .reply(200, {});
 
-  nock(base).put("/channels/1/messages/1/sticky").reply(200, {});
+  nock(base)
+    .put("/channels/1/messages/1/sticky")
+    .reply(200, {});
 
-  nock(base).delete("/channels/1/messages/1/sticky").reply(200, {});
+  nock(base)
+    .delete("/channels/1/messages/1/sticky")
+    .reply(200, {});
 
   nock(base)
     .post("/channels/pm/messages", {
@@ -47,6 +67,10 @@ before(function() {
       destinations: [1, 5, "@kwood"],
       text: "A new PM to multiple users"
     })
+    .reply(200, {});
+
+  nock(base)
+    .get("/channels/messages/search?channel_ids=600,18")
     .reply(200, {});
 });
 
@@ -105,5 +129,9 @@ describe("Messages", () => {
     return pnut
       .sendMessage([1, 5, "@kwood"], "A new PM to multiple users")
       .should.become({});
+  });
+
+  it("should be possible to search for messages", () => {
+    return pnut.searchMessages({ channelIds: [600, 18] }).should.become({});
   });
 });
