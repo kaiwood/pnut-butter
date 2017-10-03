@@ -97,6 +97,10 @@ before(function() {
   nock(base)
     .put("/users/me/presence", { presence: "A presence message" })
     .reply(200, {});
+
+  nock(base)
+    .get("/users/search?q=news&types=feed")
+    .reply(200, {});
 });
 
 after(function() {
@@ -195,5 +199,9 @@ describe("User endpoints", () => {
 
   it("should be able to update presence with an optional message", () => {
     return pnut.updatePresence("A presence message").should.become({});
+  });
+
+  it("should be possible to search for users", () => {
+    return pnut.searchUsers({ q: "news", types: "feed" });
   });
 });
