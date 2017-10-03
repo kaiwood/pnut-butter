@@ -111,6 +111,10 @@ before(function() {
   nock(base)
     .get("/posts/streams/unified")
     .reply(200, {});
+
+  nock(base)
+    .get("/posts/search?tags=mndp,MondayNightDanceParty")
+    .reply(200, {});
 });
 
 after(function() {
@@ -221,5 +225,11 @@ describe("Posts", () => {
 
   it("should be able to delete a bookmark", () => {
     return pnut.deleteBookmark(1000).should.become({});
+  });
+
+  it("should be possbible to search for posts", () => {
+    return pnut
+      .searchPosts({ tags: ["mndp", "MondayNightDanceParty"] })
+      .should.become({});
   });
 });
