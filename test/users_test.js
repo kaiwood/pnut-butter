@@ -10,49 +10,89 @@ const pnut = require("../lib/pnut");
 before(function() {
   let base = "https://api.pnut.io/v0";
 
-  nock(base).get("/users/1").reply(200, {});
+  nock(base)
+    .get("/users/1")
+    .reply(200, {});
 
-  nock(base).get("/users?ids=4,12,1000").reply(200, {});
+  nock(base)
+    .get("/users?ids=4,12,1000")
+    .reply(200, {});
 
-  nock(base).get("/users/1/mentions").reply(200, {});
+  nock(base)
+    .get("/users/1/mentions")
+    .reply(200, {});
 
-  nock(base).get("/users/1/posts").reply(200, {});
+  nock(base)
+    .get("/users/1/posts")
+    .reply(200, {});
 
-  nock(base).get("/users/1/avatar").reply(200, {});
+  nock(base)
+    .get("/users/1/avatar")
+    .reply(200, {});
 
-  nock(base).get("/users/1/cover").reply(200, {});
+  nock(base)
+    .get("/users/1/cover")
+    .reply(200, {});
 
   nock(base)
     .put("/users/me", { locale: "de_DE", timezone: "Europe/Berlin" })
     .reply(200, {});
 
-  nock(base).patch("/users/me", { name: "pnut-butter user" }).reply(200, {});
+  nock(base)
+    .patch("/users/me", { name: "pnut-butter user" })
+    .reply(200, {});
 
-  nock(base).get("/users/1/following").reply(200, {});
+  nock(base)
+    .get("/users/1/following")
+    .reply(200, {});
 
-  nock(base).get("/users/1/followers").reply(200, {});
+  nock(base)
+    .get("/users/1/followers")
+    .reply(200, {});
 
-  nock(base).put("/users/2/follow").reply(200, {});
+  nock(base)
+    .put("/users/2/follow")
+    .reply(200, {});
 
-  nock(base).delete("/users/2/follow").reply(200, {});
+  nock(base)
+    .delete("/users/2/follow")
+    .reply(200, {});
 
-  nock(base).get("/users/me/muted").reply(200, {});
+  nock(base)
+    .get("/users/me/muted")
+    .reply(200, {});
 
-  nock(base).put("/users/2/mute").reply(200, {});
+  nock(base)
+    .put("/users/2/mute")
+    .reply(200, {});
 
-  nock(base).delete("/users/2/mute").reply(200, {});
+  nock(base)
+    .delete("/users/2/mute")
+    .reply(200, {});
 
-  nock(base).get("/users/me/blocked").reply(200, {});
+  nock(base)
+    .get("/users/me/blocked")
+    .reply(200, {});
 
-  nock(base).put("/users/2/block").reply(200, {});
+  nock(base)
+    .put("/users/2/block")
+    .reply(200, {});
 
-  nock(base).delete("/users/2/block").reply(200, {});
+  nock(base)
+    .delete("/users/2/block")
+    .reply(200, {});
 
-  nock(base).get("/presence").reply(200, {});
+  nock(base)
+    .get("/presence")
+    .reply(200, {});
 
-  nock(base).get("/presence/2").reply(200, {});
+  nock(base)
+    .get("/presence/2")
+    .reply(200, {});
 
-  nock(base).put("/users/me/presence").reply(200, {});
+  nock(base)
+    .put("/users/me/presence")
+    .reply(200, {});
 
   nock(base)
     .put("/users/me/presence", { presence: "A presence message" })
