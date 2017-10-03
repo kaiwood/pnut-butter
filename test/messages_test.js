@@ -68,6 +68,10 @@ before(function() {
       text: "A new PM to multiple users"
     })
     .reply(200, {});
+
+  nock(base)
+    .get("/channels/messages/search?channel_ids=600,18")
+    .reply(200, {});
 });
 
 after(function() {
@@ -125,5 +129,9 @@ describe("Messages", () => {
     return pnut
       .sendMessage([1, 5, "@kwood"], "A new PM to multiple users")
       .should.become({});
+  });
+
+  it("should be possible to search for messages", () => {
+    return pnut.searchMessages({ channelIds: [600, 18] }).should.become({});
   });
 });
