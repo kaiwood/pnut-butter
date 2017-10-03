@@ -64,6 +64,12 @@ before(function() {
   nock(base)
     .delete("/channels/1/mute")
     .reply(200, {});
+
+  nock(base)
+    .get(
+      "/channels/search?is_public=1&channel_types=io.pnut.core.chat&categories=fun"
+    )
+    .reply(200, {});
 });
 
 after(function() {
@@ -128,5 +134,15 @@ describe("Channels", () => {
 
   it("should be able to unmute a channel (pnut.unmuteChannel)", () => {
     return pnut.unmuteChannel(1).should.become({});
+  });
+
+  it("should be possible to search for channels", () => {
+    return pnut
+      .searchChannels({
+        isPublic: 1,
+        channelTypes: "io.pnut.core.chat",
+        categories: "fun"
+      })
+      .should.become({});
   });
 });
