@@ -9,19 +9,33 @@ const pnut = require("../lib/pnut");
 before(function() {
   let base = "https://api.pnut.io/v0";
 
-  nock(base).get("/posts/1").reply(200, {});
+  nock(base)
+    .get("/posts/1")
+    .reply(200, {});
 
-  nock(base).get("/posts?ids=4,12,1000").reply(200, {});
+  nock(base)
+    .get("/posts?ids=4,12,1000")
+    .reply(200, {});
 
-  nock(base).get("/posts/1/revisions").reply(200, {});
+  nock(base)
+    .get("/posts/1/revisions")
+    .reply(200, {});
 
-  nock(base).get("/posts/tag/pnut-butter").reply(200, {});
+  nock(base)
+    .get("/posts/tag/pnut-butter")
+    .reply(200, {});
 
-  nock(base).get("/posts/1/thread").reply(200, {});
+  nock(base)
+    .get("/posts/1/thread")
+    .reply(200, {});
 
-  nock(base).get("/posts/1/actions").reply(200, {});
+  nock(base)
+    .get("/posts/1/actions")
+    .reply(200, {});
 
-  nock(base).get("/users/me/actions").reply(200, {});
+  nock(base)
+    .get("/users/me/actions")
+    .reply(200, {});
 
   nock(base)
     .post("/posts", {
@@ -54,29 +68,49 @@ before(function() {
     })
     .reply(200, {});
 
-  nock(base).delete("/posts/1000").reply(200, {});
+  nock(base)
+    .delete("/posts/1000")
+    .reply(200, {});
 
-  nock(base).put("/posts/1000/repost").reply(200, {});
+  nock(base)
+    .put("/posts/1000/repost")
+    .reply(200, {});
 
-  nock(base).delete("/posts/1000/repost").reply(200, {});
+  nock(base)
+    .delete("/posts/1000/repost")
+    .reply(200, {});
 
-  nock(base).get("/users/1/bookmarks").reply(200, {});
+  nock(base)
+    .get("/users/1/bookmarks")
+    .reply(200, {});
 
-  nock(base).put("/posts/1000/bookmark").reply(200, {});
+  nock(base)
+    .put("/posts/1000/bookmark")
+    .reply(200, {});
 
-  nock(base).delete("/posts/1000/bookmark").reply(200, {});
+  nock(base)
+    .delete("/posts/1000/bookmark")
+    .reply(200, {});
 
-  nock(base).get("/posts/streams/global").reply(200, {
-    data: [{ id: 2000 }, { id: 2001 }]
-  });
+  nock(base)
+    .get("/posts/streams/global")
+    .reply(200, {
+      data: [{ id: 2000 }, { id: 2001 }]
+    });
 
-  nock(base).get("/posts/streams/global?before_id=2000").reply(200, {
-    data: [{ id: 1998 }, { id: 1999 }]
-  });
+  nock(base)
+    .get("/posts/streams/global?before_id=2000")
+    .reply(200, {
+      data: [{ id: 1998 }, { id: 1999 }]
+    });
 
-  nock(base).get("/posts/streams/me").reply(200, {});
+  nock(base)
+    .get("/posts/streams/me")
+    .reply(200, {});
 
-  nock(base).get("/posts/streams/unified").reply(200, {});
+  nock(base)
+    .get("/posts/streams/unified")
+    .reply(200, {});
 });
 
 after(function() {
