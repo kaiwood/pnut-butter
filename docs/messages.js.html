@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: messages.js</title>
+    <title>messages.js - Documentation</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
 </head>
-
 <body>
 
-<div id="main">
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-    <h1 class="page-title">Source: messages.js</h1>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_streams.html">app_streams</a><ul class='methods'><li data-type='method'><a href="module-app_streams.html#~createStream">createStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStream">deleteStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStreams">deleteStreams</a></li><li data-type='method'><a href="module-app_streams.html#~stream">stream</a></li><li data-type='method'><a href="module-app_streams.html#~streams">streams</a></li><li data-type='method'><a href="module-app_streams.html#~updateStream">updateStream</a></li></ul></li><li><a href="module-authentication.html">authentication</a><ul class='methods'><li data-type='method'><a href="module-authentication.html#~authenticateClientURL">authenticateClientURL</a></li><li data-type='method'><a href="module-authentication.html#~requestAppAccessToken">requestAppAccessToken</a></li></ul></li><li><a href="module-channels.html">channels</a><ul class='methods'><li data-type='method'><a href="module-channels.html#~channel">channel</a></li><li data-type='method'><a href="module-channels.html#~channels">channels</a></li><li data-type='method'><a href="module-channels.html#~deactivateChannel">deactivateChannel</a></li><li data-type='method'><a href="module-channels.html#~markAllAsRead">markAllAsRead</a></li><li data-type='method'><a href="module-channels.html#~muteChannel">muteChannel</a></li><li data-type='method'><a href="module-channels.html#~mutedChannels">mutedChannels</a></li><li data-type='method'><a href="module-channels.html#~pmChannelFor">pmChannelFor</a></li><li data-type='method'><a href="module-channels.html#~searchChannels">searchChannels</a></li><li data-type='method'><a href="module-channels.html#~subscribe">subscribe</a></li><li data-type='method'><a href="module-channels.html#~subscribed">subscribed</a></li><li data-type='method'><a href="module-channels.html#~subscribers">subscribers</a></li><li data-type='method'><a href="module-channels.html#~unmuteChannel">unmuteChannel</a></li><li data-type='method'><a href="module-channels.html#~unread">unread</a></li><li data-type='method'><a href="module-channels.html#~unsubscribe">unsubscribe</a></li><li data-type='method'><a href="module-channels.html#~usersChannels">usersChannels</a></li></ul></li><li><a href="module-clients.html">clients</a><ul class='methods'><li data-type='method'><a href="module-clients.html#~client">client</a></li><li data-type='method'><a href="module-clients.html#~clientsByUser">clientsByUser</a></li></ul></li><li><a href="module-explore.html">explore</a><ul class='methods'><li data-type='method'><a href="module-explore.html#~conversations">conversations</a></li><li data-type='method'><a href="module-explore.html#~missedConversations">missedConversations</a></li><li data-type='method'><a href="module-explore.html#~photos">photos</a></li><li data-type='method'><a href="module-explore.html#~trending">trending</a></li></ul></li><li><a href="module-messages.html">messages</a><ul class='methods'><li data-type='method'><a href="module-messages.html#~channelMessages">channelMessages</a></li><li data-type='method'><a href="module-messages.html#~createMessage">createMessage</a></li><li data-type='method'><a href="module-messages.html#~deleteMessage">deleteMessage</a></li><li data-type='method'><a href="module-messages.html#~message">message</a></li><li data-type='method'><a href="module-messages.html#~messages">messages</a></li><li data-type='method'><a href="module-messages.html#~messageThread">messageThread</a></li><li data-type='method'><a href="module-messages.html#~personalMessages">personalMessages</a></li><li data-type='method'><a href="module-messages.html#~searchMessages">searchMessages</a></li><li data-type='method'><a href="module-messages.html#~sendMessage">sendMessage</a></li><li data-type='method'><a href="module-messages.html#~stickies">stickies</a></li><li data-type='method'><a href="module-messages.html#~sticky">sticky</a></li><li data-type='method'><a href="module-messages.html#~unsticky">unsticky</a></li></ul></li><li><a href="module-posts.html">posts</a><ul class='methods'><li data-type='method'><a href="module-posts.html#~actions">actions</a></li><li data-type='method'><a href="module-posts.html#~bookmark">bookmark</a></li><li data-type='method'><a href="module-posts.html#~bookmarks">bookmarks</a></li><li data-type='method'><a href="module-posts.html#~createPost">createPost</a></li><li data-type='method'><a href="module-posts.html#~deleteBookmark">deleteBookmark</a></li><li data-type='method'><a href="module-posts.html#~deletePost">deletePost</a></li><li data-type='method'><a href="module-posts.html#~deleteRepost">deleteRepost</a></li><li data-type='method'><a href="module-posts.html#~global">global</a></li><li data-type='method'><a href="module-posts.html#~personal">personal</a></li><li data-type='method'><a href="module-posts.html#~post">post</a></li><li data-type='method'><a href="module-posts.html#~posts">posts</a></li><li data-type='method'><a href="module-posts.html#~postsTaggedWith">postsTaggedWith</a></li><li data-type='method'><a href="module-posts.html#~repost">repost</a></li><li data-type='method'><a href="module-posts.html#~revisions">revisions</a></li><li data-type='method'><a href="module-posts.html#~searchPosts">searchPosts</a></li><li data-type='method'><a href="module-posts.html#~thread">thread</a></li><li data-type='method'><a href="module-posts.html#~unified">unified</a></li><li data-type='method'><a href="module-posts.html#~updatePost">updatePost</a></li><li data-type='method'><a href="module-posts.html#~usersActions">usersActions</a></li></ul></li><li><a href="module-stream_markers.html">stream_markers</a><ul class='methods'><li data-type='method'><a href="module-stream_markers.html#~marker">marker</a></li><li data-type='method'><a href="module-stream_markers.html#~markers">markers</a></li></ul></li><li><a href="module-system.html">system</a><ul class='methods'><li data-type='method'><a href="module-system.html#~config">config</a></li><li data-type='method'><a href="module-system.html#~stats">stats</a></li></ul></li><li><a href="module-users.html">users</a><ul class='methods'><li data-type='method'><a href="module-users.html#~avatar">avatar</a></li><li data-type='method'><a href="module-users.html#~block">block</a></li><li data-type='method'><a href="module-users.html#~blocked">blocked</a></li><li data-type='method'><a href="module-users.html#~cover">cover</a></li><li data-type='method'><a href="module-users.html#~follow">follow</a></li><li data-type='method'><a href="module-users.html#~followers">followers</a></li><li data-type='method'><a href="module-users.html#~following">following</a></li><li data-type='method'><a href="module-users.html#~mentions">mentions</a></li><li data-type='method'><a href="module-users.html#~mute">mute</a></li><li data-type='method'><a href="module-users.html#~muted">muted</a></li><li data-type='method'><a href="module-users.html#~postsFrom">postsFrom</a></li><li data-type='method'><a href="module-users.html#~presence">presence</a></li><li data-type='method'><a href="module-users.html#~presenceOf">presenceOf</a></li><li data-type='method'><a href="module-users.html#~replaceProfile">replaceProfile</a></li><li data-type='method'><a href="module-users.html#~searchUsers">searchUsers</a></li><li data-type='method'><a href="module-users.html#~unblock">unblock</a></li><li data-type='method'><a href="module-users.html#~unfollow">unfollow</a></li><li data-type='method'><a href="module-users.html#~unmute">unmute</a></li><li data-type='method'><a href="module-users.html#~updatePresence">updatePresence</a></li><li data-type='method'><a href="module-users.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-users.html#~uploadAvatar">uploadAvatar</a></li><li data-type='method'><a href="module-users.html#~uploadCover">uploadCover</a></li><li data-type='method'><a href="module-users.html#~user">user</a></li><li data-type='method'><a href="module-users.html#~users">users</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">messages.js</h1>
+    
 
     
 
@@ -26,61 +37,99 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+            <pre class="prettyprint source linenums"><code>"use strict";
 
 /**
  * Messages
  * @module messages
  */
-module.exports = (api) => {
+module.exports = api => {
   return {
     /**
      * Retrieve a message from a channel.
      * @param {string|Number} channelId - Id of a channel
      * @param {string|Number} messageId - Id of a message
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
      */
-    message(channelId, messageId) {
-      return api.request(`/channels/${channelId}/messages/${messageId}`);
+    message(channelId, messageId, params = {}) {
+      return api.request(`/channels/${channelId}/messages/${messageId}`, {
+        params: params
+      });
     },
 
-    messageThread(channelId, messageId) {
-      return api.request(`/channels/${channelId}/messages/${messageId}/thread`);
+    /**
+     * Retrieve messages in the same thread of a channel.
+     * @param {string|Number} channelId - Id of a channel
+     * @param {string|Number} messageId - Id of a message
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
+     */
+    messageThread(channelId, messageId, params = {}) {
+      return api.request(
+        `/channels/${channelId}/messages/${messageId}/thread`,
+        { params: params }
+      );
     },
 
     /**
      * Retrieve a list of specified messages.
      * @param {...string|Number} messageIds - Message ids, max 200
+     * @returns {Promise}
      */
     messages(...messageIds) {
-      return api.request(`/channels/messages?ids=${messageIds.join(',')}`);
+      return api.request(`/channels/messages`, { params: { ids: messageIds } });
     },
 
     /**
      * Retrieve paginated messages from a channel.
      * @param {string|Number} channelId - Id of a channel
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
      */
-    channelMessages(channelId) {
-      // TODO: Needs before_id / since_id
-      return api.request(`/channels/${channelId}/messages`);
+    channelMessages(channelId, params = {}) {
+      return api.request(`/channels/${channelId}/messages`, { params: params });
     },
 
     /**
      * Retrieve a paginated list of messages created by the authenticated user.
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
      */
-    personalMessages() {
-      // TODO: Needs before_id / since_id
-      return api.request('/users/me/messages');
+    personalMessages(params = {}) {
+      return api.request("/users/me/messages", { params: params });
     },
 
     /**
      * Create a message in a channel.
      * @param {string|Number} channelId - A channel id
      * @param {string} message - A message
+     * @returns {Promise}
      */
     createMessage(channelId, text) {
       return api.request(`/channels/${channelId}/messages`, {
-        httpMethod: 'POST',
+        httpMethod: "POST",
         data: {
+          text: text
+        }
+      });
+    },
+
+    /**
+     * Send a private message.
+     *
+     * "destination" can be either a single user id or an array of multiple users
+     * @param {string|Number|Array} destination - Destination of the PM
+     * @param {string} text - Text of the PM
+     * @returns {Promise}
+     */
+    sendMessage(destination, text) {
+      let dests = Array.isArray(destination) ? destination : [destination];
+
+      return api.request(`/channels/pm/messages`, {
+        httpMethod: "POST",
+        data: {
+          destinations: dests,
           text: text
         }
       });
@@ -90,42 +139,69 @@ module.exports = (api) => {
      * Delete a message in a channel.
      * @param {string|Number} channelId - Id of a channel
      * @param {*} messageId - Id of the message to delete
+     * @returns {Promise}
      */
     deleteMessage(channelId, messageId) {
       return api.request(`/channels/${channelId}/messages/${messageId}`, {
-        httpMethod: 'DELETE'
+        httpMethod: "DELETE"
       });
     },
 
     /**
      * Retrieve sticky messsages in a channel.
      * @param {string|Number} channelId - Id of a channel
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
      */
-    stickies(channelId) {
-      return api.request(`/channels/${channelId}/sticky_messages`);
+    stickies(channelId, params = {}) {
+      return api.request(`/channels/${channelId}/sticky_messages`, {
+        params: params
+      });
     },
 
     /**
      * Sticky a message.
      * @param {string|Number} channelId - Id of a channel
      * @param {string|Number} messageId - Id of the message to sticky
+     * @returns {Promise}
      */
     sticky(channelId, messageId) {
-      return api.request(`/channels/${channelId}/messages/${messageId}/sticky`, {
-        httpMethod: 'PUT'
-      });
+      return api.request(
+        `/channels/${channelId}/messages/${messageId}/sticky`,
+        {
+          httpMethod: "PUT"
+        }
+      );
     },
 
     /**
      * Unsticky a message.
      * @param {string|Number} channelId - Id of a channel
      * @param {string|Number} messageId - Id of the message to unsticky
+     * @returns {Promise}
      */
     unsticky(channelId, messageId) {
-      return api.request(`/channels/${channelId}/messages/${messageId}/sticky`, {
-        httpMethod: 'DELETE'
-      });
+      return api.request(
+        `/channels/${channelId}/messages/${messageId}/sticky`,
+        {
+          httpMethod: "DELETE"
+        }
+      );
     },
+
+    /**
+     * Retrieve a list of messages filtered by the given criteria.
+     *
+     * @example
+     * pnut.searchMessages({
+     *  channelIds: [600, 18]
+     * });
+     * @param {Object} params
+     * @returns {Promise}
+     */
+    searchMessages(params = {}) {
+      return api.request("/channels/messages/search", { params: params });
+    }
   };
 };
 </code></pre>
@@ -137,17 +213,13 @@ module.exports = (api) => {
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
-</nav>
-
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sun Apr 02 2017 21:42:23 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 22 2017 10:07:50 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 </body>
 </html>

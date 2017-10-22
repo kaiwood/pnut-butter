@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: users.js</title>
+    <title>users.js - Documentation</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
 </head>
-
 <body>
 
-<div id="main">
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-    <h1 class="page-title">Source: users.js</h1>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_streams.html">app_streams</a><ul class='methods'><li data-type='method'><a href="module-app_streams.html#~createStream">createStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStream">deleteStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStreams">deleteStreams</a></li><li data-type='method'><a href="module-app_streams.html#~stream">stream</a></li><li data-type='method'><a href="module-app_streams.html#~streams">streams</a></li><li data-type='method'><a href="module-app_streams.html#~updateStream">updateStream</a></li></ul></li><li><a href="module-authentication.html">authentication</a><ul class='methods'><li data-type='method'><a href="module-authentication.html#~authenticateClientURL">authenticateClientURL</a></li><li data-type='method'><a href="module-authentication.html#~requestAppAccessToken">requestAppAccessToken</a></li></ul></li><li><a href="module-channels.html">channels</a><ul class='methods'><li data-type='method'><a href="module-channels.html#~channel">channel</a></li><li data-type='method'><a href="module-channels.html#~channels">channels</a></li><li data-type='method'><a href="module-channels.html#~deactivateChannel">deactivateChannel</a></li><li data-type='method'><a href="module-channels.html#~markAllAsRead">markAllAsRead</a></li><li data-type='method'><a href="module-channels.html#~muteChannel">muteChannel</a></li><li data-type='method'><a href="module-channels.html#~mutedChannels">mutedChannels</a></li><li data-type='method'><a href="module-channels.html#~pmChannelFor">pmChannelFor</a></li><li data-type='method'><a href="module-channels.html#~searchChannels">searchChannels</a></li><li data-type='method'><a href="module-channels.html#~subscribe">subscribe</a></li><li data-type='method'><a href="module-channels.html#~subscribed">subscribed</a></li><li data-type='method'><a href="module-channels.html#~subscribers">subscribers</a></li><li data-type='method'><a href="module-channels.html#~unmuteChannel">unmuteChannel</a></li><li data-type='method'><a href="module-channels.html#~unread">unread</a></li><li data-type='method'><a href="module-channels.html#~unsubscribe">unsubscribe</a></li><li data-type='method'><a href="module-channels.html#~usersChannels">usersChannels</a></li></ul></li><li><a href="module-clients.html">clients</a><ul class='methods'><li data-type='method'><a href="module-clients.html#~client">client</a></li><li data-type='method'><a href="module-clients.html#~clientsByUser">clientsByUser</a></li></ul></li><li><a href="module-explore.html">explore</a><ul class='methods'><li data-type='method'><a href="module-explore.html#~conversations">conversations</a></li><li data-type='method'><a href="module-explore.html#~missedConversations">missedConversations</a></li><li data-type='method'><a href="module-explore.html#~photos">photos</a></li><li data-type='method'><a href="module-explore.html#~trending">trending</a></li></ul></li><li><a href="module-messages.html">messages</a><ul class='methods'><li data-type='method'><a href="module-messages.html#~channelMessages">channelMessages</a></li><li data-type='method'><a href="module-messages.html#~createMessage">createMessage</a></li><li data-type='method'><a href="module-messages.html#~deleteMessage">deleteMessage</a></li><li data-type='method'><a href="module-messages.html#~message">message</a></li><li data-type='method'><a href="module-messages.html#~messages">messages</a></li><li data-type='method'><a href="module-messages.html#~messageThread">messageThread</a></li><li data-type='method'><a href="module-messages.html#~personalMessages">personalMessages</a></li><li data-type='method'><a href="module-messages.html#~searchMessages">searchMessages</a></li><li data-type='method'><a href="module-messages.html#~sendMessage">sendMessage</a></li><li data-type='method'><a href="module-messages.html#~stickies">stickies</a></li><li data-type='method'><a href="module-messages.html#~sticky">sticky</a></li><li data-type='method'><a href="module-messages.html#~unsticky">unsticky</a></li></ul></li><li><a href="module-posts.html">posts</a><ul class='methods'><li data-type='method'><a href="module-posts.html#~actions">actions</a></li><li data-type='method'><a href="module-posts.html#~bookmark">bookmark</a></li><li data-type='method'><a href="module-posts.html#~bookmarks">bookmarks</a></li><li data-type='method'><a href="module-posts.html#~createPost">createPost</a></li><li data-type='method'><a href="module-posts.html#~deleteBookmark">deleteBookmark</a></li><li data-type='method'><a href="module-posts.html#~deletePost">deletePost</a></li><li data-type='method'><a href="module-posts.html#~deleteRepost">deleteRepost</a></li><li data-type='method'><a href="module-posts.html#~global">global</a></li><li data-type='method'><a href="module-posts.html#~personal">personal</a></li><li data-type='method'><a href="module-posts.html#~post">post</a></li><li data-type='method'><a href="module-posts.html#~posts">posts</a></li><li data-type='method'><a href="module-posts.html#~postsTaggedWith">postsTaggedWith</a></li><li data-type='method'><a href="module-posts.html#~repost">repost</a></li><li data-type='method'><a href="module-posts.html#~revisions">revisions</a></li><li data-type='method'><a href="module-posts.html#~searchPosts">searchPosts</a></li><li data-type='method'><a href="module-posts.html#~thread">thread</a></li><li data-type='method'><a href="module-posts.html#~unified">unified</a></li><li data-type='method'><a href="module-posts.html#~updatePost">updatePost</a></li><li data-type='method'><a href="module-posts.html#~usersActions">usersActions</a></li></ul></li><li><a href="module-stream_markers.html">stream_markers</a><ul class='methods'><li data-type='method'><a href="module-stream_markers.html#~marker">marker</a></li><li data-type='method'><a href="module-stream_markers.html#~markers">markers</a></li></ul></li><li><a href="module-system.html">system</a><ul class='methods'><li data-type='method'><a href="module-system.html#~config">config</a></li><li data-type='method'><a href="module-system.html#~stats">stats</a></li></ul></li><li><a href="module-users.html">users</a><ul class='methods'><li data-type='method'><a href="module-users.html#~avatar">avatar</a></li><li data-type='method'><a href="module-users.html#~block">block</a></li><li data-type='method'><a href="module-users.html#~blocked">blocked</a></li><li data-type='method'><a href="module-users.html#~cover">cover</a></li><li data-type='method'><a href="module-users.html#~follow">follow</a></li><li data-type='method'><a href="module-users.html#~followers">followers</a></li><li data-type='method'><a href="module-users.html#~following">following</a></li><li data-type='method'><a href="module-users.html#~mentions">mentions</a></li><li data-type='method'><a href="module-users.html#~mute">mute</a></li><li data-type='method'><a href="module-users.html#~muted">muted</a></li><li data-type='method'><a href="module-users.html#~postsFrom">postsFrom</a></li><li data-type='method'><a href="module-users.html#~presence">presence</a></li><li data-type='method'><a href="module-users.html#~presenceOf">presenceOf</a></li><li data-type='method'><a href="module-users.html#~replaceProfile">replaceProfile</a></li><li data-type='method'><a href="module-users.html#~searchUsers">searchUsers</a></li><li data-type='method'><a href="module-users.html#~unblock">unblock</a></li><li data-type='method'><a href="module-users.html#~unfollow">unfollow</a></li><li data-type='method'><a href="module-users.html#~unmute">unmute</a></li><li data-type='method'><a href="module-users.html#~updatePresence">updatePresence</a></li><li data-type='method'><a href="module-users.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-users.html#~uploadAvatar">uploadAvatar</a></li><li data-type='method'><a href="module-users.html#~uploadCover">uploadCover</a></li><li data-type='method'><a href="module-users.html#~user">user</a></li><li data-type='method'><a href="module-users.html#~users">users</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">users.js</h1>
+    
 
     
 
@@ -26,21 +37,22 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+            <pre class="prettyprint source linenums"><code>"use strict";
 
 /**
  * Users
  * @module users
  */
-module.exports = (api) => {
+module.exports = api => {
   return {
     /**
      * Retrieve a user object.
      * @param {string|Number} userId - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    user(userId) {
-      return api.request(`/users/${userId}`);
+    user(userId, params = {}) {
+      return api.request(`/users/${userId}`, { params: params });
     },
 
     /**
@@ -50,198 +62,296 @@ module.exports = (api) => {
      * @returns {Promise}
      */
     avatar(userId, buffered = true) {
-      let options = buffered ? {
-        resultAs: 'buffer'
-      } : {
-        resultAs: 'response'
-      };
+      let options = buffered
+        ? {
+            resultAs: "buffer"
+          }
+        : {
+            resultAs: "response"
+          };
       return api.request(`/users/${userId}/avatar`, options);
     },
 
     /**
+     * Upload a new avatar image
+     * @param {object} form - A valid DOM node of a form with a file field named "avatar"
+     * @returns {Promise}
+     */
+    uploadAvatar(form) {
+      return api.request(`/users/me/avatar`, {
+        httpMethod: "POST",
+        dataAs: "dom-node",
+        data: form
+      });
+    },
+
+    /**
+     * Upload a new cover image
+     * @param {object} form - A valid DOM node of a form with a file field named "cover"
+     * @returns {Promise}
+     */
+    uploadCover(form) {
+      return api.request(`/users/me/cover`, {
+        httpMethod: "POST",
+        dataAs: "dom-node",
+        data: form
+      });
+    },
+
+    /**
      * Retrieve a users cover image.
+     * 
+     * @example
+     * pnut.cover(1);
      * @param {string|Number} userId - A user id
      * @param {boolean} [true] - Should the return value be prebuffered via the fetch API?
      * @returns {Promise}
      */
     cover(userId, buffered = true) {
-      let options = buffered ? {
-        resultAs: 'buffer'
-      } : {
-        resultAs: 'response'
-      };
+      let options = buffered
+        ? {
+            resultAs: "buffer"
+          }
+        : {
+            resultAs: "response"
+          };
       return api.request(`/users/${userId}/cover`, options);
     },
 
     /**
      * Retrieve a list of specified user objects. Only retrieves the first 200 found.
+     * 
+     * @example
+     * pnut.users(1,15,127);
      * @param {...string|Number} userIds - 1 or more user ids
      * @returns {Promise}
      */
     users(...userIds) {
-      return api.request(`/users?ids=${userIds.join(',')}`);
+      return api.request(`/users`, { params: { ids: userIds } });
     },
 
     /**
      * Retrieve posts mentioning the specified user.
+     * 
+     * @example
+     * pnut.mentions(1);
      * @param {string|Number} userid - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    mentions(userId) {
-      return api.request(`/users/${userId}/mentions`);
+    mentions(userId, params = {}) {
+      return api.request(`/users/${userId}/mentions`, { params: params });
     },
 
     /**
      * Retrieve posts created by a specific user.
+     * 
+     * @example
+     * pnut.postsFrom(1);
      * @param {string|Number} userId - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    postsFrom(userId) {
-      return api.request(`/users/${userId}/posts`);
+    postsFrom(userId, params = {}) {
+      return api.request(`/users/${userId}/posts`, { params: params });
     },
 
     /**
      * Replaces the authenticated user's profile. Anything not included is removed.
+     * 
+     * @example
+     * pnut.replaceProfile({
+     *   timezone: "Europe/Berlin",
+     *   name: "Robert"
+     * });
      * @param {Object} profile - Object with the required API parameters
      * @returns {Promise}
      */
     replaceProfile(profile = {}) {
-      return api.request('/users/me', {
-        httpMethod: 'PUT',
+      return api.request("/users/me", {
+        httpMethod: "PUT",
         data: profile
       });
     },
 
     /**
      * Updates only specified parts of the authenticated user's profile.
+     * 
+     * @example
+     * pnut.updateProfile({
+     *   timezone: "Europe/Berlin",
+     *   name: "Robert"
+     * });
      * @param {Object} profile - Object with the require API parameters
      * @returns {Promise}
      */
     updateProfile(profile = {}) {
-      return api.request('/users/me', {
-        httpMethod: 'PATCH',
+      return api.request("/users/me", {
+        httpMethod: "PATCH",
         data: profile
       });
     },
 
     /**
      * Retrieve a list of user objects that the specified user is following.
+     * 
+     * @example
+     * pnut.following(1);
      * @param {string|Number} userId - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    following(userId) {
-      return api.request(`/users/${userId}/following`);
+    following(userId, params = {}) {
+      return api.request(`/users/${userId}/following`, { params: params });
     },
 
     /**
      * Retrieve a list of user objects that are following the specified user.
-     *
+     * 
+     * @example
+     * pnut.followers(1);
      * @param {string|Number} userId - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    followers(userId) {
-      return api.request(`/users/${userId}/followers`);
+    followers(userId, params = {}) {
+      return api.request(`/users/${userId}/followers`, { params: params });
     },
 
     /**
      * Follow a user.
+     * 
+     * @example
+     * pnut.follow(1);
      * @param {string|Number} userId - id of user to follow
      * @returns {Promise}
      */
     follow(userId) {
       return api.request(`/users/${userId}/follow`, {
-        httpMethod: 'PUT'
+        httpMethod: "PUT"
       });
     },
 
     /**
      * Unfollow a user.
-     *
+     * 
+     * @example
+     * pnut.unfollow(1);
      * @param {string|Number} userId - id of the user to unfollow
      * @returns {Promise}
      */
     unfollow(userId) {
       return api.request(`/users/${userId}/follow`, {
-        httpMethod: 'DELETE'
+        httpMethod: "DELETE"
       });
     },
 
     /**
      * Retrieve a list of muted users.
+     * 
+     * @example
+     * pnut.muted();
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    muted() {
-      return api.request(`/users/me/muted`);
+    muted(params = {}) {
+      return api.request(`/users/me/muted`, { params: params });
     },
 
     /**
      * Mute a user.
+     * 
+     * @example
+     * pnut.mute(1);
      * @param {string|Number} userId - id of the user to mute
      * @returns {Promise}
      */
     mute(userId) {
       return api.request(`/users/${userId}/mute`, {
-        httpMethod: 'PUT'
+        httpMethod: "PUT"
       });
     },
 
     /**
      * Unmute a user.
+     * 
+     * @example
+     * pnut.unmute(1);
      * @param {string|Number} userId - id of the user to unmute
      * @returns {Promise}
      */
     unmute(userId) {
       return api.request(`/users/${userId}/mute`, {
-        httpMethod: 'DELETE'
+        httpMethod: "DELETE"
       });
     },
 
     /**
      * Retrieve a list of blocked users.
+     * 
+     * @example
+     * pnut.blocked();
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    blocked() {
-      return api.request(`/users/me/blocked`, {
-        httpMethod: 'GET'
-      });
+    blocked(params = {}) {
+      return api.request(
+        `/users/me/blocked`,
+        {
+          httpMethod: "GET"
+        },
+        { params: params }
+      );
     },
 
     /**
      * Block a user.
+     * 
+     * @example
+     * pnut.block(1);
      * @param {string|Number} userId - id of the user to block.
      * @returns {Promise}
      */
     block(userId) {
       return api.request(`/users/${userId}/block`, {
-        httpMethod: 'PUT'
+        httpMethod: "PUT"
       });
     },
 
     /**
      * Unblock a user.
+     * 
+     * @example
+     * pnut.unblock(1);
      * @param {string} userId - id of the user to unblock.
      * @returns {Promise}
      */
     unblock(userId) {
       return api.request(`/users/${userId}/block`, {
-        httpMethod: 'DELETE'
+        httpMethod: "DELETE"
       });
     },
 
     /**
      * Retrieve all users' presence statuses that are not "offline".
+     * 
+     * @example
+     * pnut.presence();
+     * @param {Object} [params] - Additional URI parameters
+     * @returns {Promise}
      */
-    presence() {
-      return api.request('/presence');
+    presence(params = {}) {
+      return api.request("/presence", { params: params });
     },
 
     /**
      * Retrieve a user's presence.
      * @param {string} userId - A user id
+     * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
-    presenceOf(userId) {
-      return api.request(`/presence/${userId}`);
+    presenceOf(userId, params = {}) {
+      return api.request(`/presence/${userId}`, { params: params });
     },
 
     /**
@@ -251,7 +361,7 @@ module.exports = (api) => {
      */
     updatePresence(msg) {
       let params = {
-        httpMethod: 'PUT'
+        httpMethod: "PUT"
       };
       if (msg) {
         params.data = {
@@ -259,7 +369,21 @@ module.exports = (api) => {
         };
       }
 
-      return api.request('/users/me/presence', params);
+      return api.request("/users/me/presence", params);
+    },
+
+    /**
+     * Retrieve a list of users filtered by the given criteria.
+     *
+     * @example
+     * pnut.searchUsers({
+     *  q: "news",
+     *  types: "feed"
+     * });
+     * @param {Object} params
+     */
+    searchUsers(params = {}) {
+      return api.request("/users/search", { params: params });
     }
   };
 };
@@ -272,17 +396,13 @@ module.exports = (api) => {
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
-</nav>
-
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sun Apr 02 2017 21:42:23 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 22 2017 10:07:50 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 </body>
 </html>

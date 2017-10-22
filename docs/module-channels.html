@@ -1,84 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Documentation Module: channels</title>
+    <meta charset="utf-8">
+    <title>channels - Documentation</title>
 
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.simplex.css">
-
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
 </head>
-
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top ">
-<div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Documentation</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
-	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
-		<ul class="nav navbar-nav">
-			
-			<li class="dropdown">
-				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="module-app_streams.html">app_streams</a></li><li><a href="module-authentication.html">authentication</a></li><li><a href="module-channels.html">channels</a></li><li><a href="module-clients.html">clients</a></li><li><a href="module-explore.html">explore</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-stream_markers.html">stream_markers</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
-				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li>
-				</ul>
-			</li>
-			
-		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
-	</div>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-</div>
-</div>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_streams.html">app_streams</a><ul class='methods'><li data-type='method'><a href="module-app_streams.html#~createStream">createStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStream">deleteStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStreams">deleteStreams</a></li><li data-type='method'><a href="module-app_streams.html#~stream">stream</a></li><li data-type='method'><a href="module-app_streams.html#~streams">streams</a></li><li data-type='method'><a href="module-app_streams.html#~updateStream">updateStream</a></li></ul></li><li><a href="module-authentication.html">authentication</a><ul class='methods'><li data-type='method'><a href="module-authentication.html#~authenticateClientURL">authenticateClientURL</a></li><li data-type='method'><a href="module-authentication.html#~requestAppAccessToken">requestAppAccessToken</a></li></ul></li><li><a href="module-channels.html">channels</a><ul class='methods'><li data-type='method'><a href="module-channels.html#~channel">channel</a></li><li data-type='method'><a href="module-channels.html#~channels">channels</a></li><li data-type='method'><a href="module-channels.html#~deactivateChannel">deactivateChannel</a></li><li data-type='method'><a href="module-channels.html#~markAllAsRead">markAllAsRead</a></li><li data-type='method'><a href="module-channels.html#~muteChannel">muteChannel</a></li><li data-type='method'><a href="module-channels.html#~mutedChannels">mutedChannels</a></li><li data-type='method'><a href="module-channels.html#~pmChannelFor">pmChannelFor</a></li><li data-type='method'><a href="module-channels.html#~searchChannels">searchChannels</a></li><li data-type='method'><a href="module-channels.html#~subscribe">subscribe</a></li><li data-type='method'><a href="module-channels.html#~subscribed">subscribed</a></li><li data-type='method'><a href="module-channels.html#~subscribers">subscribers</a></li><li data-type='method'><a href="module-channels.html#~unmuteChannel">unmuteChannel</a></li><li data-type='method'><a href="module-channels.html#~unread">unread</a></li><li data-type='method'><a href="module-channels.html#~unsubscribe">unsubscribe</a></li><li data-type='method'><a href="module-channels.html#~usersChannels">usersChannels</a></li></ul></li><li><a href="module-clients.html">clients</a><ul class='methods'><li data-type='method'><a href="module-clients.html#~client">client</a></li><li data-type='method'><a href="module-clients.html#~clientsByUser">clientsByUser</a></li></ul></li><li><a href="module-explore.html">explore</a><ul class='methods'><li data-type='method'><a href="module-explore.html#~conversations">conversations</a></li><li data-type='method'><a href="module-explore.html#~missedConversations">missedConversations</a></li><li data-type='method'><a href="module-explore.html#~photos">photos</a></li><li data-type='method'><a href="module-explore.html#~trending">trending</a></li></ul></li><li><a href="module-messages.html">messages</a><ul class='methods'><li data-type='method'><a href="module-messages.html#~channelMessages">channelMessages</a></li><li data-type='method'><a href="module-messages.html#~createMessage">createMessage</a></li><li data-type='method'><a href="module-messages.html#~deleteMessage">deleteMessage</a></li><li data-type='method'><a href="module-messages.html#~message">message</a></li><li data-type='method'><a href="module-messages.html#~messages">messages</a></li><li data-type='method'><a href="module-messages.html#~messageThread">messageThread</a></li><li data-type='method'><a href="module-messages.html#~personalMessages">personalMessages</a></li><li data-type='method'><a href="module-messages.html#~searchMessages">searchMessages</a></li><li data-type='method'><a href="module-messages.html#~sendMessage">sendMessage</a></li><li data-type='method'><a href="module-messages.html#~stickies">stickies</a></li><li data-type='method'><a href="module-messages.html#~sticky">sticky</a></li><li data-type='method'><a href="module-messages.html#~unsticky">unsticky</a></li></ul></li><li><a href="module-posts.html">posts</a><ul class='methods'><li data-type='method'><a href="module-posts.html#~actions">actions</a></li><li data-type='method'><a href="module-posts.html#~bookmark">bookmark</a></li><li data-type='method'><a href="module-posts.html#~bookmarks">bookmarks</a></li><li data-type='method'><a href="module-posts.html#~createPost">createPost</a></li><li data-type='method'><a href="module-posts.html#~deleteBookmark">deleteBookmark</a></li><li data-type='method'><a href="module-posts.html#~deletePost">deletePost</a></li><li data-type='method'><a href="module-posts.html#~deleteRepost">deleteRepost</a></li><li data-type='method'><a href="module-posts.html#~global">global</a></li><li data-type='method'><a href="module-posts.html#~personal">personal</a></li><li data-type='method'><a href="module-posts.html#~post">post</a></li><li data-type='method'><a href="module-posts.html#~posts">posts</a></li><li data-type='method'><a href="module-posts.html#~postsTaggedWith">postsTaggedWith</a></li><li data-type='method'><a href="module-posts.html#~repost">repost</a></li><li data-type='method'><a href="module-posts.html#~revisions">revisions</a></li><li data-type='method'><a href="module-posts.html#~searchPosts">searchPosts</a></li><li data-type='method'><a href="module-posts.html#~thread">thread</a></li><li data-type='method'><a href="module-posts.html#~unified">unified</a></li><li data-type='method'><a href="module-posts.html#~updatePost">updatePost</a></li><li data-type='method'><a href="module-posts.html#~usersActions">usersActions</a></li></ul></li><li><a href="module-stream_markers.html">stream_markers</a><ul class='methods'><li data-type='method'><a href="module-stream_markers.html#~marker">marker</a></li><li data-type='method'><a href="module-stream_markers.html#~markers">markers</a></li></ul></li><li><a href="module-system.html">system</a><ul class='methods'><li data-type='method'><a href="module-system.html#~config">config</a></li><li data-type='method'><a href="module-system.html#~stats">stats</a></li></ul></li><li><a href="module-users.html">users</a><ul class='methods'><li data-type='method'><a href="module-users.html#~avatar">avatar</a></li><li data-type='method'><a href="module-users.html#~block">block</a></li><li data-type='method'><a href="module-users.html#~blocked">blocked</a></li><li data-type='method'><a href="module-users.html#~cover">cover</a></li><li data-type='method'><a href="module-users.html#~follow">follow</a></li><li data-type='method'><a href="module-users.html#~followers">followers</a></li><li data-type='method'><a href="module-users.html#~following">following</a></li><li data-type='method'><a href="module-users.html#~mentions">mentions</a></li><li data-type='method'><a href="module-users.html#~mute">mute</a></li><li data-type='method'><a href="module-users.html#~muted">muted</a></li><li data-type='method'><a href="module-users.html#~postsFrom">postsFrom</a></li><li data-type='method'><a href="module-users.html#~presence">presence</a></li><li data-type='method'><a href="module-users.html#~presenceOf">presenceOf</a></li><li data-type='method'><a href="module-users.html#~replaceProfile">replaceProfile</a></li><li data-type='method'><a href="module-users.html#~searchUsers">searchUsers</a></li><li data-type='method'><a href="module-users.html#~unblock">unblock</a></li><li data-type='method'><a href="module-users.html#~unfollow">unfollow</a></li><li data-type='method'><a href="module-users.html#~unmute">unmute</a></li><li data-type='method'><a href="module-users.html#~updatePresence">updatePresence</a></li><li data-type='method'><a href="module-users.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-users.html#~uploadAvatar">uploadAvatar</a></li><li data-type='method'><a href="module-users.html#~uploadCover">uploadCover</a></li><li data-type='method'><a href="module-users.html#~user">user</a></li><li data-type='method'><a href="module-users.html#~users">users</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">channels</h1>
+    
+
+    
 
 
-<div class="container" id="toc-content">
-<div class="row">
 
-	
-	<div class="col-md-8">
-	
-		<div id="main">
-			
 
-	<h1 class="page-title">Module: channels</h1>
 <section>
 
 <header>
     
+        
+            
+        
+    
 </header>
-
 
 <article>
     <div class="container-overview">
@@ -88,43 +53,77 @@
         
 
         
+            
+
+
+
+
 <dl class="details">
-    
-
-	
-
-	
-
-	
 
     
-
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line3">line 3</a>
+    </li></ul></dd>
     
 
     
 
     
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
+    
 
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
+
+    
+
+    
 </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
@@ -137,7 +136,7 @@
 
     
 
-    
+     
 
     
 
@@ -146,32 +145,80 @@
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="~channel"><span class="type-signature">&lt;inner> </span>channel(channelId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a channel object.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
         
+            
 
-<table class="params table table-striped">
+    
+
+    <h4 class="name" id="~channel"><span class="type-signature">(inner) </span>channel<span class="signature">(channelId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a channel object.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -181,7 +228,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -205,7 +252,6 @@
 |
 
 <span class="param-type">number</span>
-
 
 
             
@@ -239,7 +285,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -264,65 +309,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -331,42 +336,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~channels"><span class="type-signature">&lt;inner> </span>channels(channelIds)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of specified channel objects.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~channels"><span class="type-signature">(inner) </span>channels<span class="signature">(channelIds)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line25">line 25</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of specified channel objects.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -400,7 +449,6 @@
 <span class="param-type">number</span>
 
 
-
             
             </td>
 
@@ -415,65 +463,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -482,42 +490,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~deactivateChannel"><span class="type-signature">&lt;inner> </span>deactivateChannel(channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Deactivate a channel.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~deactivateChannel"><span class="type-signature">(inner) </span>deactivateChannel<span class="signature">(channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line75">line 75</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Deactivate a channel.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -551,7 +603,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -566,65 +617,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -633,96 +644,100 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~markAllAsRead"><span class="type-signature">&lt;inner> </span>markAllAsRead()</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Mark all unread private messages as read for the authenticated user.
-    </div>
-    
 
     
 
-    
+    <h4 class="name" id="~markAllAsRead"><span class="type-signature">(inner) </span>markAllAsRead<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
 
     
-    
 
-    
+
+
+
 <dl class="details">
-    
-
-	
-
-	
-
-	
 
     
-
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line64">line 64</a>
+    </li></ul></dd>
     
 
     
 
     
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
+    
 
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
+
+    
+
+    
 </dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+<div class="description">
+    Mark all unread private messages as read for the authenticated user.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -731,42 +746,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~muteChannel"><span class="type-signature">&lt;inner> </span>muteChannel(channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Mute subscriptions for a channel. Muting unsubscribes, if you were subscribed.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~muteChannel"><span class="type-signature">(inner) </span>muteChannel<span class="signature">(channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line138">line 138</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Mute subscriptions for a channel. Muting unsubscribes, if you were subscribed.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -800,7 +859,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -815,65 +873,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -882,42 +900,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~mutedChannels"><span class="type-signature">&lt;inner> </span>mutedChannels( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of channels the authenticated user has muted.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~mutedChannels"><span class="type-signature">(inner) </span>mutedChannels<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line129">line 129</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of channels the authenticated user has muted.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -927,7 +989,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -948,7 +1010,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -975,65 +1036,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1042,42 +1063,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~pmChannelFor"><span class="type-signature">&lt;inner> </span>pmChannelFor(userIds)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a Private Message channel for a set of users, if one exists.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~pmChannelFor"><span class="type-signature">(inner) </span>pmChannelFor<span class="signature">(userIds)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line43">line 43</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a Private Message channel for a set of users, if one exists.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1111,7 +1176,6 @@
 <span class="param-type">number</span>
 
 
-
             
             </td>
 
@@ -1126,65 +1190,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1193,42 +1217,95 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~searchChannels"><span class="type-signature">&lt;inner> </span>searchChannels(params)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of channels filtered by the given criteria.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~searchChannels"><span class="type-signature">(inner) </span>searchChannels<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line167">line 167</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of channels filtered by the given criteria.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.searchChannels({
+  isPublic: 1,
+  channelTypes: "io.pnut.core.chat",
+  categories: "fun"
+});</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1257,7 +1334,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -1274,65 +1350,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1341,52 +1377,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.searchChannels({
-  isPublic: 1,
-  channelTypes: &quot;io.pnut.core.chat&quot;,
-  categories: &quot;fun&quot;
-});</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~subscribe"><span class="type-signature">&lt;inner> </span>subscribe(channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Subscribe to updates from a channel.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~subscribe"><span class="type-signature">(inner) </span>subscribe<span class="signature">(channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line107">line 107</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Subscribe to updates from a channel.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1420,7 +1490,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -1435,65 +1504,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1502,42 +1531,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~subscribed"><span class="type-signature">&lt;inner> </span>subscribed( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of channels the authenticated user is subscribed to.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~subscribed"><span class="type-signature">(inner) </span>subscribed<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line86">line 86</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of channels the authenticated user is subscribed to.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1547,7 +1620,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1568,7 +1641,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -1595,65 +1667,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1662,42 +1694,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~subscribers"><span class="type-signature">&lt;inner> </span>subscribers( [params], channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of users subscribed to a channel.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~subscribers"><span class="type-signature">(inner) </span>subscribers<span class="signature">(params<span class="signature-attributes">opt</span>, channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line96">line 96</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of users subscribed to a channel.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1707,7 +1783,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1728,7 +1804,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -1767,7 +1842,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -1790,65 +1864,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1857,42 +1891,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unmuteChannel"><span class="type-signature">&lt;inner> </span>unmuteChannel(channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Delete a subscription mute for a channel.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unmuteChannel"><span class="type-signature">(inner) </span>unmuteChannel<span class="signature">(channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line149">line 149</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Delete a subscription mute for a channel.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1926,7 +2004,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -1941,65 +2018,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2008,42 +2045,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unread"><span class="type-signature">&lt;inner> </span>unread( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve the number of unread private messages for the authenticated user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unread"><span class="type-signature">(inner) </span>unread<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line54">line 54</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve the number of unread private messages for the authenticated user.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2053,7 +2134,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -2074,7 +2155,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -2101,65 +2181,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2168,42 +2208,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unsubscribe"><span class="type-signature">&lt;inner> </span>unsubscribe(channelId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Delete a subscription for a channel.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unsubscribe"><span class="type-signature">(inner) </span>unsubscribe<span class="signature">(channelId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line118">line 118</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Delete a subscription for a channel.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2237,7 +2321,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -2252,65 +2335,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2319,42 +2362,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~usersChannels"><span class="type-signature">&lt;inner> </span>usersChannels( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of channels created by the authenticated user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~usersChannels"><span class="type-signature">(inner) </span>usersChannels<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="channels.js.html">channels.js</a>, <a href="channels.js.html#line34">line 34</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of channels created by the authenticated user.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2364,7 +2451,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -2385,7 +2472,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -2412,65 +2498,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2479,17 +2525,13 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
+    
+
 
         
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -2502,132 +2544,15 @@
 
 
 
-		</div>
-	</div>
-
-	<div class="clearfix"></div>
-
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
-	
-
-</div>
 </div>
 
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
-
+<br class="clear">
 
 <footer>
-
-
-<span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
-	
-		on 2017-10-21T17:01:55+02:00
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
-</span>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 22 2017 10:07:50 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
-<script src="scripts/docstrap.lib.js"></script>
-<script src="scripts/toc.js"></script>
-
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
-
-
-<script>
-$( function () {
-	$( "[id*='$']" ).each( function () {
-		var $this = $( this );
-
-		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-	} );
-
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
-		var $this = $( this );
-
-		var example = $this.find( "code" );
-		exampleText = example.html();
-		var lang = /{@lang (.*?)}/.exec( exampleText );
-		if ( lang && lang[1] ) {
-			exampleText = exampleText.replace( lang[0], "" );
-			example.html( exampleText );
-			lang = lang[1];
-		} else {
-			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
-			lang = langClassMatch ? langClassMatch[1] : "javascript";
-		}
-
-		if ( lang ) {
-
-			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
-			.html( example.html() );
-
-		}
-	} );
-
-	Sunlight.highlightAll( {
-		lineNumbers : false,
-		showMenu : true,
-		enableDoclinks : true
-	} );
-
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
-	$( "#toc" ).toc( {
-		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
-		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
-		showAndHide : false,
-		smoothScrolling: true
-	} );
-
-	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-	$( '.dropdown-toggle' ).dropdown();
-
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
-
-} );
-</script>
-
-
-
-<!--Navigation and Symbol Display-->
-
-
-<!--Google Analytics-->
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
-
-
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 </body>
 </html>

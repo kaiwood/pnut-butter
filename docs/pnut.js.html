@@ -2,22 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: pnut.js</title>
+    <title>pnut.js - Documentation</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
 </head>
-
 <body>
 
-<div id="main">
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-    <h1 class="page-title">Source: pnut.js</h1>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_streams.html">app_streams</a><ul class='methods'><li data-type='method'><a href="module-app_streams.html#~createStream">createStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStream">deleteStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStreams">deleteStreams</a></li><li data-type='method'><a href="module-app_streams.html#~stream">stream</a></li><li data-type='method'><a href="module-app_streams.html#~streams">streams</a></li><li data-type='method'><a href="module-app_streams.html#~updateStream">updateStream</a></li></ul></li><li><a href="module-authentication.html">authentication</a><ul class='methods'><li data-type='method'><a href="module-authentication.html#~authenticateClientURL">authenticateClientURL</a></li><li data-type='method'><a href="module-authentication.html#~requestAppAccessToken">requestAppAccessToken</a></li></ul></li><li><a href="module-channels.html">channels</a><ul class='methods'><li data-type='method'><a href="module-channels.html#~channel">channel</a></li><li data-type='method'><a href="module-channels.html#~channels">channels</a></li><li data-type='method'><a href="module-channels.html#~deactivateChannel">deactivateChannel</a></li><li data-type='method'><a href="module-channels.html#~markAllAsRead">markAllAsRead</a></li><li data-type='method'><a href="module-channels.html#~muteChannel">muteChannel</a></li><li data-type='method'><a href="module-channels.html#~mutedChannels">mutedChannels</a></li><li data-type='method'><a href="module-channels.html#~pmChannelFor">pmChannelFor</a></li><li data-type='method'><a href="module-channels.html#~searchChannels">searchChannels</a></li><li data-type='method'><a href="module-channels.html#~subscribe">subscribe</a></li><li data-type='method'><a href="module-channels.html#~subscribed">subscribed</a></li><li data-type='method'><a href="module-channels.html#~subscribers">subscribers</a></li><li data-type='method'><a href="module-channels.html#~unmuteChannel">unmuteChannel</a></li><li data-type='method'><a href="module-channels.html#~unread">unread</a></li><li data-type='method'><a href="module-channels.html#~unsubscribe">unsubscribe</a></li><li data-type='method'><a href="module-channels.html#~usersChannels">usersChannels</a></li></ul></li><li><a href="module-clients.html">clients</a><ul class='methods'><li data-type='method'><a href="module-clients.html#~client">client</a></li><li data-type='method'><a href="module-clients.html#~clientsByUser">clientsByUser</a></li></ul></li><li><a href="module-explore.html">explore</a><ul class='methods'><li data-type='method'><a href="module-explore.html#~conversations">conversations</a></li><li data-type='method'><a href="module-explore.html#~missedConversations">missedConversations</a></li><li data-type='method'><a href="module-explore.html#~photos">photos</a></li><li data-type='method'><a href="module-explore.html#~trending">trending</a></li></ul></li><li><a href="module-messages.html">messages</a><ul class='methods'><li data-type='method'><a href="module-messages.html#~channelMessages">channelMessages</a></li><li data-type='method'><a href="module-messages.html#~createMessage">createMessage</a></li><li data-type='method'><a href="module-messages.html#~deleteMessage">deleteMessage</a></li><li data-type='method'><a href="module-messages.html#~message">message</a></li><li data-type='method'><a href="module-messages.html#~messages">messages</a></li><li data-type='method'><a href="module-messages.html#~messageThread">messageThread</a></li><li data-type='method'><a href="module-messages.html#~personalMessages">personalMessages</a></li><li data-type='method'><a href="module-messages.html#~searchMessages">searchMessages</a></li><li data-type='method'><a href="module-messages.html#~sendMessage">sendMessage</a></li><li data-type='method'><a href="module-messages.html#~stickies">stickies</a></li><li data-type='method'><a href="module-messages.html#~sticky">sticky</a></li><li data-type='method'><a href="module-messages.html#~unsticky">unsticky</a></li></ul></li><li><a href="module-posts.html">posts</a><ul class='methods'><li data-type='method'><a href="module-posts.html#~actions">actions</a></li><li data-type='method'><a href="module-posts.html#~bookmark">bookmark</a></li><li data-type='method'><a href="module-posts.html#~bookmarks">bookmarks</a></li><li data-type='method'><a href="module-posts.html#~createPost">createPost</a></li><li data-type='method'><a href="module-posts.html#~deleteBookmark">deleteBookmark</a></li><li data-type='method'><a href="module-posts.html#~deletePost">deletePost</a></li><li data-type='method'><a href="module-posts.html#~deleteRepost">deleteRepost</a></li><li data-type='method'><a href="module-posts.html#~global">global</a></li><li data-type='method'><a href="module-posts.html#~personal">personal</a></li><li data-type='method'><a href="module-posts.html#~post">post</a></li><li data-type='method'><a href="module-posts.html#~posts">posts</a></li><li data-type='method'><a href="module-posts.html#~postsTaggedWith">postsTaggedWith</a></li><li data-type='method'><a href="module-posts.html#~repost">repost</a></li><li data-type='method'><a href="module-posts.html#~revisions">revisions</a></li><li data-type='method'><a href="module-posts.html#~searchPosts">searchPosts</a></li><li data-type='method'><a href="module-posts.html#~thread">thread</a></li><li data-type='method'><a href="module-posts.html#~unified">unified</a></li><li data-type='method'><a href="module-posts.html#~updatePost">updatePost</a></li><li data-type='method'><a href="module-posts.html#~usersActions">usersActions</a></li></ul></li><li><a href="module-stream_markers.html">stream_markers</a><ul class='methods'><li data-type='method'><a href="module-stream_markers.html#~marker">marker</a></li><li data-type='method'><a href="module-stream_markers.html#~markers">markers</a></li></ul></li><li><a href="module-system.html">system</a><ul class='methods'><li data-type='method'><a href="module-system.html#~config">config</a></li><li data-type='method'><a href="module-system.html#~stats">stats</a></li></ul></li><li><a href="module-users.html">users</a><ul class='methods'><li data-type='method'><a href="module-users.html#~avatar">avatar</a></li><li data-type='method'><a href="module-users.html#~block">block</a></li><li data-type='method'><a href="module-users.html#~blocked">blocked</a></li><li data-type='method'><a href="module-users.html#~cover">cover</a></li><li data-type='method'><a href="module-users.html#~follow">follow</a></li><li data-type='method'><a href="module-users.html#~followers">followers</a></li><li data-type='method'><a href="module-users.html#~following">following</a></li><li data-type='method'><a href="module-users.html#~mentions">mentions</a></li><li data-type='method'><a href="module-users.html#~mute">mute</a></li><li data-type='method'><a href="module-users.html#~muted">muted</a></li><li data-type='method'><a href="module-users.html#~postsFrom">postsFrom</a></li><li data-type='method'><a href="module-users.html#~presence">presence</a></li><li data-type='method'><a href="module-users.html#~presenceOf">presenceOf</a></li><li data-type='method'><a href="module-users.html#~replaceProfile">replaceProfile</a></li><li data-type='method'><a href="module-users.html#~searchUsers">searchUsers</a></li><li data-type='method'><a href="module-users.html#~unblock">unblock</a></li><li data-type='method'><a href="module-users.html#~unfollow">unfollow</a></li><li data-type='method'><a href="module-users.html#~unmute">unmute</a></li><li data-type='method'><a href="module-users.html#~updatePresence">updatePresence</a></li><li data-type='method'><a href="module-users.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-users.html#~uploadAvatar">uploadAvatar</a></li><li data-type='method'><a href="module-users.html#~uploadCover">uploadCover</a></li><li data-type='method'><a href="module-users.html#~user">user</a></li><li data-type='method'><a href="module-users.html#~users">users</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">pnut.js</h1>
+    
 
     
 
@@ -26,14 +37,23 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>require('es6-promise').polyfill();
-require('isomorphic-fetch');
+            <pre class="prettyprint source linenums"><code>require("es6-promise").polyfill();
+require("isomorphic-fetch");
+const FormData = require("form-data");
 
-const users = require('./users');
-const posts = require('./posts');
-const channels = require('./channels');
-const messages = require('./messages');
-const system = require('./system');
+const snakeCase = require("snake-case");
+const appendQuery = require("append-query");
+
+const authentication = require("./authentication");
+const users = require("./users");
+const posts = require("./posts");
+const explore = require("./explore");
+const channels = require("./channels");
+const streamMarkers = require("./stream_markers");
+const messages = require("./messages");
+const system = require("./system");
+const appStreams = require("./app_streams");
+const clients = require("./clients");
 
 /**
  * pnut-butter.js
@@ -43,16 +63,25 @@ const system = require('./system');
  * @returns {Object}
  */
 const pnut = () => {
-
   const api = {
-    base: 'https://api.pnut.io/v0',
-    token: '',
+    base: "https://api.pnut.io/v0",
+    streamBase: "wss://stream.pnut.io/v0",
+    token: "",
 
-    request(endpoint, { httpMethod = 'GET', resultAs = 'json', data = {} } = {}) {
+    request(
+      endpoint,
+      {
+        httpMethod = "GET",
+        params = {},
+        resultAs = "json",
+        dataAs = "json",
+        data = {}
+      } = {}
+    ) {
       let auth = {};
-      if (this.token !== '') {
+      if (this.token !== "") {
         auth = {
-          "Authorization": `Bearer ${this.token}`
+          Authorization: `Bearer ${this.token}`
         };
       }
 
@@ -61,14 +90,40 @@ const pnut = () => {
         headers: auth
       };
 
-      if (httpMethod !== 'GET' &amp;&amp; Object.keys(data).length > 0) {
-        options.body = JSON.stringify(data);
-        options.headers['Content-Type'] = 'application/json';
+      if (httpMethod !== "GET" &amp;&amp; Object.keys(data).length > 0) {
+        if (dataAs === "json") {
+          options.body = JSON.stringify(data);
+          options.headers["Content-Type"] = "application/json";
+        } else if (dataAs === "form") {
+          let form = new FormData();
+          Object.keys(data).forEach(key => form.append(key, data[key]));
+          options.body = form;
+        } else if (dataAs === "dom-node") {
+          let form = new FormData(data);
+          options.body = form;
+        }
       }
 
-      const uri = `${this.base}${endpoint}`;
-      return fetch(uri, options).then(function (response) {
-        if (resultAs === 'response') {
+      /**
+       * We do some magic here to allow any arbitrary URI parameter written
+       * camelCase, snake_case or any-other-case too.
+       * TODO: This should be extract into a separate module that handles the
+       * URL construction.
+       */
+      const sanitizedParams = {};
+      Object.keys(params).forEach(key => {
+        if (Array.isArray(params[key])) {
+          sanitizedParams[snakeCase(key)] = params[key].join(",");
+        } else {
+          sanitizedParams[snakeCase(key)] = params[key];
+        }
+      });
+      const uri = appendQuery(`${this.base}${endpoint}`, sanitizedParams, {
+        encodeComponents: false
+      });
+
+      return fetch(uri, options).then(function(response) {
+        if (resultAs === "response") {
           return response;
         } else {
           return response[resultAs]();
@@ -88,59 +143,42 @@ const pnut = () => {
       },
 
       /**
+       * Return the auth token that was set.
+       * @returns {string}
+       */
+      get token() {
+        return api.token;
+      },
+
+      /**
        * Send request with custom endpoint / parameters.
        * @param {string} endpoint - The custom call
        * @param {string} method - HTTP verb, defaults to GET
        * @return {Promise}
        */
-      custom(endpoint, method = 'GET', data = {}) {
-        endpoint = endpoint.startsWith('/') ? `${endpoint}` : `/${endpoint}`;
-        return api.request(`${endpoint}`, { httpMethod: method, data: data });
-      },
-
-      /**
-      * Generate a URL for client side authentication.
-      * @param {string} - Client ID token
-      * @param {string} redirectURI - URI you want to be redirected at
-      * @param {Object} [scope] - The scope you want to request
-      * @returns {string} - A ready-to-use authentication url
-      */
-      authenticateClientURL(clientId = '', redirectURI = '', scope = {
-        basic: true,
-        stream: true,
-        write_post: true,
-        follow: true,
-        update_profile: true,
-        presence: true,
-        messages: true,
-        public_messages: true,
-      }) {
-
-        if (clientId.length &lt; 1) {
-          throw new Error('You need a client ID for this request');
-        } else if (redirectURI.length &lt; 1) {
-          throw new Error('You need a redirect URI for this request');
-        }
-
-        let url = `https://pnut.io/oauth/authenticate?`;
-        url += `client_id=${clientId}`;
-        url += `&amp;redirect_uri=${redirectURI}`;
-        url += `&amp;scope=${Object.keys(scope).join(',')}`;
-        url += `&amp;response_type=token`;
-
-        return url;
-      },
+      custom(endpoint, method = "GET", data = {}) {
+        endpoint = endpoint.startsWith("/") ? `${endpoint}` : `/${endpoint}`;
+        return api.request(`${endpoint}`, {
+          httpMethod: method,
+          data: data
+        });
+      }
     },
-
+    authentication(api),
     users(api),
     posts(api),
+    explore(api),
     channels(api),
+    streamMarkers(api),
     messages(api),
-    system(api)
+    system(api),
+    appStreams(api),
+    clients(api)
   );
 };
 
-module.exports = pnut();</code></pre>
+module.exports = pnut();
+</code></pre>
         </article>
     </section>
 
@@ -149,17 +187,13 @@ module.exports = pnut();</code></pre>
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-channels.html">channels</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticateClientURL">authenticateClientURL</a></li><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
-</nav>
-
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sun Apr 02 2017 21:42:23 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 22 2017 10:07:50 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 </body>
 </html>

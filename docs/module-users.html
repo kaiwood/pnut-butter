@@ -1,84 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Documentation Module: users</title>
+    <meta charset="utf-8">
+    <title>users - Documentation</title>
 
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.simplex.css">
-
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
 </head>
-
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top ">
-<div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">Documentation</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
-	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
-		<ul class="nav navbar-nav">
-			
-			<li class="dropdown">
-				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="module-app_streams.html">app_streams</a></li><li><a href="module-authentication.html">authentication</a></li><li><a href="module-channels.html">channels</a></li><li><a href="module-clients.html">clients</a></li><li><a href="module-explore.html">explore</a></li><li><a href="module-messages.html">messages</a></li><li><a href="module-posts.html">posts</a></li><li><a href="module-stream_markers.html">stream_markers</a></li><li><a href="module-system.html">system</a></li><li><a href="module-users.html">users</a></li>
-				</ul>
-			</li>
-			
-			<li class="dropdown">
-				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li>
-				</ul>
-			</li>
-			
-		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
-	</div>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
 
-</div>
-</div>
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-app_streams.html">app_streams</a><ul class='methods'><li data-type='method'><a href="module-app_streams.html#~createStream">createStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStream">deleteStream</a></li><li data-type='method'><a href="module-app_streams.html#~deleteStreams">deleteStreams</a></li><li data-type='method'><a href="module-app_streams.html#~stream">stream</a></li><li data-type='method'><a href="module-app_streams.html#~streams">streams</a></li><li data-type='method'><a href="module-app_streams.html#~updateStream">updateStream</a></li></ul></li><li><a href="module-authentication.html">authentication</a><ul class='methods'><li data-type='method'><a href="module-authentication.html#~authenticateClientURL">authenticateClientURL</a></li><li data-type='method'><a href="module-authentication.html#~requestAppAccessToken">requestAppAccessToken</a></li></ul></li><li><a href="module-channels.html">channels</a><ul class='methods'><li data-type='method'><a href="module-channels.html#~channel">channel</a></li><li data-type='method'><a href="module-channels.html#~channels">channels</a></li><li data-type='method'><a href="module-channels.html#~deactivateChannel">deactivateChannel</a></li><li data-type='method'><a href="module-channels.html#~markAllAsRead">markAllAsRead</a></li><li data-type='method'><a href="module-channels.html#~muteChannel">muteChannel</a></li><li data-type='method'><a href="module-channels.html#~mutedChannels">mutedChannels</a></li><li data-type='method'><a href="module-channels.html#~pmChannelFor">pmChannelFor</a></li><li data-type='method'><a href="module-channels.html#~searchChannels">searchChannels</a></li><li data-type='method'><a href="module-channels.html#~subscribe">subscribe</a></li><li data-type='method'><a href="module-channels.html#~subscribed">subscribed</a></li><li data-type='method'><a href="module-channels.html#~subscribers">subscribers</a></li><li data-type='method'><a href="module-channels.html#~unmuteChannel">unmuteChannel</a></li><li data-type='method'><a href="module-channels.html#~unread">unread</a></li><li data-type='method'><a href="module-channels.html#~unsubscribe">unsubscribe</a></li><li data-type='method'><a href="module-channels.html#~usersChannels">usersChannels</a></li></ul></li><li><a href="module-clients.html">clients</a><ul class='methods'><li data-type='method'><a href="module-clients.html#~client">client</a></li><li data-type='method'><a href="module-clients.html#~clientsByUser">clientsByUser</a></li></ul></li><li><a href="module-explore.html">explore</a><ul class='methods'><li data-type='method'><a href="module-explore.html#~conversations">conversations</a></li><li data-type='method'><a href="module-explore.html#~missedConversations">missedConversations</a></li><li data-type='method'><a href="module-explore.html#~photos">photos</a></li><li data-type='method'><a href="module-explore.html#~trending">trending</a></li></ul></li><li><a href="module-messages.html">messages</a><ul class='methods'><li data-type='method'><a href="module-messages.html#~channelMessages">channelMessages</a></li><li data-type='method'><a href="module-messages.html#~createMessage">createMessage</a></li><li data-type='method'><a href="module-messages.html#~deleteMessage">deleteMessage</a></li><li data-type='method'><a href="module-messages.html#~message">message</a></li><li data-type='method'><a href="module-messages.html#~messages">messages</a></li><li data-type='method'><a href="module-messages.html#~messageThread">messageThread</a></li><li data-type='method'><a href="module-messages.html#~personalMessages">personalMessages</a></li><li data-type='method'><a href="module-messages.html#~searchMessages">searchMessages</a></li><li data-type='method'><a href="module-messages.html#~sendMessage">sendMessage</a></li><li data-type='method'><a href="module-messages.html#~stickies">stickies</a></li><li data-type='method'><a href="module-messages.html#~sticky">sticky</a></li><li data-type='method'><a href="module-messages.html#~unsticky">unsticky</a></li></ul></li><li><a href="module-posts.html">posts</a><ul class='methods'><li data-type='method'><a href="module-posts.html#~actions">actions</a></li><li data-type='method'><a href="module-posts.html#~bookmark">bookmark</a></li><li data-type='method'><a href="module-posts.html#~bookmarks">bookmarks</a></li><li data-type='method'><a href="module-posts.html#~createPost">createPost</a></li><li data-type='method'><a href="module-posts.html#~deleteBookmark">deleteBookmark</a></li><li data-type='method'><a href="module-posts.html#~deletePost">deletePost</a></li><li data-type='method'><a href="module-posts.html#~deleteRepost">deleteRepost</a></li><li data-type='method'><a href="module-posts.html#~global">global</a></li><li data-type='method'><a href="module-posts.html#~personal">personal</a></li><li data-type='method'><a href="module-posts.html#~post">post</a></li><li data-type='method'><a href="module-posts.html#~posts">posts</a></li><li data-type='method'><a href="module-posts.html#~postsTaggedWith">postsTaggedWith</a></li><li data-type='method'><a href="module-posts.html#~repost">repost</a></li><li data-type='method'><a href="module-posts.html#~revisions">revisions</a></li><li data-type='method'><a href="module-posts.html#~searchPosts">searchPosts</a></li><li data-type='method'><a href="module-posts.html#~thread">thread</a></li><li data-type='method'><a href="module-posts.html#~unified">unified</a></li><li data-type='method'><a href="module-posts.html#~updatePost">updatePost</a></li><li data-type='method'><a href="module-posts.html#~usersActions">usersActions</a></li></ul></li><li><a href="module-stream_markers.html">stream_markers</a><ul class='methods'><li data-type='method'><a href="module-stream_markers.html#~marker">marker</a></li><li data-type='method'><a href="module-stream_markers.html#~markers">markers</a></li></ul></li><li><a href="module-system.html">system</a><ul class='methods'><li data-type='method'><a href="module-system.html#~config">config</a></li><li data-type='method'><a href="module-system.html#~stats">stats</a></li></ul></li><li><a href="module-users.html">users</a><ul class='methods'><li data-type='method'><a href="module-users.html#~avatar">avatar</a></li><li data-type='method'><a href="module-users.html#~block">block</a></li><li data-type='method'><a href="module-users.html#~blocked">blocked</a></li><li data-type='method'><a href="module-users.html#~cover">cover</a></li><li data-type='method'><a href="module-users.html#~follow">follow</a></li><li data-type='method'><a href="module-users.html#~followers">followers</a></li><li data-type='method'><a href="module-users.html#~following">following</a></li><li data-type='method'><a href="module-users.html#~mentions">mentions</a></li><li data-type='method'><a href="module-users.html#~mute">mute</a></li><li data-type='method'><a href="module-users.html#~muted">muted</a></li><li data-type='method'><a href="module-users.html#~postsFrom">postsFrom</a></li><li data-type='method'><a href="module-users.html#~presence">presence</a></li><li data-type='method'><a href="module-users.html#~presenceOf">presenceOf</a></li><li data-type='method'><a href="module-users.html#~replaceProfile">replaceProfile</a></li><li data-type='method'><a href="module-users.html#~searchUsers">searchUsers</a></li><li data-type='method'><a href="module-users.html#~unblock">unblock</a></li><li data-type='method'><a href="module-users.html#~unfollow">unfollow</a></li><li data-type='method'><a href="module-users.html#~unmute">unmute</a></li><li data-type='method'><a href="module-users.html#~updatePresence">updatePresence</a></li><li data-type='method'><a href="module-users.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-users.html#~uploadAvatar">uploadAvatar</a></li><li data-type='method'><a href="module-users.html#~uploadCover">uploadCover</a></li><li data-type='method'><a href="module-users.html#~user">user</a></li><li data-type='method'><a href="module-users.html#~users">users</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#custom">custom</a></li><li><a href="global.html#pnut">pnut</a></li><li><a href="global.html#token">token</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">users</h1>
+    
+
+    
 
 
-<div class="container" id="toc-content">
-<div class="row">
 
-	
-	<div class="col-md-8">
-	
-		<div id="main">
-			
 
-	<h1 class="page-title">Module: users</h1>
 <section>
 
 <header>
     
+        
+            
+        
+    
 </header>
-
 
 <article>
     <div class="container-overview">
@@ -88,43 +53,77 @@
         
 
         
+            
+
+
+
+
 <dl class="details">
-    
-
-	
-
-	
-
-	
 
     
-
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line3">line 3</a>
+    </li></ul></dd>
     
 
     
 
     
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
+    
 
+    
 
-	
+    
 
-	
+    
 
-	
+    
 
-	
+    
+
+    
+
+    
 </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
@@ -137,7 +136,7 @@
 
     
 
-    
+     
 
     
 
@@ -146,32 +145,80 @@
     
         <h3 class="subsection-title">Methods</h3>
 
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="~avatar"><span class="type-signature">&lt;inner> </span>avatar(userId [, true])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a users avatar image.
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
         
+            
 
-<table class="params table table-striped">
+    
+
+    <h4 class="name" id="~avatar"><span class="type-signature">(inner) </span>avatar<span class="signature">(userId, true<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a users avatar image.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -181,7 +228,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -205,7 +252,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -239,7 +285,6 @@
 <span class="param-type">boolean</span>
 
 
-
             
             </td>
 
@@ -264,65 +309,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -331,42 +336,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~block"><span class="type-signature">&lt;inner> </span>block(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Block a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~block"><span class="type-signature">(inner) </span>block<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line276">line 276</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Block a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.block(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -398,7 +452,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -415,65 +468,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -482,48 +495,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.block(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~blocked"><span class="type-signature">&lt;inner> </span>blocked( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of blocked users.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~blocked"><span class="type-signature">(inner) </span>blocked<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line258">line 258</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of blocked users.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.blocked();</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -533,7 +589,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -554,7 +610,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -581,65 +636,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -648,48 +663,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.blocked();</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~cover"><span class="type-signature">&lt;inner> </span>cover(userId [, true])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a users cover image.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~cover"><span class="type-signature">(inner) </span>cover<span class="signature">(userId, true<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line71">line 71</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a users cover image.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.cover(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -699,7 +757,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -723,7 +781,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -757,7 +814,6 @@
 <span class="param-type">boolean</span>
 
 
-
             
             </td>
 
@@ -782,65 +838,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -849,48 +865,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.cover(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~follow"><span class="type-signature">&lt;inner> </span>follow(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Follow a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~follow"><span class="type-signature">(inner) </span>follow<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line190">line 190</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Follow a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.follow(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -922,7 +981,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -939,65 +997,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1006,48 +1024,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.follow(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~followers"><span class="type-signature">&lt;inner> </span>followers(userId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of user objects that are following the specified user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~followers"><span class="type-signature">(inner) </span>followers<span class="signature">(userId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line178">line 178</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of user objects that are following the specified user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.followers(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1057,7 +1118,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1081,7 +1142,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -1115,7 +1175,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -1140,65 +1199,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1207,48 +1226,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.followers(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~following"><span class="type-signature">&lt;inner> </span>following(userId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of user objects that the specified user is following.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~following"><span class="type-signature">(inner) </span>following<span class="signature">(userId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line165">line 165</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of user objects that the specified user is following.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.following(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1258,7 +1320,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1282,7 +1344,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -1316,7 +1377,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -1341,65 +1401,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1408,48 +1428,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.following(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~mentions"><span class="type-signature">&lt;inner> </span>mentions(userid [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve posts mentioning the specified user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~mentions"><span class="type-signature">(inner) </span>mentions<span class="signature">(userid, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line103">line 103</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve posts mentioning the specified user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.mentions(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1459,7 +1522,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1485,7 +1548,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -1517,7 +1579,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -1542,65 +1603,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1609,48 +1630,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.mentions(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~mute"><span class="type-signature">&lt;inner> </span>mute(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Mute a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~mute"><span class="type-signature">(inner) </span>mute<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line230">line 230</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Mute a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.mute(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1682,7 +1746,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -1699,65 +1762,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1766,48 +1789,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.mute(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~muted"><span class="type-signature">&lt;inner> </span>muted( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of muted users.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~muted"><span class="type-signature">(inner) </span>muted<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line218">line 218</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of muted users.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.muted();</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1817,7 +1883,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -1838,7 +1904,6 @@
             
                 
 <span class="param-type">Object</span>
-
 
 
             
@@ -1865,65 +1930,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -1932,48 +1957,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.muted();</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~postsFrom"><span class="type-signature">&lt;inner> </span>postsFrom(userId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve posts created by a specific user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~postsFrom"><span class="type-signature">(inner) </span>postsFrom<span class="signature">(userId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line116">line 116</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve posts created by a specific user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.postsFrom(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -1983,7 +2051,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -2009,7 +2077,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -2041,7 +2108,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -2066,65 +2132,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2133,48 +2159,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.postsFrom(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~presence"><span class="type-signature">&lt;inner> </span>presence( [params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve all users' presence statuses that are not "offline".
-    </div>
-    
 
     
 
+    <h4 class="name" id="~presence"><span class="type-signature">(inner) </span>presence<span class="signature">(params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line304">line 304</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve all users' presence statuses that are not "offline".
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.presence();</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2184,7 +2253,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -2207,7 +2276,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -2232,65 +2300,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2299,48 +2327,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.presence();</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~presenceOf"><span class="type-signature">&lt;inner> </span>presenceOf(userId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a user's presence.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~presenceOf"><span class="type-signature">(inner) </span>presenceOf<span class="signature">(userId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line314">line 314</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a user's presence.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2350,7 +2416,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -2373,7 +2439,6 @@
 <span class="param-type">string</span>
 
 
-
             
             </td>
 
@@ -2405,7 +2470,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -2430,65 +2494,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2497,42 +2521,94 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~replaceProfile"><span class="type-signature">&lt;inner> </span>replaceProfile(profile)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Replaces the authenticated user's profile. Anything not included is removed.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~replaceProfile"><span class="type-signature">(inner) </span>replaceProfile<span class="signature">(profile)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line131">line 131</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Replaces the authenticated user's profile. Anything not included is removed.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.replaceProfile({
+  timezone: "Europe/Berlin",
+  name: "Robert"
+});</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2563,7 +2639,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -2578,65 +2653,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2645,51 +2680,94 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.replaceProfile({
-  timezone: &quot;Europe/Berlin&quot;,
-  name: &quot;Robert&quot;
-});</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~searchUsers"><span class="type-signature">&lt;inner> </span>searchUsers(params)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of users filtered by the given criteria.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~searchUsers"><span class="type-signature">(inner) </span>searchUsers<span class="signature">(params)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line346">line 346</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of users filtered by the given criteria.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.searchUsers({
+ q: "news",
+ types: "feed"
+});</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2720,7 +2798,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -2735,98 +2812,100 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.searchUsers({
- q: &quot;news&quot;,
- types: &quot;feed&quot;
-});</pre>
 
 
-    
-</dd>
+
+
+
+
+
+
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unblock"><span class="type-signature">&lt;inner> </span>unblock(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Unblock a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unblock"><span class="type-signature">(inner) </span>unblock<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line290">line 290</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Unblock a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.unblock(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -2855,7 +2934,6 @@
             
                 
 <span class="param-type">string</span>
-
 
 
             
@@ -2872,65 +2950,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -2939,48 +2977,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.unblock(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unfollow"><span class="type-signature">&lt;inner> </span>unfollow(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Unfollow a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unfollow"><span class="type-signature">(inner) </span>unfollow<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line204">line 204</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Unfollow a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.unfollow(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3012,7 +3093,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -3029,65 +3109,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3096,48 +3136,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.unfollow(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~unmute"><span class="type-signature">&lt;inner> </span>unmute(userId)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Unmute a user.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~unmute"><span class="type-signature">(inner) </span>unmute<span class="signature">(userId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line244">line 244</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Unmute a user.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.unmute(1);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3171,7 +3254,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -3186,65 +3268,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3253,48 +3295,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.unmute(1);</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~updatePresence"><span class="type-signature">&lt;inner> </span>updatePresence(msg)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Update a user's presence.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~updatePresence"><span class="type-signature">(inner) </span>updatePresence<span class="signature">(msg)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line323">line 323</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Update a user's presence.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3325,7 +3405,6 @@
 <span class="param-type">string</span>
 
 
-
             
             </td>
 
@@ -3340,65 +3419,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3407,42 +3446,94 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~updateProfile"><span class="type-signature">&lt;inner> </span>updateProfile(profile)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Updates only specified parts of the authenticated user's profile.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~updateProfile"><span class="type-signature">(inner) </span>updateProfile<span class="signature">(profile)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line149">line 149</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Updates only specified parts of the authenticated user's profile.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.updateProfile({
+  timezone: "Europe/Berlin",
+  name: "Robert"
+});</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3473,7 +3564,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -3488,65 +3578,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3555,51 +3605,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.updateProfile({
-  timezone: &quot;Europe/Berlin&quot;,
-  name: &quot;Robert&quot;
-});</pre>
 
-
-    
-</dd>
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~uploadAvatar"><span class="type-signature">&lt;inner> </span>uploadAvatar(form)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Upload a new avatar image
-    </div>
-    
 
     
 
+    <h4 class="name" id="~uploadAvatar"><span class="type-signature">(inner) </span>uploadAvatar<span class="signature">(form)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line41">line 41</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Upload a new avatar image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3628,7 +3713,6 @@
             
                 
 <span class="param-type">object</span>
-
 
 
             
@@ -3645,65 +3729,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3712,42 +3756,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~uploadCover"><span class="type-signature">&lt;inner> </span>uploadCover(form)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Upload a new cover image
-    </div>
-    
 
     
 
+    <h4 class="name" id="~uploadCover"><span class="type-signature">(inner) </span>uploadCover<span class="signature">(form)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line54">line 54</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Upload a new cover image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3778,7 +3866,6 @@
 <span class="param-type">object</span>
 
 
-
             
             </td>
 
@@ -3793,65 +3880,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -3860,42 +3907,86 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~user"><span class="type-signature">&lt;inner> </span>user(userId [, params])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a user object.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~user"><span class="type-signature">(inner) </span>user<span class="signature">(userId, params<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line15">line 15</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a user object.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -3905,7 +3996,7 @@
         <th>Type</th>
 
         
-        <th>Argument</th>
+        <th>Attributes</th>
         
 
         
@@ -3929,7 +4020,6 @@
 |
 
 <span class="param-type">Number</span>
-
 
 
             
@@ -3963,7 +4053,6 @@
 <span class="param-type">Object</span>
 
 
-
             
             </td>
 
@@ -3988,65 +4077,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -4055,42 +4104,91 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
-
-        
-
     
-</dd>
+
 
         
             
-<hr>
-<dt>
-    <h4 class="name" id="~users"><span class="type-signature">&lt;inner> </span>users(userIds)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        Retrieve a list of specified user objects. Only retrieves the first 200 found.
-    </div>
-    
 
     
 
+    <h4 class="name" id="~users"><span class="type-signature">(inner) </span>users<span class="signature">(userIds)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="users.js.html">users.js</a>, <a href="users.js.html#line90">line 90</a>
+    </li></ul></dd>
     
 
     
-    
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Retrieve a list of specified user objects. Only retrieves the first 200 found.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>pnut.users(1,15,127);</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
     <thead>
     <tr>
         
@@ -4124,7 +4222,6 @@
 <span class="param-type">Number</span>
 
 
-
             
             </td>
 
@@ -4139,65 +4236,25 @@
     </tbody>
 </table>
 
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
 
 
 
-	
-
-	
-
-	
-
-	
-</dl>
 
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
 
 
-<dl>
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl class="param-type">
     <dt>
         Type
     </dt>
@@ -4206,23 +4263,13 @@
 <span class="param-type">Promise</span>
 
 
-
     </dd>
 </dl>
 
+    
+
 
         
-
-    
-        <h5>Example</h5>
-        
-    <pre class="sunlight-highlight-javascript">pnut.users(1,15,127);</pre>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -4235,132 +4282,15 @@
 
 
 
-		</div>
-	</div>
-
-	<div class="clearfix"></div>
-
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
-	
-
-</div>
 </div>
 
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
-          </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div>
-
+<br class="clear">
 
 <footer>
-
-
-<span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
-	
-		on 2017-10-21T17:01:55+02:00
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
-</span>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 22 2017 10:07:50 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
-<script src="scripts/docstrap.lib.js"></script>
-<script src="scripts/toc.js"></script>
-
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
-
-
-<script>
-$( function () {
-	$( "[id*='$']" ).each( function () {
-		var $this = $( this );
-
-		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-	} );
-
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
-		var $this = $( this );
-
-		var example = $this.find( "code" );
-		exampleText = example.html();
-		var lang = /{@lang (.*?)}/.exec( exampleText );
-		if ( lang && lang[1] ) {
-			exampleText = exampleText.replace( lang[0], "" );
-			example.html( exampleText );
-			lang = lang[1];
-		} else {
-			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
-			lang = langClassMatch ? langClassMatch[1] : "javascript";
-		}
-
-		if ( lang ) {
-
-			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
-			.html( example.html() );
-
-		}
-	} );
-
-	Sunlight.highlightAll( {
-		lineNumbers : false,
-		showMenu : true,
-		enableDoclinks : true
-	} );
-
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
-	$( "#toc" ).toc( {
-		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
-		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
-		showAndHide : false,
-		smoothScrolling: true
-	} );
-
-	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-	$( '.dropdown-toggle' ).dropdown();
-
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
-
-} );
-</script>
-
-
-
-<!--Navigation and Symbol Display-->
-
-
-<!--Google Analytics-->
-
-
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
-
-
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
 </body>
 </html>

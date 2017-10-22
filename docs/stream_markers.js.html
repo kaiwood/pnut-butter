@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>channels.js - Documentation</title>
+    <title>stream_markers.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">channels.js</h1>
+    <h1 class="page-title">stream_markers.js</h1>
     
 
     
@@ -40,171 +40,55 @@
             <pre class="prettyprint source linenums"><code>"use strict";
 
 /**
- * Channels
- * @module channels
+ * Stream markers
+ * @module stream_markers
  */
 module.exports = api => {
   return {
     /**
-     * Retrieve a channel object.
-     * @param {string|number} channelId - A channel id
-     * @param {Object} [params] - Additional URI parameters
-     * @returns {Promise}
-     */
-    channel(channelId, params = {}) {
-      return api.request(`/channels/${channelId}`, { params: params });
-    },
-
-    /**
-     * Retrieve a list of specified channel objects.
+     * Set a single stream marker.
      *
-     * @param {...string|number} channelIds - channel ids, max 200
+     * Valid values for the "name" argument are:
+     * - global
+     * - personal
+     * - mentions
+     * - channel:id
+     * @example
+     * pnut.marker("channel:18", 15100).then(res => {
+     *  console.log(res);
+     * });
+     * @param {string} name - Name of the markable stream
+     * @param {string|number} id - ID of the post / message
      * @returns {Promise}
      */
-    channels(...channelIds) {
-      return api.request(`/channels`, { params: { ids: channelIds } });
-    },
-
-    /**
-     * Retrieve a list of channels created by the authenticated user.
-     * @param {Object} [params] - Additional URI parameters
-     * @returns {Promise}
-     */
-    usersChannels(params = {}) {
-      return api.request(`/users/me/channels`, { params: params });
-    },
-
-    /**
-     * Retrieve a Private Message channel for a set of users, if one exists.
-     * @param {...string|number} userIds - user ids
-     * @returns {Promise}
-     */
-    pmChannelFor(...userIds) {
-      return api.request(`/users/me/channels/existing_pm`, {
-        params: { ids: userIds }
+    marker(name, id) {
+      return api.request(`/markers`, {
+        httpMethod: "POST",
+        data: [
+          {
+            name: name,
+            id: id
+          }
+        ]
       });
     },
 
     /**
-     * Retrieve the number of unread private messages for the authenticated user.
-     * @param {Object} [params] - Additional URI parameters
-     * @returns {Promise}
-     */
-    unread(params = {}) {
-      return api.request("/users/me/channels/num_unread/pm", {
-        params: params
-      });
-    },
-
-    /**
-     * Mark all unread private messages as read for the authenticated user.
-     * @returns {Promise}
-     */
-    markAllAsRead() {
-      return api.request("/users/me/channels/num_unread/pm", {
-        httpMethod: "DELETE"
-      });
-    },
-
-    /**
-     * Deactivate a channel.
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    deactivateChannel(channelId) {
-      return api.request(`/channels/${channelId}`, {
-        httpMethod: "DELETE"
-      });
-    },
-
-    /**
-     * Retrieve a list of channels the authenticated user is subscribed to.
-     * @param {Object} [params] - Additional URI parameters
-     * @returns {Promise}
-     */
-    subscribed(params = {}) {
-      return api.request("/users/me/channels/subscribed", { params: params });
-    },
-
-    /**
-     * Retrieve a list of users subscribed to a channel.
-     * @param {Object} [params] - Additional URI parameters
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    subscribers(channelId, params = {}) {
-      return api.request(`/channels/${channelId}/subscribers`, {
-        params: params
-      });
-    },
-
-    /**
-     * Subscribe to updates from a channel.
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    subscribe(channelId) {
-      return api.request(`/channels/${channelId}/subscribe`, {
-        httpMethod: "PUT"
-      });
-    },
-
-    /**
-     * Delete a subscription for a channel.
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    unsubscribe(channelId) {
-      return api.request(`/channels/${channelId}/subscribe`, {
-        httpMethod: "DELETE"
-      });
-    },
-
-    /**
-     * Retrieve a list of channels the authenticated user has muted.
-     * @param {Object} [params] - Additional URI parameters
-     * @returns {Promise}
-     */
-    mutedChannels(params = {}) {
-      return api.request("/users/me/channels/muted", { params: params });
-    },
-
-    /**
-     * Mute subscriptions for a channel. Muting unsubscribes, if you were subscribed.
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    muteChannel(channelId) {
-      return api.request(`/channels/${channelId}/mute`, {
-        httpMethod: "PUT"
-      });
-    },
-
-    /**
-     * Delete a subscription mute for a channel.
-     * @param {string|Number} channelId - Id of a channel
-     * @returns {Promise}
-     */
-    unmuteChannel(channelId) {
-      return api.request(`/channels/${channelId}/mute`, {
-        httpMethod: "DELETE"
-      });
-    },
-
-    /**
-     * Retrieve a list of channels filtered by the given criteria.
+     * Set up to 10 markers at once, like described in the pnut docs.
      *
      * @example
-     * pnut.searchChannels({
-     *   isPublic: 1,
-     *   channelTypes: "io.pnut.core.chat",
-     *   categories: "fun"
-     * });
-     * @param {Object} params - Search parameters
+     * pnut.markers([
+     *     { name: "channel:18", id: 15100 },
+     *     { name: "channel:19", id: 15101 }
+     * ]).then(res => console.log(res));
+     * @param {array} markerObjects - An array of marker objects
      * @returns {Promise}
      */
-    searchChannels(params = {}) {
-      return api.request("/channels/search", { params: params });
+    markers(markerObjects = []) {
+      return api.request(`/markers`, {
+        httpMethod: "POST",
+        data: markerObjects
+      });
     }
   };
 };
