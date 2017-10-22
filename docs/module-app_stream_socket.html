@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>authentication - Documentation</title>
+    <title>app_stream_socket - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">authentication</h1>
+    <h1 class="page-title">app_stream_socket</h1>
     
 
     
@@ -49,7 +49,7 @@
     <div class="container-overview">
     
         
-            <div class="description">Authentication</div>
+            <div class="description">Create and return a websocket with an app stream.</div>
         
 
         
@@ -63,7 +63,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="authentication.js.html">authentication.js</a>, <a href="authentication.js.html#line3">line 3</a>
+        <a href="app_stream_socket.js.html">app_stream_socket.js</a>, <a href="app_stream_socket.js.html#line6">line 6</a>
     </li></ul></dd>
     
 
@@ -110,107 +110,25 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    <h5>Example</h5>
     
-    </div>
+    <pre class="prettyprint"><code>const pnut = require("pnut-butter");
+pnut.token = "MY_VALID_ACCESS_TOKEN";
 
-    
+const AppStreamSocket = require("pnut-butter/dist/app_stream_socket");
+const ws = AppStreamSocket("myfancykeyname");
 
-    
+ws.on("open", event => {
+  console.log("Opening app stream");
+});
 
-    
+ws.on("message", event => {
+  console.log(event.data);
+});
 
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="~authenticateClientURL"><span class="type-signature">(inner) </span>authenticateClientURL<span class="signature">(redirectURI, scope<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="authentication.js.html">authentication.js</a>, <a href="authentication.js.html#line16">line 16</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Generate a URL for client side authentication.
-</div>
-
-
-
-
-
-
-
+ws.on("close", event => {
+  console.log("Closing app stream", event.code, event.reason);
+});</code></pre>
 
 
 
@@ -228,8 +146,6 @@
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -242,7 +158,7 @@
 
         <tr>
             
-                <td class="name"><code></code></td>
+                <td class="name"><code>streamKey</code></td>
             
 
             <td class="type">
@@ -255,82 +171,10 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last">Client ID token</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>redirectURI</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">URI you want to be redirected at</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>scope</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The scope you want to request</td>
+            <td class="description last">A valid stream key</td>
         </tr>
 
     
@@ -354,7 +198,7 @@
 
         
 <div class="param-desc">
-    - A ready-to-use authentication url
+    - A connected websocket
 </div>
 
 
@@ -365,7 +209,7 @@
     </dt>
     <dd>
         
-<span class="param-type">string</span>
+<span class="param-type">Object</span>
 
 
     </dd>
@@ -375,25 +219,8 @@
 
 
         
-            
-
     
-
-    <h4 class="name" id="~requestAppAccessToken"><span class="type-signature">(inner) </span>requestAppAccessToken<span class="signature">(clientId, clientSecret)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="authentication.js.html">authentication.js</a>, <a href="authentication.js.html#line51">line 51</a>
-    </li></ul></dd>
-    
+    </div>
 
     
 
@@ -401,154 +228,12 @@
 
     
 
-    
+     
 
     
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Request an app access token
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>clientId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The client id</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>clientSecret</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The client secret</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
     
 
     
