@@ -41,6 +41,10 @@ patch:
   'npm:debug:20170905':
     - node-pre-gyp > tar-pack > debug:
         patched: '2017-09-30T13:56:39.389Z'
+      babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+        patched: '2017-10-25T09:45:09.356Z'
   'npm:tough-cookie:20170905':
     - node-pre-gyp > request > tough-cookie:
         patched: '2017-09-30T13:56:39.389Z'
+      babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2017-10-25T09:45:09.356Z'
