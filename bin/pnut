@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+const commander = require("commander");
+const pkg = require("../package.json");
+const pnut = require("../lib/pnut");
+const fs = require("fs");
+const userHome = require("user-home");
+
+const configFile = `${userHome}/.pnut-butter.json`;
+if (fs.existsSync(configFile)) {
+  const config = require(configFile);
+  if (config.access_token) {
+    pnut.token = config.access_token;
+  }
+}
+
+async function run(cmd, arg) {
+  if (pnut.hasOwnProperty(cmd)) {
+    const { meta, data } = await pnut[cmd](`${arg}`);
+    console.log(data || meta);
+  } else {
+    console.log(`pnut-butter command '${cmd}' does not exist.`);
+  }
+}
+
+commander
+  .version(pkg.version)
+  .description(pkg.description)
+  .usage("[options] <command> [...]");
+
+commander
+  .command("run <cmd> [arg]")
+  .description("run any arbitrary pnut-butter command")
+  .action((cmd, arg) => run(cmd, arg));
+
+commander.parse(process.argv);
+
+if (!commander.args.filter(arg => typeof arg === "object").length) {
+  commander.help();
+}
