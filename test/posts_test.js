@@ -63,6 +63,18 @@ before(function() {
     .reply(200, {});
 
   nock(base)
+    .post("/posts", {
+      text: "A post with raw data",
+      raw: {
+        type: "io.pnut.core.language",
+        value: {
+          language: "en"
+        }
+      }
+    })
+    .reply(200, {});
+
+  nock(base)
     .put("/posts/1000", {
       text: "A revised, but still awesome post"
     })
@@ -195,6 +207,17 @@ describe("Posts", () => {
         parseMarkdownLinks: false
       })
       .should.become({});
+  });
+
+  it("should be able to create a new post with raw parameters ", () => {
+    return pnut.createPost("A post with raw data", {
+      raw: {
+        type: "io.pnut.core.language",
+        value: {
+          language: "en"
+        }
+      }
+    });
   });
 
   it("should be able to edit a post", () => {

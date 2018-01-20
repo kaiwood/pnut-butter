@@ -47,6 +47,8 @@ module.exports = api => {
   return {
     /**
      * Retrieve a user object.
+     * @example
+     * const { meta, data } = await pnut.user("me");
      * @param {string|Number} userId - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -57,6 +59,8 @@ module.exports = api => {
 
     /**
      * Retrieve a users avatar image.
+     * @example
+     * const { meta, data } = await pnut.avatar("me");
      * @param {string|Number} userId - A user id
      * @param {boolean} [true] - Should the return value be prebuffered via the fetch API?
      * @returns {Promise}
@@ -74,6 +78,7 @@ module.exports = api => {
 
     /**
      * Upload a new avatar image
+     * // TODO: Client side form example
      * @param {object} form - A valid DOM node of a form with a file field named "avatar"
      * @returns {Promise}
      */
@@ -87,6 +92,7 @@ module.exports = api => {
 
     /**
      * Upload a new cover image
+     * // TODO: Client side form example
      * @param {object} form - A valid DOM node of a form with a file field named "cover"
      * @returns {Promise}
      */
@@ -100,9 +106,9 @@ module.exports = api => {
 
     /**
      * Retrieve a users cover image.
-     * 
+     *
      * @example
-     * pnut.cover(1);
+     * const { meta, data } = await pnut.cover("me");
      * @param {string|Number} userId - A user id
      * @param {boolean} [true] - Should the return value be prebuffered via the fetch API?
      * @returns {Promise}
@@ -120,9 +126,9 @@ module.exports = api => {
 
     /**
      * Retrieve a list of specified user objects. Only retrieves the first 200 found.
-     * 
+     *
      * @example
-     * pnut.users(1,15,127);
+     * const { meta, data } pnut.users(1,15,127);
      * @param {...string|Number} userIds - 1 or more user ids
      * @returns {Promise}
      */
@@ -132,9 +138,9 @@ module.exports = api => {
 
     /**
      * Retrieve posts mentioning the specified user.
-     * 
+     *
      * @example
-     * pnut.mentions(1);
+     * const { meta, data } = await pnut.mentions(1);
      * @param {string|Number} userid - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -145,9 +151,9 @@ module.exports = api => {
 
     /**
      * Retrieve posts created by a specific user.
-     * 
+     *
      * @example
-     * pnut.postsFrom(1);
+     * const { meta, data } = pnut.postsFrom(1);
      * @param {string|Number} userId - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -158,9 +164,9 @@ module.exports = api => {
 
     /**
      * Replaces the authenticated user's profile. Anything not included is removed.
-     * 
+     *
      * @example
-     * pnut.replaceProfile({
+     * const { meta, data } = await pnut.replaceProfile({
      *   timezone: "Europe/Berlin",
      *   name: "Robert"
      * });
@@ -176,9 +182,9 @@ module.exports = api => {
 
     /**
      * Updates only specified parts of the authenticated user's profile.
-     * 
+     *
      * @example
-     * pnut.updateProfile({
+     * const { meta, data } = await pnut.updateProfile({
      *   timezone: "Europe/Berlin",
      *   name: "Robert"
      * });
@@ -194,9 +200,9 @@ module.exports = api => {
 
     /**
      * Retrieve a list of user objects that the specified user is following.
-     * 
+     *
      * @example
-     * pnut.following(1);
+     * const { meta, data } = await pnut.following(1);
      * @param {string|Number} userId - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -207,9 +213,9 @@ module.exports = api => {
 
     /**
      * Retrieve a list of user objects that are following the specified user.
-     * 
+     *
      * @example
-     * pnut.followers(1);
+     * const { meta, data } = await pnut.followers(1);
      * @param {string|Number} userId - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -220,9 +226,9 @@ module.exports = api => {
 
     /**
      * Follow a user.
-     * 
+     *
      * @example
-     * pnut.follow(1);
+     * const { meta, data } = await pnut.follow(1);
      * @param {string|Number} userId - id of user to follow
      * @returns {Promise}
      */
@@ -234,9 +240,9 @@ module.exports = api => {
 
     /**
      * Unfollow a user.
-     * 
+     *
      * @example
-     * pnut.unfollow(1);
+     * const { meta, data } = await const { meta, data } = await pnut.unfollow(1);
      * @param {string|Number} userId - id of the user to unfollow
      * @returns {Promise}
      */
@@ -248,9 +254,9 @@ module.exports = api => {
 
     /**
      * Retrieve a list of muted users.
-     * 
+     *
      * @example
-     * pnut.muted();
+     * const { meta, data } = await pnut.muted();
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
@@ -260,9 +266,9 @@ module.exports = api => {
 
     /**
      * Mute a user.
-     * 
+     *
      * @example
-     * pnut.mute(1);
+     * const { meta, data } = await pnut.mute(1);
      * @param {string|Number} userId - id of the user to mute
      * @returns {Promise}
      */
@@ -274,9 +280,9 @@ module.exports = api => {
 
     /**
      * Unmute a user.
-     * 
+     *
      * @example
-     * pnut.unmute(1);
+     * const { meta, data } = await pnut.unmute(1);
      * @param {string|Number} userId - id of the user to unmute
      * @returns {Promise}
      */
@@ -288,9 +294,9 @@ module.exports = api => {
 
     /**
      * Retrieve a list of blocked users.
-     * 
+     *
      * @example
-     * pnut.blocked();
+     * const { meta, data } = await pnut.blocked();
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
@@ -306,9 +312,9 @@ module.exports = api => {
 
     /**
      * Block a user.
-     * 
+     *
      * @example
-     * pnut.block(1);
+     * const { meta, data } = await pnut.block(1);
      * @param {string|Number} userId - id of the user to block.
      * @returns {Promise}
      */
@@ -320,9 +326,9 @@ module.exports = api => {
 
     /**
      * Unblock a user.
-     * 
+     *
      * @example
-     * pnut.unblock(1);
+     * const { meta, data } = await pnut.unblock(1);
      * @param {string} userId - id of the user to unblock.
      * @returns {Promise}
      */
@@ -334,9 +340,9 @@ module.exports = api => {
 
     /**
      * Retrieve all users' presence statuses that are not "offline".
-     * 
+     *
      * @example
-     * pnut.presence();
+     * const { meta, data } = await pnut.presence();
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
      */
@@ -346,6 +352,7 @@ module.exports = api => {
 
     /**
      * Retrieve a user's presence.
+     * const { meta, data } = await presenceOf("me");
      * @param {string} userId - A user id
      * @param {Object} [params] - Additional URI parameters
      * @returns {Promise}
@@ -356,6 +363,7 @@ module.exports = api => {
 
     /**
      * Update a user's presence.
+     * const { meta, data } = await updatePresence("my status");
      * @param {string} msg - An optional status message
      * @returns {Promise}
      */
@@ -376,7 +384,7 @@ module.exports = api => {
      * Retrieve a list of users filtered by the given criteria.
      *
      * @example
-     * pnut.searchUsers({
+     * const { meta, data } = await pnut.searchUsers({
      *  q: "news",
      *  types: "feed"
      * });
@@ -399,7 +407,7 @@ module.exports = api => {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Oct 23 2017 21:23:14 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Jan 20 2018 15:14:15 GMT+0100 (CET) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
