@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.10.2
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:brace-expansion:20170302':
@@ -33,6 +33,35 @@ ignore:
     - node-pre-gyp > tar-pack > tar > fstream > rimraf > glob > minimatch > brace-expansion:
         reason: None given
         expires: '2017-10-30T13:59:08.481Z'
+  'npm:braces:20180219':
+    - babel-cli > chokidar > anymatch > micromatch > braces:
+        reason: None given
+        expires: '2018-03-27T16:07:25.627Z'
+  'npm:hoek:20180212':
+    - babel-cli > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.627Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.627Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.627Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.628Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.628Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.628Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.628Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2018-03-27T16:07:25.628Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:ms:20170412':
@@ -41,10 +70,10 @@ patch:
   'npm:debug:20170905':
     - node-pre-gyp > tar-pack > debug:
         patched: '2017-09-30T13:56:39.389Z'
-      babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > debug:
         patched: '2017-10-25T09:45:09.356Z'
   'npm:tough-cookie:20170905':
     - node-pre-gyp > request > tough-cookie:
         patched: '2017-09-30T13:56:39.389Z'
-      babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+    - babel-cli > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
         patched: '2017-10-25T09:45:09.356Z'
