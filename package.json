@@ -1,6 +1,6 @@
 {
   "name": "pnut-butter",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "description": "pnut-butter.js – A modern, promise based wrapper library for the pnut.io API.",
   "main": "dist/pnut.js",
   "bin": "bin/pnut",
