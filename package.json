@@ -8,9 +8,7 @@
     "test": "node_modules/mocha/bin/mocha",
     "test:watch": "mocha -w -R min",
     "build": "babel lib --presets babel-preset-es2015 --out-dir dist",
-    "generate_docs": "jsdoc -d ./docs -t ./node_modules/docdash -R README.md lib/*",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "generate_docs": "jsdoc -d ./docs -t ./node_modules/docdash -R README.md lib/*"
   },
   "repository": {
     "type": "git",
@@ -53,8 +51,6 @@
     "faye-websocket": "^0.11.1",
     "form-data": "^2.3.2",
     "isomorphic-fetch": "^2.2.1",
-    "snake-case": "2.1.0",
-    "snyk": "^1.80.1"
-  },
-  "snyk": true
+    "snake-case": "2.1.0"
+  }
 }
