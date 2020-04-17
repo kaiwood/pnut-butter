@@ -46,25 +46,42 @@
 
 
     <section class="readme">
-        <article><h1>pnut-butter.js</h1><p>A modern, promise based wrapper library for the <a href="https://pnut.io">pnut.io</a> API.</p>
+        <article><h1>pnut-butter.js</h1>
+<p>A modern, promise based wrapper library for the <a href="https://pnut.io">pnut.io</a> API.</p>
 <p>It is currently developed and tested on Node 8 LTS, but should work with basically any current browser supporting ES6 as well (feel free to open an issue if not), especially if you throw it in your typical Webpack/Babel/whatever toolchain.</p>
-<h2>Installation</h2><pre class="prettyprint source lang-bash"><code>npm install pnut-butter</code></pre><h2>Usage</h2><p>Everything related to data fetching returns a Promise, which you can either use directly, with a supporting library like <a href="https://www.npmjs.com/package/co">co</a> or the upcoming async/await standard.</p>
+<h2>Installation</h2>
+<pre class="prettyprint source lang-bash"><code>npm install pnut-butter
+</code></pre>
+<h2>Usage</h2>
+<p>Everything related to data fetching returns a Promise, which you can either use directly, with a supporting library like <a href="https://www.npmjs.com/package/co">co</a> or the upcoming async/await standard.</p>
 <p>For example, to fetch the global timeline:</p>
 <pre class="prettyprint source lang-javascript"><code>const pnut = require(&quot;pnut-butter&quot;);
 
 (async () => {
   const { meta, data } = await pnut.global();
-})();</code></pre><p>Fetch a post by its ID:</p>
+})();
+</code></pre>
+<p>Fetch a post by its ID:</p>
 <pre class="prettyprint source lang-javascript"><code>const pnut = require(&quot;pnut-butter&quot;);
 
 (async () => {
   const { meta, data } = await pnut.post(1234);
-})();</code></pre><p>Most methods allow any arbiritary, additional URL parameters that can be found in the <a href="https://pnut.io/docs/api">official documentation</a>. For example, you can use something like this:</p>
-<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.mentions({ beforeId: 1235 });</code></pre><p>…to get posts in the mentions category before the specified id. We generate them dynamically and convert the parameters to snake_case automatically for you, so it doesn't matter if you write:</p>
-<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.global({ sinceId: 4567 });</code></pre><p>or</p>
-<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.global({ since_id: 4567 });</code></pre><p>Both versions work, it's just syntactic sugar and a matter of personal preference.</p>
-<h2>Documentation</h2><p>You can find the full documentation of all methods <a href="https://kaiwood.github.io/pnut-butter/">here</a>.</p>
-<h2>Custom requests</h2><p>Pnut is a moving target, so there are still some methods missing and/or parameters that are not yet implemented. Therefor you can always fall back to a custom request with support for all HTTP verbs.</p>
+})();
+</code></pre>
+<p>Most methods allow any arbiritary, additional URL parameters that can be found in the <a href="https://pnut.io/docs/api">official documentation</a>. For example, you can use something like this:</p>
+<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.mentions({ beforeId: 1235 });
+</code></pre>
+<p>…to get posts in the mentions category before the specified id. We generate them dynamically and convert the parameters to snake_case automatically for you, so it doesn't matter if you write:</p>
+<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.global({ sinceId: 4567 });
+</code></pre>
+<p>or</p>
+<pre class="prettyprint source lang-javascript"><code>const { meta, data } = await pnut.global({ since_id: 4567 });
+</code></pre>
+<p>Both versions work, it's just syntactic sugar and a matter of personal preference.</p>
+<h2>Documentation</h2>
+<p>You can find the full documentation of all methods <a href="https://kaiwood.github.io/pnut-butter/">here</a>.</p>
+<h2>Custom requests</h2>
+<p>Pnut is a moving target, so there are still some methods missing and/or parameters that are not yet implemented. Therefor you can always fall back to a custom request with support for all HTTP verbs.</p>
 <pre class="prettyprint source lang-javascript"><code>const pnut = require(&quot;pnut-butter&quot;);
 
 (async () => {
@@ -72,26 +89,37 @@
 
   await pnut.custom(&quot;/posts&quot;, &quot;POST&quot;, { text: &quot;Posting with pnut-butter!&quot; });
   await pnut.custom(&quot;/posts/1234&quot;, &quot;DELETE&quot;);
-})();</code></pre><h2>Authentication</h2><p>For everything that requires an authenticated user, you will need an access token. You can create one in the setting of your account on pnut.io under the &quot;Develop&quot; menu.</p>
+})();
+</code></pre>
+<h2>Authentication</h2>
+<p>For everything that requires an authenticated user, you will need an access token. You can create one in the setting of your account on pnut.io under the &quot;Develop&quot; menu.</p>
 <p>You can set it like this:</p>
 <pre class="prettyprint source lang-javascript"><code>const pnut = require(&quot;pnut-butter&quot;);
 pnut.token = ACCESS_TOKEN;
 
 (async () => {
   const { meta, data } = await pnut.mentions(&quot;me&quot;);
-})();</code></pre><p>Please consult the <a href="https://pnut.io/docs">pnut docs</a> for further information about how authentication is handled in the network, how to aquire a &quot;real&quot; token able to authenticate multiple users and so on.</p>
-<h2>Changing profile / cover images</h2><p>Uploading images is currently only supported on the client side. You can give the DOM node for an upload form containing file fields for &quot;avatar&quot; or &quot;cover&quot; as argument to the corresponding methods <code>uploadAvatar</code> / <code>uploadCover</code>.</p>
+})();
+</code></pre>
+<p>Please consult the <a href="https://pnut.io/docs">pnut docs</a> for further information about how authentication is handled in the network, how to aquire a &quot;real&quot; token able to authenticate multiple users and so on.</p>
+<h2>Changing profile / cover images</h2>
+<p>Uploading images is currently only supported on the client side. You can give the DOM node for an upload form containing file fields for &quot;avatar&quot; or &quot;cover&quot; as argument to the corresponding methods <code>uploadAvatar</code> / <code>uploadCover</code>.</p>
 <p>A basic HTML form would look something like this:</p>
 <pre class="prettyprint source lang-html"><code>&lt;form id=&quot;avatar-form&quot;>
   &lt;input type=&quot;file&quot; name=&quot;avatar&quot;>
-&lt;/form></code></pre><p>Depending on how your application is set up, an upload function looks somewhat like this:</p>
+&lt;/form>
+</code></pre>
+<p>Depending on how your application is set up, an upload function looks somewhat like this:</p>
 <pre class="prettyprint source lang-javascript"><code>async function upload(ev) {
   event.preventDefault();
 
   const form = document.querySelector(&quot;#avatar-form&quot;);
   await pnut.uploadAvatar(form);
-}</code></pre><p>Both, <code>uploadAvatar</code> and <code>uploadCover</code> will handle server side uploads in a future release.</p>
-<h2>App Streams</h2><p>pnut-butter has support for creating, managing and reading app streams (you need a properly &quot;signed&quot; pair of Client ID and Client Secret to use this).</p>
+}
+</code></pre>
+<p>Both, <code>uploadAvatar</code> and <code>uploadCover</code> will handle server side uploads in a future release.</p>
+<h2>App Streams</h2>
+<p>pnut-butter has support for creating, managing and reading app streams (you need a properly &quot;signed&quot; pair of Client ID and Client Secret to use this).</p>
 <p>First, you need to request an app stream access token:</p>
 <pre class="prettyprint source lang-js"><code>const pnut = require(&quot;pnut-butter&quot;);
 (async () => {
@@ -99,14 +127,20 @@ pnut.token = ACCESS_TOKEN;
     YOUR_CLIENT_ID,
     YOUR_CLIENT_SECRET
   );
-})();</code></pre><p>If successful, you will get back a proper token in the response. Set it via:</p>
-<pre class="prettyprint source lang-js"><code>pnut.token = YOUR_ACCESS_TOKEN;</code></pre><p>Next step is to setup your app stream with up to 5 (!) options (post, bookmark, follow, mute, block, message, channel, channel_subscription, token, user) and a key name:</p>
+})();
+</code></pre>
+<p>If successful, you will get back a proper token in the response. Set it via:</p>
+<pre class="prettyprint source lang-js"><code>pnut.token = YOUR_ACCESS_TOKEN;
+</code></pre>
+<p>Next step is to setup your app stream with up to 5 (!) options (post, bookmark, follow, mute, block, message, channel, channel_subscription, token, user) and a key name:</p>
 <pre class="prettyprint source lang-js"><code>(async () => {
   const { meta, data } = await pnut.createStream({
     objectTypes: [&quot;post&quot;, &quot;bookmark&quot;, &quot;follow&quot;],
     key: &quot;myfancykeyname&quot;
   });
-})();</code></pre><p>For reading the stream, we provide a separate module you have to require, that preconfigures a web socket connection for you, where you can simply listen on the &quot;message&quot; event to read the stream:</p>
+})();
+</code></pre>
+<p>For reading the stream, we provide a separate module you have to require, that preconfigures a web socket connection for you, where you can simply listen on the &quot;message&quot; event to read the stream:</p>
 <pre class="prettyprint source lang-js"><code>const pnut = require(&quot;pnut-butter&quot;);
 const AppStreamSocket = require(&quot;pnut-butter/dist/app_stream_socket&quot;);
 
@@ -123,8 +157,11 @@ ws.on(&quot;message&quot;, event => {
 
 ws.on(&quot;close&quot;, event => {
   console.log(&quot;Closing app stream&quot;, event.code, event.reason);
-});</code></pre><p>You can now work on the streaming data from the &quot;message&quot; event. Keep in mind that you might want to reconnect to the socket in case it closes on the server side.</p>
-<h2>Collaboration / Project status</h2><p>Issues / Pull Requests are always welcome. If you have any questions, feel free to drop me an email or write a message on pnut.io. There are still a couple of things not implemented yet (creating and updating channels comes to mind), but should be stable and usable already.</p></article>
+});
+</code></pre>
+<p>You can now work on the streaming data from the &quot;message&quot; event. Keep in mind that you might want to reconnect to the socket in case it closes on the server side.</p>
+<h2>Collaboration / Project status</h2>
+<p>Issues / Pull Requests are always welcome. If you have any questions, feel free to drop me an email or write a message on pnut.io. There are still a couple of things not implemented yet (creating and updating channels comes to mind), but should be stable and usable already.</p></article>
     </section>
 
 
@@ -137,7 +174,7 @@ ws.on(&quot;close&quot;, event => {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Apr 07 2018 16:51:12 GMT+0200 (CEST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Fri Apr 17 2020 10:07:28 GMT+0200 (Central European Summer Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
