@@ -6,18 +6,18 @@ import FormData from "form-data";
 import snakeCase from "snake-case";
 import appendQuery from "append-query";
 
-import authentication from "./authentication";
-import users from "./users";
-import posts from "./posts";
-import explore from "./explore";
-import channels from "./channels";
-import streamMarkers from "./stream_markers";
-import messages from "./messages";
-import system from "./system";
-import appStreams from "./app_streams";
-import clients from "./clients";
-import files from "./files";
-import polls from "./polls";
+import authentication from "./modules/authentication";
+import users from "./modules/users";
+import posts from "./modules/posts";
+import explore from "./modules/explore";
+import channels from "./modules/channels";
+import streamMarkers from "./modules/stream_markers";
+import messages from "./modules/messages";
+import system from "./modules/system";
+import appStreams from "./modules/app_streams";
+import clients from "./modules/clients";
+import files from "./modules/files";
+import polls from "./modules/polls";
 
 /**
  * pnut-butter.js
