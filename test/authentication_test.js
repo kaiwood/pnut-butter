@@ -5,7 +5,7 @@ chai.use(chaiAsPromised);
 chai.should();
 const expect = chai.expect;
 
-const pnut = require("../lib/pnut");
+const pnut = require("../dist/index");
 
 before(function() {
   let base = "https://api.pnut.io/v0";

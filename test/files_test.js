@@ -4,7 +4,7 @@ const nock = require("nock");
 chai.use(chaiAsPromised);
 chai.should();
 
-const pnut = require("../lib/pnut");
+const pnut = require("../dist/index");
 
 before(function() {
   let base = "https://api.pnut.io/v0";
