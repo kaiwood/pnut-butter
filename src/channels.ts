@@ -4,7 +4,7 @@
  * Channels
  * @module channels
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a channel object.
@@ -42,7 +42,7 @@ module.exports = api => {
      */
     pmChannelFor(...userIds) {
       return api.request(`/users/me/channels/existing_pm`, {
-        params: { ids: userIds }
+        params: { ids: userIds },
       });
     },
 
@@ -53,7 +53,7 @@ module.exports = api => {
      */
     unread(params = {}) {
       return api.request("/users/me/channels/num_unread/pm", {
-        params: params
+        params: params,
       });
     },
 
@@ -63,7 +63,7 @@ module.exports = api => {
      */
     markAllAsRead() {
       return api.request("/users/me/channels/num_unread/pm", {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -74,7 +74,7 @@ module.exports = api => {
      */
     deactivateChannel(channelId) {
       return api.request(`/channels/${channelId}`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -95,7 +95,7 @@ module.exports = api => {
      */
     subscribers(channelId, params = {}) {
       return api.request(`/channels/${channelId}/subscribers`, {
-        params: params
+        params: params,
       });
     },
 
@@ -106,7 +106,7 @@ module.exports = api => {
      */
     subscribe(channelId) {
       return api.request(`/channels/${channelId}/subscribe`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -117,7 +117,7 @@ module.exports = api => {
      */
     unsubscribe(channelId) {
       return api.request(`/channels/${channelId}/subscribe`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -137,7 +137,7 @@ module.exports = api => {
      */
     muteChannel(channelId) {
       return api.request(`/channels/${channelId}/mute`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -148,7 +148,7 @@ module.exports = api => {
      */
     unmuteChannel(channelId) {
       return api.request(`/channels/${channelId}/mute`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -166,6 +166,6 @@ module.exports = api => {
      */
     searchChannels(params = {}) {
       return api.request("/channels/search", { params: params });
-    }
+    },
   };
 };

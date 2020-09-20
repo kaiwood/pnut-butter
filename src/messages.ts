@@ -4,7 +4,7 @@
  * Messages
  * @module messages
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a message from a channel.
@@ -15,7 +15,7 @@ module.exports = api => {
      */
     message(channelId, messageId, params = {}) {
       return api.request(`/channels/${channelId}/messages/${messageId}`, {
-        params: params
+        params: params,
       });
     },
 
@@ -71,8 +71,8 @@ module.exports = api => {
       return api.request(`/channels/${channelId}/messages`, {
         httpMethod: "POST",
         data: {
-          text: text
-        }
+          text: text,
+        },
       });
     },
 
@@ -91,8 +91,8 @@ module.exports = api => {
         httpMethod: "POST",
         data: {
           destinations: dests,
-          text: text
-        }
+          text: text,
+        },
       });
     },
 
@@ -104,7 +104,7 @@ module.exports = api => {
      */
     deleteMessage(channelId, messageId) {
       return api.request(`/channels/${channelId}/messages/${messageId}`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -116,7 +116,7 @@ module.exports = api => {
      */
     stickies(channelId, params = {}) {
       return api.request(`/channels/${channelId}/sticky_messages`, {
-        params: params
+        params: params,
       });
     },
 
@@ -130,7 +130,7 @@ module.exports = api => {
       return api.request(
         `/channels/${channelId}/messages/${messageId}/sticky`,
         {
-          httpMethod: "PUT"
+          httpMethod: "PUT",
         }
       );
     },
@@ -145,7 +145,7 @@ module.exports = api => {
       return api.request(
         `/channels/${channelId}/messages/${messageId}/sticky`,
         {
-          httpMethod: "DELETE"
+          httpMethod: "DELETE",
         }
       );
     },
@@ -162,6 +162,6 @@ module.exports = api => {
      */
     searchMessages(params = {}) {
       return api.request("/channels/messages/search", { params: params });
-    }
+    },
   };
 };

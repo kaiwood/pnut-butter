@@ -1,22 +1,23 @@
 require("es6-promise").polyfill();
 require("isomorphic-fetch");
-const FormData = require("form-data");
 
-const snakeCase = require("snake-case");
-const appendQuery = require("append-query");
+import FormData from "form-data";
 
-const authentication = require("./authentication");
-const users = require("./users");
-const posts = require("./posts");
-const explore = require("./explore");
-const channels = require("./channels");
-const streamMarkers = require("./stream_markers");
-const messages = require("./messages");
-const system = require("./system");
-const appStreams = require("./app_streams");
-const clients = require("./clients");
-const files = require("./files");
-const polls = require("./polls");
+import snakeCase from "snake-case";
+import appendQuery from "append-query";
+
+import authentication from "./authentication";
+import users from "./users";
+import posts from "./posts";
+import explore from "./explore";
+import channels from "./channels";
+import streamMarkers from "./stream_markers";
+import messages from "./messages";
+import system from "./system";
+import appStreams from "./app_streams";
+import clients from "./clients";
+import files from "./files";
+import polls from "./polls";
 
 /**
  * pnut-butter.js

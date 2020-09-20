@@ -4,7 +4,7 @@
  * Users
  * @module users
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a user object.
@@ -29,10 +29,10 @@ module.exports = api => {
     avatar(userId, buffered = true) {
       let options = buffered
         ? {
-            resultAs: "buffer"
+            resultAs: "buffer",
           }
         : {
-            resultAs: "response"
+            resultAs: "response",
           };
       return api.request(`/users/${userId}/avatar`, options);
     },
@@ -47,7 +47,7 @@ module.exports = api => {
       return api.request(`/users/me/avatar`, {
         httpMethod: "POST",
         dataAs: "dom-node",
-        data: form
+        data: form,
       });
     },
 
@@ -61,7 +61,7 @@ module.exports = api => {
       return api.request(`/users/me/cover`, {
         httpMethod: "POST",
         dataAs: "dom-node",
-        data: form
+        data: form,
       });
     },
 
@@ -77,10 +77,10 @@ module.exports = api => {
     cover(userId, buffered = true) {
       let options = buffered
         ? {
-            resultAs: "buffer"
+            resultAs: "buffer",
           }
         : {
-            resultAs: "response"
+            resultAs: "response",
           };
       return api.request(`/users/${userId}/cover`, options);
     },
@@ -137,7 +137,7 @@ module.exports = api => {
     replaceProfile(profile = {}) {
       return api.request("/users/me", {
         httpMethod: "PUT",
-        data: profile
+        data: profile,
       });
     },
 
@@ -155,7 +155,7 @@ module.exports = api => {
     updateProfile(profile = {}) {
       return api.request("/users/me", {
         httpMethod: "PATCH",
-        data: profile
+        data: profile,
       });
     },
 
@@ -195,7 +195,7 @@ module.exports = api => {
      */
     follow(userId) {
       return api.request(`/users/${userId}/follow`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -209,7 +209,7 @@ module.exports = api => {
      */
     unfollow(userId) {
       return api.request(`/users/${userId}/follow`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -235,7 +235,7 @@ module.exports = api => {
      */
     mute(userId) {
       return api.request(`/users/${userId}/mute`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -249,7 +249,7 @@ module.exports = api => {
      */
     unmute(userId) {
       return api.request(`/users/${userId}/mute`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -265,7 +265,7 @@ module.exports = api => {
       return api.request(
         `/users/me/blocked`,
         {
-          httpMethod: "GET"
+          httpMethod: "GET",
         },
         { params: params }
       );
@@ -281,7 +281,7 @@ module.exports = api => {
      */
     block(userId) {
       return api.request(`/users/${userId}/block`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -295,7 +295,7 @@ module.exports = api => {
      */
     unblock(userId) {
       return api.request(`/users/${userId}/block`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -330,11 +330,11 @@ module.exports = api => {
      */
     updatePresence(msg) {
       let params = {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       };
       if (msg) {
         params.data = {
-          presence: msg
+          presence: msg,
         };
       }
 
@@ -353,6 +353,6 @@ module.exports = api => {
      */
     searchUsers(params = {}) {
       return api.request("/users/search", { params: params });
-    }
+    },
   };
 };

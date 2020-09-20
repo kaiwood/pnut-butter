@@ -2,7 +2,7 @@
  * {@link https://pnut.io/docs/api/resources/files}
  * @module files
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a list of files created by the authenticated user.
@@ -39,6 +39,6 @@ module.exports = api => {
      */
     files(...fileIds) {
       return api.request("/files", { params: { ids: fileIds } });
-    }
+    },
   };
 };

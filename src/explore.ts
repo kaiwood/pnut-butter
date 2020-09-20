@@ -4,7 +4,7 @@
  * {@link https://pnut.io/docs/api/resources/explore}
  * @module explore
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a list of explore streams.
@@ -17,7 +17,7 @@ module.exports = api => {
      */
     explore(params = {}) {
       return api.request("/posts/streams/explore", {
-        params: params
+        params: params,
       });
     },
 
@@ -31,7 +31,7 @@ module.exports = api => {
      */
     conversations(params = {}) {
       return api.request("/posts/streams/explore/conversations", {
-        params: params
+        params: params,
       });
     },
 
@@ -45,7 +45,7 @@ module.exports = api => {
      */
     photos(params) {
       return api.request("/posts/streams/explore/photos", {
-        params: params
+        params: params,
       });
     },
 
@@ -59,7 +59,7 @@ module.exports = api => {
      */
     trending(params) {
       return api.request("/posts/streams/explore/trending", {
-        params: params
+        params: params,
       });
     },
 
@@ -73,8 +73,8 @@ module.exports = api => {
      */
     missedConversations(params) {
       return api.request("/posts/streams/explore/missed_conversations", {
-        params: params
+        params: params,
       });
-    }
+    },
   };
 };
