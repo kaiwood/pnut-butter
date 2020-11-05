@@ -4,6 +4,8 @@ A modern, promise based wrapper library for the [pnut.io](https://pnut.io) API.
 
 It is currently developed and tested on Node 8 LTS, but should work with basically any current browser supporting ES6 as well (feel free to open an issue if not), especially if you throw it in your typical Webpack/Babel/whatever toolchain.
 
+However, we are currently in the process of moving the whole library to TypeScript and try to modernize its core. Stay tuned for a bigger revamp in the short future.
+
 ## Installation
 
 ```bash
