@@ -4,7 +4,7 @@
  * {@link https://pnut.io/docs/api/resources/app-streams}
  * @module app_streams
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Get a specific app stream by its key.
@@ -50,7 +50,7 @@ module.exports = api => {
     createStream(options) {
       let sanitizedOptions = {
         type: "long_poll",
-        object_types: options.objectTypes
+        object_types: options.objectTypes,
       };
 
       if (options.key) {
@@ -59,7 +59,7 @@ module.exports = api => {
 
       return api.request("/streams", {
         httpMethod: "POST",
-        data: sanitizedOptions
+        data: sanitizedOptions,
       });
     },
 
@@ -74,7 +74,7 @@ module.exports = api => {
      */
     updateStream(options) {
       let sanitizedOptions = {
-        object_types: options.objectTypes
+        object_types: options.objectTypes,
       };
 
       if (options.key) {
@@ -83,7 +83,7 @@ module.exports = api => {
 
       return api.request("/streams", {
         httpMethod: "PUT",
-        data: sanitizedOptions
+        data: sanitizedOptions,
       });
     },
 
@@ -108,6 +108,6 @@ module.exports = api => {
      */
     deleteStream(streamKey) {
       return api.request(`/streams/${streamKey}`, { httpMethod: "DELETE" });
-    }
+    },
   };
 };

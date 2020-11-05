@@ -4,7 +4,7 @@
  * Stream markers
  * @module stream_markers
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Set a single stream marker.
@@ -28,9 +28,9 @@ module.exports = api => {
         data: [
           {
             name: name,
-            id: id
-          }
-        ]
+            id: id,
+          },
+        ],
       });
     },
 
@@ -48,8 +48,8 @@ module.exports = api => {
     markers(markerObjects = []) {
       return api.request(`/markers`, {
         httpMethod: "POST",
-        data: markerObjects
+        data: markerObjects,
       });
-    }
+    },
   };
 };

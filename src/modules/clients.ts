@@ -4,7 +4,7 @@
  * {@link https://pnut.io/docs/api/resources/clients}
  * @module clients
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve details on a public client.
@@ -28,6 +28,6 @@ module.exports = api => {
      */
     clientsByUser(userId) {
       return api.request(`/users/${userId}/clients`);
-    }
+    },
   };
 };

@@ -4,7 +4,7 @@
  * {@link https://pnut.io/docs/api/resources/system}
  * @module system
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Retrieve a list of parameters for interacting with the API.
@@ -28,6 +28,6 @@ module.exports = api => {
      */
     stats(params = {}) {
       return api.request("/sys/stats", { params: params });
-    }
+    },
   };
 };

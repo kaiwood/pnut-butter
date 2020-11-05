@@ -6,7 +6,7 @@
  * @module polls
  */
 
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * Create a poll placeholder or a complete poll.
@@ -31,7 +31,7 @@ module.exports = api => {
     createPoll(poll) {
       return api.request(`/polls`, {
         httpMethod: "POST",
-        data: poll
+        data: poll,
       });
     },
 
@@ -45,7 +45,7 @@ module.exports = api => {
      */
     respondToPoll(poll, position) {
       return api.request(`/polls/${poll}/response/${position}`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -58,7 +58,7 @@ module.exports = api => {
      */
     deletePoll(pollId) {
       return api.request(`/polls/${pollId}`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -81,6 +81,6 @@ module.exports = api => {
      */
     myPolls() {
       return api.request("/users/me/polls");
-    }
+    },
   };
 };

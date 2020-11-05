@@ -4,7 +4,7 @@
  * Posts
  * @module posts
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
      * A stream of all users' public posts.
@@ -162,7 +162,7 @@ module.exports = api => {
 
       return api.request("/posts", {
         httpMethod: "POST",
-        data
+        data,
       });
     },
 
@@ -179,8 +179,8 @@ module.exports = api => {
       return api.request(`/posts/${postId}`, {
         httpMethod: "PUT",
         data: {
-          text: newText
-        }
+          text: newText,
+        },
       });
     },
 
@@ -194,7 +194,7 @@ module.exports = api => {
      */
     deletePost(postId) {
       return api.request(`/posts/${postId}`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -208,7 +208,7 @@ module.exports = api => {
      */
     repost(postId) {
       return api.request(`/posts/${postId}/repost`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -222,7 +222,7 @@ module.exports = api => {
      */
     deleteRepost(postId) {
       return api.request(`/posts/${postId}/repost`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -249,7 +249,7 @@ module.exports = api => {
      */
     bookmark(postId) {
       return api.request(`/posts/${postId}/bookmark`, {
-        httpMethod: "PUT"
+        httpMethod: "PUT",
       });
     },
 
@@ -263,7 +263,7 @@ module.exports = api => {
      */
     deleteBookmark(postId) {
       return api.request(`/posts/${postId}/bookmark`, {
-        httpMethod: "DELETE"
+        httpMethod: "DELETE",
       });
     },
 
@@ -279,6 +279,6 @@ module.exports = api => {
      */
     searchPosts(params = {}) {
       return api.request("/posts/search", { params: params });
-    }
+    },
   };
 };

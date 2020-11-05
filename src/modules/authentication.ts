@@ -4,15 +4,15 @@
  * Authentication
  * @module authentication
  */
-module.exports = api => {
+export default (api) => {
   return {
     /**
-      * Generate a URL for client side authentication.
-      * @param {string} - Client ID token
-      * @param {string} redirectURI - URI you want to be redirected at
-      * @param {Object} [scope] - The scope you want to request
-      * @returns {string} - A ready-to-use authentication url
-      */
+     * Generate a URL for client side authentication.
+     * @param {string} - Client ID token
+     * @param {string} redirectURI - URI you want to be redirected at
+     * @param {Object} [scope] - The scope you want to request
+     * @returns {string} - A ready-to-use authentication url
+     */
     authenticateClientURL(
       clientId = "",
       redirectURI = "",
@@ -24,7 +24,7 @@ module.exports = api => {
         update_profile: true,
         presence: true,
         messages: true,
-        public_messages: true
+        public_messages: true,
       }
     ) {
       if (clientId.length < 1) {
@@ -55,9 +55,9 @@ module.exports = api => {
         data: {
           client_id: clientId,
           client_secret: clientSecret,
-          grant_type: "client_credentials"
-        }
+          grant_type: "client_credentials",
+        },
       });
-    }
+    },
   };
 };
